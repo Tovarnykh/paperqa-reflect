@@ -1,0 +1,83 @@
+{
+  "purpose": "Engineering smoke test; same development question repeated with setup changes, not a benchmark or controlled timing comparison.",
+  "attempts": [
+    {
+      "run_id": "20260919T144041Z-e402fd",
+      "question_id": "smoke-01",
+      "status": "error",
+      "seconds": 10.916,
+      "actions": [],
+      "original_grade": {
+        "selected": null,
+        "expected": "B",
+        "format_valid": false,
+        "abstained": false,
+        "option_matches_key": false,
+        "correct_completed": false,
+        "claim_support_checked": false
+      }
+    },
+    {
+      "run_id": "20260919T144155Z-6f9bb3",
+      "question_id": "smoke-01",
+      "status": "fail",
+      "seconds": 333.341,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer"
+      ],
+      "original_grade": {
+        "selected": null,
+        "expected": "B",
+        "format_valid": false,
+        "abstained": false,
+        "option_matches_key": false,
+        "correct_completed": false,
+        "claim_support_checked": false
+      }
+    },
+    {
+      "run_id": "20260919T144934Z-2401d6",
+      "question_id": "smoke-01",
+      "status": "success",
+      "seconds": 189.952,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "original_grade": {
+        "selected": "B",
+        "expected": "B",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      }
+    },
+    {
+      "run_id": "20260919T145503Z-9b17b8",
+      "question_id": "smoke-01",
+      "status": "success",
+      "seconds": 195.946,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "original_grade": {
+        "selected": "B",
+        "expected": "B",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      }
+    }
+  ]
+}

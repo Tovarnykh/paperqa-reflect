@@ -1,0 +1,18 @@
+{
+  "name": "molecular-explanations-smoke-v1",
+  "purpose": "Engineering smoke/development set; not a scientific benchmark or held-out evaluation set.",
+  "documents": [
+    {
+      "file": "molecular-explanations.pdf",
+      "title": "A Perspective on Explanations of Molecular Prediction Models",
+      "doi": "10.1021/acs.jctc.2c01235",
+      "authors": ["Geemi P. Wellawatte", "Heta A. Gandhi", "Aditi Seshadri", "Andrew D. White"],
+      "journal": "Journal of Chemical Theory and Computation",
+      "citation": "Wellawatte, G. P.; Gandhi, H. A.; Seshadri, A.; White, A. D. A Perspective on Explanations of Molecular Prediction Models. Journal of Chemical Theory and Computation (2023). doi:10.1021/acs.jctc.2c01235.",
+      "year": 2023,
+      "url": "https://raw.githubusercontent.com/Future-House/paper-qa/57e89f7223b0960d5ee5ea048c69e3c47e088572/tests/stub_data/paper.pdf",
+      "sha256": "145c91b72086b5cde6b048e4b50c7b325c7e1b8c6260e4e91fbc12fcf177eaf3",
+      "notes": "41-page manuscript distributed in the upstream test fixtures; pagination refers to this exact PDF, not necessarily the publisher version."
+    }
+  ]
+}
