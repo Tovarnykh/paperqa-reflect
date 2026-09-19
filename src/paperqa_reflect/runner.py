@@ -3,9 +3,11 @@
 import asyncio
 import importlib.metadata
 import json
+import locale
 import logging
 import platform
 import subprocess
+import sys
 import time
 import traceback
 import zipfile
@@ -17,6 +19,7 @@ import httpx
 
 from .config import build_settings, write_json
 from .data import grade, jsonl, paperqa_manifest, question_prompt, sha256, validate_corpus
+from .evaluation import aggregate, evidence_diagnostics, runtime_snapshot
 
 
 def inspect_ollama(config):
@@ -116,6 +119,13 @@ class QuestionTrace:
 
 async def run(config, config_path: Path, root: Path, limit: int, question_id: str | None = None):
     documents = validate_corpus(root, config)
+    if (
+        any(doc["file"].endswith(".txt") for doc in documents)
+        and locale.getpreferredencoding(False).lower().replace("-", "") != "utf8"
+    ):
+        raise ValueError(
+            "Text-corpus inference requires UTF-8 mode; run Python with -X utf8 or use the CLI."
+        )
     questions = jsonl(root / config.questions)
     if question_id:
         questions = [question for question in questions if question["id"] == question_id]
@@ -148,6 +158,8 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
             "run_id": run_id,
             "started_utc": datetime.now(UTC).isoformat(),
             "python": platform.python_version(),
+            "python_utf8_mode": sys.flags.utf8_mode,
+            "default_text_encoding": locale.getpreferredencoding(False),
             "platform": platform.platform(),
             "git": git_state(root),
             "code_sha256": code_hashes(root),
@@ -157,18 +169,57 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
             "corpus_manifest_sha256": sha256(root / config.corpus_manifest),
             "corpus": documents,
             "ollama": model_info,
+            "runtime_start": runtime_snapshot(),
             "packages": {
                 name: importlib.metadata.version(name)
                 for name in ("paper-qa", "paper-qa-pypdf", "fhlmi", "fhaviary", "litellm", "pypdf")
             },
             "question_ids": [question["id"] for question in questions],
-            "timing": "Per-question wall time includes indexing on first question; model warmness uncontrolled.",
-            "protocol": "smoke-v1; no verifier, judge, fine-tuning or new stopping rule",
+            "timing": (
+                "Index measured separately; question time includes model loading/switching. Warmness uncontrolled."
+                if config.preindex
+                else "Per-question wall time includes indexing on first question; model warmness uncontrolled."
+            ),
+            "protocol": config.protocol,
+            "split": config.split,
         },
     )
     print(f"Run: {output}", flush=True)
     records = []
     try:
+        if config.preindex:
+            from paperqa.agents.search import get_directory_index
+
+            started = time.perf_counter()
+            try:
+                async with asyncio.timeout(config.index_timeout_seconds):
+                    index = await get_directory_index(settings=settings)
+                    indexed = await index.index_files
+                if set(indexed) != {doc["file"] for doc in documents}:
+                    raise ValueError("PaperQA did not index every manifest document")
+                write_json(
+                    output / "indexing.json",
+                    {
+                        "seconds": round(time.perf_counter() - started, 3),
+                        "documents": len(indexed),
+                        "status": "success",
+                    },
+                )
+                settings.agent.rebuild_index = False
+                print(
+                    f"  Indexed {len(indexed)} documents in {time.perf_counter() - started:.1f} s",
+                    flush=True,
+                )
+            except Exception as error:
+                write_json(
+                    output / "indexing.json",
+                    {
+                        "seconds": round(time.perf_counter() - started, 3),
+                        "status": "error",
+                        "error": f"{type(error).__name__}: {error}",
+                    },
+                )
+                raise
         for question in questions:
             qdir = output / question["id"]
             qdir.mkdir()
@@ -232,6 +283,29 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
                 record["status"],
                 record["declared_success"],
                 tuple(record["citation_ids"]),
+                tuple(question["options"]),
+            )
+            session = trace.state.session.model_dump(mode="json") if trace.state else {}
+            record["evidence_diagnostics"] = evidence_diagnostics(session, key)
+            record["runtime_end"] = runtime_snapshot()
+            evidence_path = qdir / "evidence-progress.json"
+            full_evidence = (
+                json.loads(evidence_path.read_text(encoding="utf-8"))
+                if evidence_path.exists()
+                else session
+            )
+            write_json(
+                qdir / "review.json",
+                {
+                    "question": question,
+                    "reference": key,
+                    "answer": record.get("answer", ""),
+                    "raw_answer": record["raw_answer"],
+                    "status": record["status"],
+                    "used_contexts": session.get("used_contexts", []),
+                    "contexts": full_evidence.get("contexts", []),
+                    "review_status": "pending; no claim-level judge has been run",
+                },
             )
             write_json(qdir / "grade.json", {**record["grade"], "reference": key})
             records.append(record)
@@ -243,7 +317,9 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
                     "completed_questions": len(records),
                     "correct_completed": sum(row["grade"]["correct_completed"] for row in records),
                     "records": records,
-                    "warning": "Technical smoke test; not a benchmark estimate or citation verification.",
+                    "metrics": aggregate(records, len(questions)),
+                    "protocol": config.protocol,
+                    "warning": "Development pilot; not a full LitQA2 evaluation or citation entailment verification.",
                 },
             )
             print(

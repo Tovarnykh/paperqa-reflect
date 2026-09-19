@@ -1,0 +1,147 @@
+{
+  "run_id": "20260919T153930Z-860e20",
+  "planned_questions": 5,
+  "completed_questions": 5,
+  "metrics": {
+    "questions": 5,
+    "correct_completed": 5,
+    "accuracy": 1.0,
+    "answered_completed": 5,
+    "coverage": 1.0,
+    "precision_when_answered": 1.0,
+    "explicit_or_declared_abstentions": 0,
+    "invalid_answer_formats": 0,
+    "statuses": {
+      "success": 5
+    },
+    "total_question_seconds": 615.428,
+    "median_question_seconds": 106.371,
+    "tool_calls": {
+      "paper_search": 5,
+      "gather_evidence": 5,
+      "gen_answer": 5,
+      "complete": 5
+    }
+  },
+  "records": [
+    {
+      "id": "smoke-01",
+      "status": "success",
+      "seconds": 195.667,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "B",
+        "expected": "B",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      }
+    },
+    {
+      "id": "smoke-02",
+      "status": "success",
+      "seconds": 106.371,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "C",
+        "expected": "C",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      }
+    },
+    {
+      "id": "smoke-03",
+      "status": "success",
+      "seconds": 104.815,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "A",
+        "expected": "A",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      }
+    },
+    {
+      "id": "smoke-04",
+      "status": "success",
+      "seconds": 98.781,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "D",
+        "expected": "D",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      }
+    },
+    {
+      "id": "smoke-05",
+      "status": "success",
+      "seconds": 109.794,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "B",
+        "expected": "B",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      }
+    }
+  ],
+  "scope": "Technical smoke/development; all questions concern one article; not a research benchmark estimate.",
+  "assistant_review": {
+    "reviewed": "Central MCQ answers 1-5, plus selected evidence/wording in 3 and 5",
+    "not_reviewed": "Exhaustive atomic-claim entailment for every answer; independent domain expert assessment",
+    "findings": [
+      {
+        "id": "smoke-03",
+        "context_id": "pqac-32bf873e",
+        "label": "quotation fidelity problem",
+        "detail": "Answer places an RCS paraphrase in quotation marks as if it were a verbatim passage. The central test-error meaning is supported, but quoted wording differs from the raw article."
+      },
+      {
+        "id": "smoke-05",
+        "context_id": "pqac-7c69dddf",
+        "label": "insufficient support for an added procedural claim",
+        "detail": "Raw source describes global/local and intrinsic/extrinsic classification axes. RCS recasts these as the two-step XAI procedure; answer repeats intrinsic/extrinsic determination as the second step. Correct central B answer also cites the abstract, but this extra assertion conflates separate concepts."
+      }
+    ]
+  }
+}

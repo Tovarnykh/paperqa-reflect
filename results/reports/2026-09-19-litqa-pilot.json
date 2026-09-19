@@ -1,0 +1,944 @@
+{
+  "run_id": "20260919T155917Z-d979c5",
+  "scope": "8-question development pilot; fixed 16-article text corpus; 8 held-out questions remain unrun",
+  "metrics": {
+    "questions": 8,
+    "planned_questions": 8,
+    "series_complete": true,
+    "correct_completed": 3,
+    "accuracy": 0.375,
+    "answered_completed": 4,
+    "coverage": 0.5,
+    "precision_when_answered": 0.75,
+    "explicit_or_declared_abstentions": 2,
+    "invalid_answer_formats": 0,
+    "statuses": {
+      "success": 4,
+      "unsure": 2,
+      "truncated": 1,
+      "fail": 1
+    },
+    "total_question_seconds": 1417.953,
+    "median_question_seconds": 178.8965,
+    "tool_calls": {
+      "paper_search": 10,
+      "gather_evidence": 10,
+      "gen_answer": 10,
+      "complete": 6,
+      "reset": 3
+    }
+  },
+  "raw_option_matches": 5,
+  "expected_source_in_evidence": 8,
+  "expected_source_cited": 8,
+  "indexing": {
+    "seconds": 41.844,
+    "documents": 16,
+    "status": "success"
+  },
+  "records": [
+    {
+      "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+      "status": "success",
+      "seconds": 158.924,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "D",
+        "expected": "D",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      },
+      "evidence_diagnostics": {
+        "reference_in_evidence": true,
+        "reference_cited": true,
+        "reference_context_ids": [
+          "pqac-825ca807",
+          "pqac-d5ed91f6",
+          "pqac-5d900cc8"
+        ],
+        "cited_contexts": 2,
+        "claim_support_checked": false,
+        "note": "Source DOI presence only; does not establish that any claim is supported."
+      },
+      "token_counts": {
+        "ollama_chat/qwen3:8b": [
+          10438,
+          820
+        ]
+      },
+      "runtime_end": {
+        "system": "Windows-11-10.0.26200-SP0",
+        "ac_line_status": "online",
+        "battery_percent": 100,
+        "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 6567 MiB, 98 %, 83.33 W"
+      }
+    },
+    {
+      "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+      "status": "unsure",
+      "seconds": 201.55,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "reset",
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "ABSTAIN",
+        "expected": "B",
+        "format_valid": true,
+        "abstained": true,
+        "option_matches_key": false,
+        "correct_completed": false,
+        "claim_support_checked": false
+      },
+      "evidence_diagnostics": {
+        "reference_in_evidence": true,
+        "reference_cited": true,
+        "reference_context_ids": [
+          "pqac-d02b3f6e"
+        ],
+        "cited_contexts": 1,
+        "claim_support_checked": false,
+        "note": "Source DOI presence only; does not establish that any claim is supported."
+      },
+      "token_counts": {
+        "ollama_chat/qwen3:8b": [
+          21304,
+          1265
+        ]
+      },
+      "runtime_end": {
+        "system": "Windows-11-10.0.26200-SP0",
+        "ac_line_status": "online",
+        "battery_percent": 100,
+        "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 6686 MiB, 97 %, 60.71 W"
+      }
+    },
+    {
+      "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+      "status": "truncated",
+      "seconds": 304.632,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "reset",
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "reset"
+      ],
+      "grade": {
+        "selected": "D",
+        "expected": "D",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": false,
+        "claim_support_checked": false
+      },
+      "evidence_diagnostics": {
+        "reference_in_evidence": true,
+        "reference_cited": true,
+        "reference_context_ids": [
+          "pqac-a4dd20c3",
+          "pqac-945a09b2",
+          "pqac-43e8d2ee"
+        ],
+        "cited_contexts": 2,
+        "claim_support_checked": false,
+        "note": "Source DOI presence only; does not establish that any claim is supported."
+      },
+      "token_counts": {
+        "ollama_chat/qwen3:8b": [
+          27986,
+          1944
+        ]
+      },
+      "runtime_end": {
+        "system": "Windows-11-10.0.26200-SP0",
+        "ac_line_status": "online",
+        "battery_percent": 100,
+        "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 6592 MiB, 98 %, 80.90 W"
+      }
+    },
+    {
+      "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+      "status": "success",
+      "seconds": 112.736,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "D",
+        "expected": "B",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": false,
+        "correct_completed": false,
+        "claim_support_checked": false
+      },
+      "evidence_diagnostics": {
+        "reference_in_evidence": true,
+        "reference_cited": true,
+        "reference_context_ids": [
+          "pqac-a2a56f34",
+          "pqac-4bc7b839",
+          "pqac-d8f8bc26"
+        ],
+        "cited_contexts": 1,
+        "claim_support_checked": false,
+        "note": "Source DOI presence only; does not establish that any claim is supported."
+      },
+      "token_counts": {
+        "ollama_chat/qwen3:8b": [
+          10368,
+          891
+        ]
+      },
+      "runtime_end": {
+        "system": "Windows-11-10.0.26200-SP0",
+        "ac_line_status": "online",
+        "battery_percent": 100,
+        "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 6516 MiB, 94 %, 67.25 W"
+      }
+    },
+    {
+      "id": "658f7050-d137-477e-8693-26609080cecd",
+      "status": "success",
+      "seconds": 107.762,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "A",
+        "expected": "A",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      },
+      "evidence_diagnostics": {
+        "reference_in_evidence": true,
+        "reference_cited": true,
+        "reference_context_ids": [
+          "pqac-1293a0ee",
+          "pqac-eab346ab"
+        ],
+        "cited_contexts": 2,
+        "claim_support_checked": false,
+        "note": "Source DOI presence only; does not establish that any claim is supported."
+      },
+      "token_counts": {
+        "ollama_chat/qwen3:8b": [
+          9591,
+          677
+        ]
+      },
+      "runtime_end": {
+        "system": "Windows-11-10.0.26200-SP0",
+        "ac_line_status": "online",
+        "battery_percent": 100,
+        "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 6543 MiB, 98 %, 64.49 W"
+      }
+    },
+    {
+      "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+      "status": "fail",
+      "seconds": 134.076,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer"
+      ],
+      "grade": {
+        "selected": "C",
+        "expected": "C",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": false,
+        "claim_support_checked": false
+      },
+      "evidence_diagnostics": {
+        "reference_in_evidence": true,
+        "reference_cited": true,
+        "reference_context_ids": [
+          "pqac-de3c6b57",
+          "pqac-660afb88",
+          "pqac-c5562226"
+        ],
+        "cited_contexts": 1,
+        "claim_support_checked": false,
+        "note": "Source DOI presence only; does not establish that any claim is supported."
+      },
+      "token_counts": {
+        "ollama_chat/qwen3:8b": [
+          8560,
+          700
+        ]
+      },
+      "runtime_end": {
+        "system": "Windows-11-10.0.26200-SP0",
+        "ac_line_status": "online",
+        "battery_percent": 100,
+        "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 6578 MiB, 7 %, 35.13 W"
+      }
+    },
+    {
+      "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+      "status": "unsure",
+      "seconds": 199.404,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "ABSTAIN",
+        "expected": "A",
+        "format_valid": true,
+        "abstained": true,
+        "option_matches_key": false,
+        "correct_completed": false,
+        "claim_support_checked": false
+      },
+      "evidence_diagnostics": {
+        "reference_in_evidence": true,
+        "reference_cited": true,
+        "reference_context_ids": [
+          "pqac-7badcc4d",
+          "pqac-34fe85fe",
+          "pqac-835b188a"
+        ],
+        "cited_contexts": 3,
+        "claim_support_checked": false,
+        "note": "Source DOI presence only; does not establish that any claim is supported."
+      },
+      "token_counts": {
+        "ollama_chat/qwen3:8b": [
+          10307,
+          912
+        ]
+      },
+      "runtime_end": {
+        "system": "Windows-11-10.0.26200-SP0",
+        "ac_line_status": "online",
+        "battery_percent": 100,
+        "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 6785 MiB, 94 %, 62.38 W"
+      }
+    },
+    {
+      "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+      "status": "success",
+      "seconds": 198.869,
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "grade": {
+        "selected": "D",
+        "expected": "D",
+        "format_valid": true,
+        "abstained": false,
+        "option_matches_key": true,
+        "correct_completed": true,
+        "claim_support_checked": false
+      },
+      "evidence_diagnostics": {
+        "reference_in_evidence": true,
+        "reference_cited": true,
+        "reference_context_ids": [
+          "pqac-f3f6b9d3",
+          "pqac-508173db",
+          "pqac-ea1b4958"
+        ],
+        "cited_contexts": 1,
+        "claim_support_checked": false,
+        "note": "Source DOI presence only; does not establish that any claim is supported."
+      },
+      "token_counts": {
+        "ollama_chat/qwen3:8b": [
+          10236,
+          870
+        ]
+      },
+      "runtime_end": {
+        "system": "Windows-11-10.0.26200-SP0",
+        "ac_line_status": "online",
+        "battery_percent": 100,
+        "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 6713 MiB, 62 %, 60.38 W"
+      }
+    }
+  ],
+  "provenance": {
+    "run_id": "20260919T155917Z-d979c5",
+    "started_utc": "2026-09-19T15:59:23.562425+00:00",
+    "python": "3.12.14",
+    "python_utf8_mode": 1,
+    "default_text_encoding": "utf-8",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git": {
+      "head": "a090d385017da65e06d5699b6dd609e2c180bcaf",
+      "status": "M AGENTS.md\n M README.md\n M pyproject.toml\n M src/paperqa_reflect/cli.py\n M src/paperqa_reflect/config.py\n M src/paperqa_reflect/data.py\n M src/paperqa_reflect/runner.py\n M uv.lock\n?? configs/litqa-dev-qwen3-8b.json\n?? configs/litqa-holdout-qwen3-8b.json\n?? data/ATTRIBUTION.md\n?? data/gold/litqa-dev.jsonl\n?? data/gold/litqa-holdout.jsonl\n?? data/manifests/litqa-pilot.json\n?? data/manifests/litqa-selection.json\n?? data/questions/litqa-dev.jsonl\n?? data/questions/litqa-holdout.jsonl\n?? docs/\n?? results/reports/2026-09-19-smoke-series.json\n?? results/reports/2026-09-19-smoke-series.md\n?? scripts/prepare-litqa-pilot.py\n?? src/paperqa_reflect/corpus.py\n?? src/paperqa_reflect/evaluation.py\n?? tests/test_pilot.py"
+    },
+    "code_sha256": {
+      "pyproject.toml": "cf210dd671df6632c31a5e78012a4e2ea83e47b4b8b1948d23d28d66cce93d5c",
+      "uv.lock": "4524732fa414f210491d5c090ab761acd8a1a678cc74829c1e495039ad63cd0f",
+      "src\\paperqa_reflect\\__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+      "src\\paperqa_reflect\\cli.py": "42d04e9583f4ef19fde5d7643dd1bfd9845250f7e283bec9a8f737b28419e47f",
+      "src\\paperqa_reflect\\config.py": "e825d7172d7f4a44ee876a9b6cc532324a6c5152cadef2df995d96e8a4a35345",
+      "src\\paperqa_reflect\\corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+      "src\\paperqa_reflect\\data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+      "src\\paperqa_reflect\\evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+      "src\\paperqa_reflect\\runner.py": "0857360045d97083b60b47a768f6edd5c06cd5acc140f2e906e7862a6d4e9bef"
+    },
+    "config_sha256": "ee18eaacb01832448cebca5ff4cceee4cd342639177dd3321448f2a3afb5a9e3",
+    "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+    "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+    "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c",
+    "corpus": [
+      {
+        "file": "PMC10409721.txt",
+        "sha256": "0d1e243f5ac9c208037eca815679d2e23b99a1ec0d773ffaa0a2ddbad10a8dd2",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10409721/fullTextXML",
+        "source_sha256": "cd9a6a8bcda4efdfb65273f95e21cbe6c430fa48a6aea259ebf9ba2bc85bb4a2",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC10409721",
+        "doi": "10.1038/s41467-023-39770-1",
+        "title": "Lymph node targeted multi-epitope subunit vaccine promotes effective immunity to EBV in HLA-expressing mice.",
+        "year": 2023,
+        "authors": [
+          "Dasari V",
+          "McNeil LK",
+          "Beckett K",
+          "Solomon M",
+          "Ambalathingal G",
+          "Thuy TL",
+          "Panikkar A",
+          "Smith C",
+          "Steinbuck MP",
+          "Jakubowski A",
+          "Seenappa LM",
+          "Palmer E",
+          "Zhang J",
+          "Haqq CM",
+          "DeMuth PC",
+          "Khanna R"
+        ],
+        "journal": "Nature communications",
+        "citation": "Dasari V, McNeil LK, Beckett K, Solomon M, Ambalathingal G, Thuy TL, Panikkar A, Smith C, Steinbuck MP, Jakubowski A, Seenappa LM, Palmer E, Zhang J, Haqq CM, DeMuth PC, Khanna R. Lymph node targeted multi-epitope subunit vaccine promotes effective immunity to EBV in HLA-expressing mice. (2023). doi:10.1038/s41467-023-39770-1",
+        "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.",
+        "text_characters": 72124
+      },
+      {
+        "file": "PMC11077091.txt",
+        "sha256": "31f89b28fa49e6fa43c24e8188d3336f791a942d398c3abb8e0c0d642a8bff1e",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11077091/fullTextXML",
+        "source_sha256": "a853ad6ab33d98537433a7825dc4a9e6140b20c6f7ed1c0de922bf617056f2a7",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC11077091",
+        "doi": "10.1093/nar/gkae252",
+        "title": "Mutation rate heterogeneity at the sub-gene scale due to local DNA hypomethylation.",
+        "year": 2024,
+        "authors": [
+          "Mas-Ponte D",
+          "Supek F"
+        ],
+        "journal": "Nucleic acids research",
+        "citation": "Mas-Ponte D, Supek F. Mutation rate heterogeneity at the sub-gene scale due to local DNA hypomethylation. (2024). doi:10.1093/nar/gkae252",
+        "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.",
+        "text_characters": 80209
+      },
+      {
+        "file": "PMC9683785.txt",
+        "sha256": "576b0c7cac322b7283c60a3ae06b125b933896c87e1db6ad13d90b93a6e092ff",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9683785/fullTextXML",
+        "source_sha256": "5c5f94b477652725865008c355d8529acc96dd7b8454f0e476bbac15cc9a4744",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC9683785",
+        "doi": "10.7554/elife.76630",
+        "title": "Structural and thermodynamic analyses of the β-to-α transformation in RfaH reveal principles of fold-switching proteins.",
+        "year": 2022,
+        "authors": [
+          "Zuber PK",
+          "Daviter T",
+          "Heißmann R",
+          "Persau U",
+          "Schweimer K",
+          "Knauer SH"
+        ],
+        "journal": "eLife",
+        "citation": "Zuber PK, Daviter T, Heißmann R, Persau U, Schweimer K, Knauer SH. Structural and thermodynamic analyses of the β-to-α transformation in RfaH reveal principles of fold-switching proteins. (2022). doi:10.7554/elife.76630",
+        "license_text": "https://creativecommons.org/licenses/by/4.0/This article is distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use and redistribution provided that the original author and source are credited.",
+        "text_characters": 101921
+      },
+      {
+        "file": "PMC9605863.txt",
+        "sha256": "5a90ab042c1c7986d428aca3a212388a3634355ee606fc4ac10a7d3d5a1fd484",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9605863/fullTextXML",
+        "source_sha256": "c198c3da88aa8d978a1c2be7705571e04b7e16a4508a932f6fea077e223f730b",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC9605863",
+        "doi": "10.1038/s41586-022-05256-1",
+        "title": "Borgs are giant genetic elements with potential to expand metabolic capacity.",
+        "year": 2022,
+        "authors": [
+          "Al-Shayeb B",
+          "Schoelmerich MC",
+          "West-Roberts J",
+          "Valentin-Alvarado LE",
+          "Sachdeva R",
+          "Mullen S",
+          "Crits-Christoph A",
+          "Wilkins MJ",
+          "Williams KH",
+          "Doudna JA",
+          "Banfield JF"
+        ],
+        "journal": "Nature",
+        "citation": "Al-Shayeb B, Schoelmerich MC, West-Roberts J, Valentin-Alvarado LE, Sachdeva R, Mullen S, Crits-Christoph A, Wilkins MJ, Williams KH, Doudna JA, Banfield JF. Borgs are giant genetic elements with potential to expand metabolic capacity. (2022). doi:10.1038/s41586-022-05256-1",
+        "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.",
+        "text_characters": 35327
+      },
+      {
+        "file": "PMC10748745.txt",
+        "sha256": "1528aac3f2a145a38f3ebb63936ea43a64c72a2a34305ffb90751a50a50c8442",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10748745/fullTextXML",
+        "source_sha256": "bb495c8ba4d4f7abe5f30a8fc3da08daf20f10f931e119f2d2203c9f3357a505",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC10748745",
+        "doi": "10.1093/molbev/msad271",
+        "title": "Phylloxera and Aphids Show Distinct Features of Genome Evolution Despite Similar Reproductive Modes.",
+        "year": 2023,
+        "authors": [
+          "Li Z",
+          "Xue AZ",
+          "Maeda GP",
+          "Li Y",
+          "Nabity PD",
+          "Moran NA"
+        ],
+        "journal": "Molecular biology and evolution",
+        "citation": "Li Z, Xue AZ, Maeda GP, Li Y, Nabity PD, Moran NA. Phylloxera and Aphids Show Distinct Features of Genome Evolution Despite Similar Reproductive Modes. (2023). doi:10.1093/molbev/msad271",
+        "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial License (https://creativecommons.org/licenses/by-nc/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re-use, please contact journals.permissions@oup.com",
+        "text_characters": 51735
+      },
+      {
+        "file": "PMC11077093.txt",
+        "sha256": "54c72ecc5ecdbc9d3b0810dee356447889d790519254f2455eb21f5f6dd0cd5d",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11077093/fullTextXML",
+        "source_sha256": "d0d93c147d2199d63439a62f723d707f613378534fdb4e72ec86070db590491f",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC11077093",
+        "doi": "10.1093/nar/gkae102",
+        "title": "Novel insights into the role of translesion synthesis polymerase in DNA incorporation and bypass of 5-fluorouracil in colorectal cancer.",
+        "year": 2024,
+        "authors": [
+          "Averill JR",
+          "Lin JC",
+          "Jung J",
+          "Jung H"
+        ],
+        "journal": "Nucleic acids research",
+        "citation": "Averill JR, Lin JC, Jung J, Jung H. Novel insights into the role of translesion synthesis polymerase in DNA incorporation and bypass of 5-fluorouracil in colorectal cancer. (2024). doi:10.1093/nar/gkae102",
+        "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial License (https://creativecommons.org/licenses/by-nc/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re-use, please contact journals.permissions@oup.com",
+        "text_characters": 82081
+      },
+      {
+        "file": "PMC11077092.txt",
+        "sha256": "0b725a273d11f01013876f808e9f00bc7f976aef2ff91ba4fbe82fc68e89bb4a",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11077092/fullTextXML",
+        "source_sha256": "e20b3de8de469a19baa95c307bb5d1eef07525e9b8c13f922c6472c5e42e826e",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC11077092",
+        "doi": "10.1093/nar/gkae130",
+        "title": "COSA-1 mediated pro-crossover complex formation promotes meiotic crossing over in C. elegans.",
+        "year": 2024,
+        "authors": [
+          "Yang Y",
+          "Wang N",
+          "Liu G",
+          "Nan W",
+          "Wang B",
+          "Gartner A",
+          "Zhang H",
+          "Hong Y"
+        ],
+        "journal": "Nucleic acids research",
+        "citation": "Yang Y, Wang N, Liu G, Nan W, Wang B, Gartner A, Zhang H, Hong Y. COSA-1 mediated pro-crossover complex formation promotes meiotic crossing over in C. elegans. (2024). doi:10.1093/nar/gkae130",
+        "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.",
+        "text_characters": 77585
+      },
+      {
+        "file": "PMC11077077.txt",
+        "sha256": "46f6a25b1d4c2ff9b36ce54fca01d6e1da9c0f6d40c2e06063edc1f4e9fd2fd1",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11077077/fullTextXML",
+        "source_sha256": "1aa68f859b00824b63aef7c2f73ecf4a1abf50d26ae7fc5e4b9bf43fce958756",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC11077077",
+        "doi": "10.1093/nar/gkae212",
+        "title": "The crystal structure of bacteriophage λ RexA provides novel insights into the DNA binding properties of Rex-like phage exclusion proteins.",
+        "year": 2024,
+        "authors": [
+          "Adams MC",
+          "Schiltz CJ",
+          "Sun J",
+          "Hosford CJ",
+          "Johnson VM",
+          "Pan H",
+          "Borbat PP",
+          "Freed JH",
+          "Thomason LC",
+          "Court C",
+          "Court DL",
+          "Chappie JS"
+        ],
+        "journal": "Nucleic acids research",
+        "citation": "Adams MC, Schiltz CJ, Sun J, Hosford CJ, Johnson VM, Pan H, Borbat PP, Freed JH, Thomason LC, Court C, Court DL, Chappie JS. The crystal structure of bacteriophage λ RexA provides novel insights into the DNA binding properties of Rex-like phage exclusion proteins. (2024). doi:10.1093/nar/gkae212",
+        "license_text": "https://creativecommons.org/licenses/by/4.0/This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.",
+        "text_characters": 63246
+      },
+      {
+        "file": "PMC11062931.txt",
+        "sha256": "a390da355989a8b5ba049431212be347e42c4d06f1143c92e790e90ead05da20",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11062931/fullTextXML",
+        "source_sha256": "0ddaeadcac56c12990ef80f26c586e663322496d0ae40a069a52ac02cd024c75",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC11062931",
+        "doi": "10.1038/s41586-024-07298-z",
+        "title": "Streptomyces umbrella toxin particles block hyphal growth of competing species.",
+        "year": 2024,
+        "authors": [
+          "Zhao Q",
+          "Bertolli S",
+          "Park YJ",
+          "Tan Y",
+          "Cutler KJ",
+          "Srinivas P",
+          "Asfahl KL",
+          "Fonesca-García C",
+          "Gallagher LA",
+          "Li Y",
+          "Wang Y",
+          "Coleman-Derr D",
+          "DiMaio F",
+          "Zhang D",
+          "Peterson SB",
+          "Veesler D",
+          "Mougous JD"
+        ],
+        "journal": "Nature",
+        "citation": "Zhao Q, Bertolli S, Park YJ, Tan Y, Cutler KJ, Srinivas P, Asfahl KL, Fonesca-García C, Gallagher LA, Li Y, Wang Y, Coleman-Derr D, DiMaio F, Zhang D, Peterson SB, Veesler D, Mougous JD. Streptomyces umbrella toxin particles block hyphal growth of competing species. (2024). doi:10.1038/s41586-024-07298-z",
+        "license_text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.",
+        "text_characters": 105609
+      },
+      {
+        "file": "PMC10765522.txt",
+        "sha256": "5cc0a94aabf167310f7772ee23c0fb260bc381ba276937388ef79ced894164a6",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10765522/fullTextXML",
+        "source_sha256": "1d7aea455ed0d0bc55bf1eae2a7f006b8f0d1f980be46c5673479114bff121ee",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC10765522",
+        "doi": "10.1038/s41586-023-06845-4",
+        "title": "RNA-mediated symmetry breaking enables singular olfactory receptor choice.",
+        "year": 2024,
+        "authors": [
+          "Pourmorady AD",
+          "Bashkirova EV",
+          "Chiariello AM",
+          "Belagzhal H",
+          "Kodra A",
+          "Duffié R",
+          "Kahiapo J",
+          "Monahan K",
+          "Pulupa J",
+          "Schieren I",
+          "Osterhoudt A",
+          "Dekker J",
+          "Nicodemi M",
+          "Lomvardas S"
+        ],
+        "journal": "Nature",
+        "citation": "Pourmorady AD, Bashkirova EV, Chiariello AM, Belagzhal H, Kodra A, Duffié R, Kahiapo J, Monahan K, Pulupa J, Schieren I, Osterhoudt A, Dekker J, Nicodemi M, Lomvardas S. RNA-mediated symmetry breaking enables singular olfactory receptor choice. (2024). doi:10.1038/s41586-023-06845-4",
+        "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.",
+        "text_characters": 61870
+      },
+      {
+        "file": "PMC10773119.txt",
+        "sha256": "359d98394ca3b4f21f07e54915109a9ac30923b1330a01418eb0e615cc27cc5c",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10773119/fullTextXML",
+        "source_sha256": "72788a2661738a2f528c11132d336517ffc6fe99dc181c55d5779462650b1b8e",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC10773119",
+        "doi": "10.1186/s12915-023-01805-w",
+        "title": "TMPRSS2 isoform 1 downregulation by G-quadruplex stabilization induces SARS-CoV-2 replication arrest.",
+        "year": 2024,
+        "authors": [
+          "De Magis A",
+          "Schult P",
+          "Schönleber A",
+          "Linke R",
+          "Ludwig KU",
+          "Kümmerer BM",
+          "Paeschke K"
+        ],
+        "journal": "BMC biology",
+        "citation": "De Magis A, Schult P, Schönleber A, Linke R, Ludwig KU, Kümmerer BM, Paeschke K. TMPRSS2 isoform 1 downregulation by G-quadruplex stabilization induces SARS-CoV-2 replication arrest. (2024). doi:10.1186/s12915-023-01805-w",
+        "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data.",
+        "text_characters": 59110
+      },
+      {
+        "file": "PMC10530073.txt",
+        "sha256": "e5c13835cfcfe57ed3a5dd9b03e6a6706f24e4474f22cc2db63291df0ee16c6c",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10530073/fullTextXML",
+        "source_sha256": "fa9ea2a3cde0845c4f777c181d74a0c45203460e189bfb3f4a765374eea4db44",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC10530073",
+        "doi": "10.1126/sciadv.adk0171",
+        "title": "Programmable RNA-guided DNA endonucleases are widespread in eukaryotes and their viruses.",
+        "year": 2023,
+        "authors": [
+          "Jiang K",
+          "Lim J",
+          "Sgrizzi S",
+          "Trinh M",
+          "Kayabolen A",
+          "Yutin N",
+          "Bao W",
+          "Kato K",
+          "Koonin EV",
+          "Gootenberg JS",
+          "Abudayyeh OO"
+        ],
+        "journal": "Science advances",
+        "citation": "Jiang K, Lim J, Sgrizzi S, Trinh M, Kayabolen A, Yutin N, Bao W, Kato K, Koonin EV, Gootenberg JS, Abudayyeh OO. Programmable RNA-guided DNA endonucleases are widespread in eukaryotes and their viruses. (2023). doi:10.1126/sciadv.adk0171",
+        "license_text": "https://creativecommons.org/licenses/by-nc/4.0/This is an open-access article distributed under the terms of the Creative Commons Attribution-NonCommercial license, which permits use, distribution, and reproduction in any medium, so long as the resultant use is not for commercial advantage and provided the original work is properly cited.",
+        "text_characters": 65722
+      },
+      {
+        "file": "PMC9130329.txt",
+        "sha256": "d83aa4d2611641dc539aaf2dc3589fe5df78e98953d7799c598e87110ba790d0",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9130329/fullTextXML",
+        "source_sha256": "17271d92127ef4cc873f98e16494d6b71ca38b32249ac4ae5ef64e5dc05b486a",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC9130329",
+        "doi": "10.1038/s41467-022-30570-7",
+        "title": "Functional expression of opioid receptors and other human GPCRs in yeast engineered to produce human sterols.",
+        "year": 2022,
+        "authors": [
+          "Bean BDM",
+          "Mulvihill CJ",
+          "Garge RK",
+          "Boutz DR",
+          "Rousseau O",
+          "Floyd BM",
+          "Cheney W",
+          "Gardner EC",
+          "Ellington AD",
+          "Marcotte EM",
+          "Gollihar JD",
+          "Whiteway M",
+          "Martin VJJ"
+        ],
+        "journal": "Nature communications",
+        "citation": "Bean BDM, Mulvihill CJ, Garge RK, Boutz DR, Rousseau O, Floyd BM, Cheney W, Gardner EC, Ellington AD, Marcotte EM, Gollihar JD, Whiteway M, Martin VJJ. Functional expression of opioid receptors and other human GPCRs in yeast engineered to produce human sterols. (2022). doi:10.1038/s41467-022-30570-7",
+        "license_text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.",
+        "text_characters": 78121
+      },
+      {
+        "file": "PMC10764289.txt",
+        "sha256": "6ebf2d13f1682b078de8e7a429a20ec4bad9951b2ed887fd49983e6604bfa4e0",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10764289/fullTextXML",
+        "source_sha256": "f872b8da2a4797fad1bf692cfcb851373524e9f84d0e49e6405de9879c69d44b",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC10764289",
+        "doi": "10.1038/s41586-023-06850-7",
+        "title": "Cytoneme-mediated transport of active Wnt5b-Ror2 complexes in zebrafish.",
+        "year": 2024,
+        "authors": [
+          "Zhang C",
+          "Brunt L",
+          "Ono Y",
+          "Rogers S",
+          "Scholpp S"
+        ],
+        "journal": "Nature",
+        "citation": "Zhang C, Brunt L, Ono Y, Rogers S, Scholpp S. Cytoneme-mediated transport of active Wnt5b-Ror2 complexes in zebrafish. (2024). doi:10.1038/s41586-023-06850-7",
+        "license_text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.",
+        "text_characters": 97376
+      },
+      {
+        "file": "PMC10917522.txt",
+        "sha256": "00034ddf16c97544208e3550b98bf5bd052246d76b866d621ac013f1bfd4b14e",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10917522/fullTextXML",
+        "source_sha256": "4a531fda752ef29a04340010690e07f92164c02b9c251f6949a9cc4709cd0813",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC10917522",
+        "doi": "10.1093/g3journal/jkad293",
+        "title": "Systematic profiling of ale yeast protein dynamics across fermentation and repitching.",
+        "year": 2024,
+        "authors": [
+          "Garge RK",
+          "Geck RC",
+          "Armstrong JO",
+          "Dunn B",
+          "Boutz DR",
+          "Battenhouse A",
+          "Leutert M",
+          "Dang V",
+          "Jiang P",
+          "Kwiatkowski D",
+          "Peiser T",
+          "McElroy H",
+          "Marcotte EM",
+          "Dunham MJ"
+        ],
+        "journal": "G3 (Bethesda, Md.)",
+        "citation": "Garge RK, Geck RC, Armstrong JO, Dunn B, Boutz DR, Battenhouse A, Leutert M, Dang V, Jiang P, Kwiatkowski D, Peiser T, McElroy H, Marcotte EM, Dunham MJ. Systematic profiling of ale yeast protein dynamics across fermentation and repitching. (2024). doi:10.1093/g3journal/jkad293",
+        "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.",
+        "text_characters": 79616
+      },
+      {
+        "file": "PMC7649238.txt",
+        "sha256": "84d22922a0a58eb54cc6018344c458b5c69a37b54300a0f589ee7e555e3711f2",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7649238/fullTextXML",
+        "source_sha256": "56b1c663ba865519fbb34fabc73ea45443d7fee29abafc11122ff1cde027789b",
+        "transform": "jats-body-text-v1",
+        "pmcid": "PMC7649238",
+        "doi": "10.2147/cmar.s262421",
+        "title": "<i>HNRNPCL1, PRAMEF1, CFAP74</i>, and <i>DFFB</i>: Common Potential Biomarkers for Sporadic and Suspected Lynch Syndrome Endometrial Cancer.",
+        "year": 2020,
+        "authors": [
+          "Gao Y",
+          "Zhang X",
+          "Wang T",
+          "Zhang Y",
+          "Wang Q",
+          "Hu Y"
+        ],
+        "journal": "Cancer management and research",
+        "citation": "Gao Y, Zhang X, Wang T, Zhang Y, Wang Q, Hu Y. <i>HNRNPCL1, PRAMEF1, CFAP74</i>, and <i>DFFB</i>: Common Potential Biomarkers for Sporadic and Suspected Lynch Syndrome Endometrial Cancer. (2020). doi:10.2147/cmar.s262421",
+        "license_text": "This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.php and incorporate the Creative Commons Attribution – Non Commercial (unported, v3.0) License (http://creativecommons.org/licenses/by-nc/3.0/). By accessing the work you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).",
+        "text_characters": 35814
+      }
+    ],
+    "ollama": {
+      "version": "0.30.10",
+      "models": {
+        "nomic-embed-text:latest": {
+          "name": "nomic-embed-text:latest",
+          "model": "nomic-embed-text:latest",
+          "modified_at": "2026-04-15T20:46:14.3932791+02:00",
+          "size": 274302450,
+          "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "nomic-bert",
+            "families": [
+              "nomic-bert"
+            ],
+            "parameter_size": "137M",
+            "quantization_level": "F16",
+            "context_length": 2048,
+            "embedding_length": 768
+          },
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        "qwen3:8b": {
+          "name": "qwen3:8b",
+          "model": "qwen3:8b",
+          "modified_at": "2026-04-15T20:44:46.0523465+02:00",
+          "size": 5225388164,
+          "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "8.2B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 4096
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        }
+      }
+    },
+    "runtime_start": {
+      "system": "Windows-11-10.0.26200-SP0",
+      "ac_line_status": "online",
+      "battery_percent": 100,
+      "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 610.62, 8188 MiB, 1039 MiB, 41 %, 5.84 W"
+    },
+    "packages": {
+      "paper-qa": "2026.8.12",
+      "paper-qa-pypdf": "2026.8.12",
+      "fhlmi": "0.45.0",
+      "fhaviary": "0.37.0",
+      "litellm": "1.84.1",
+      "pypdf": "6.19.0"
+    },
+    "question_ids": [
+      "22306bd7-7e84-415d-aebb-11c6312eb081",
+      "b105af85-833e-48bc-ac78-48f73c9673fd",
+      "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+      "487539f9-2f17-4009-aa4a-c41322445f11",
+      "658f7050-d137-477e-8693-26609080cecd",
+      "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+      "77a41274-cd9c-48bc-a347-e0746907840d",
+      "983f1ef5-fc7d-4f4a-8f48-e704641eae12"
+    ],
+    "timing": "Index measured separately; question time includes model loading/switching. Warmness uncontrolled.",
+    "protocol": "litqa-pilot-v1",
+    "split": "dev"
+  },
+  "excluded_attempt": {
+    "run_id": "20260919T155017Z-73ddc2",
+    "reason": "Stopped after two completed questions because Windows default TXT decoding corrupted scientific symbols. Third question interrupted. Preserved as diagnostic; complete rerun after UTF-8 fix."
+  },
+  "validation": {
+    "pytest_passed": 29,
+    "ruff": "lint and format passed",
+    "utf8_source_reader_matches": 16
+  },
+  "review": "2026-09-19-litqa-pilot-review.json; assistant review, not an independent domain expert or automated judge",
+  "limitations": [
+    "Small OA-selected public biomedical subset, not full LitQA2 or publication reproduction.",
+    "Timing includes model loading/switching; warmness uncontrolled and VRAM snapshots are not peaks.",
+    "Source DOI presence is not claim entailment; raw key matching and valid agent completion differ.",
+    "No hosted judge, verifier, new retrieval policy or model-selection experiment performed."
+  ]
+}

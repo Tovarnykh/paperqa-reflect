@@ -8,6 +8,8 @@ from pathlib import Path
 
 import httpx
 
+from .corpus import source_to_document
+
 
 def sha256(path: Path) -> str:
     with path.open("rb") as stream:
@@ -29,8 +31,11 @@ def manifest_documents(root: Path, config) -> list[dict]:
     names = [doc["file"] for doc in documents]
     if not names or len(names) != len(set(names)):
         raise ValueError("The manifest must contain unique source files.")
-    if any(Path(name).name != name or Path(name).suffix.lower() != ".pdf" for name in names):
-        raise ValueError("The smoke corpus accepts plain PDF filenames only.")
+    if any(
+        Path(name).name != name or Path(name).suffix.lower() not in {".pdf", ".txt"}
+        for name in names
+    ):
+        raise ValueError("The corpus accepts plain PDF/text filenames only.")
     return documents
 
 
@@ -65,8 +70,11 @@ def prepare_corpus(root: Path, config, source: Path | None = None):
             response = httpx.get(doc["url"], timeout=120, follow_redirects=True)
             response.raise_for_status()
             payload = response.content
-        if hashlib.sha256(payload).hexdigest() != doc["sha256"]:
+        if hashlib.sha256(payload).hexdigest() != doc.get("source_sha256", doc["sha256"]):
             raise ValueError(f"Source hash mismatch for {doc['file']}")
+        payload = source_to_document(payload, doc)
+        if hashlib.sha256(payload).hexdigest() != doc["sha256"]:
+            raise ValueError(f"Extracted text hash mismatch for {doc['file']}")
         target.write_bytes(payload)
     return validate_corpus(root, config)
 
@@ -102,12 +110,15 @@ def paperqa_manifest(path: Path, documents: list[dict]):
 
 def question_prompt(question: dict) -> str:
     # Whitelist the input fields: even an accidentally merged key is never passed to the model.
+    labels = tuple(question["options"])
+    if not 2 <= len(labels) <= 26 or labels != tuple("ABCDEFGHIJKLMNOPQRSTUVWXYZ"[: len(labels)]):
+        raise ValueError("Options must use consecutive uppercase letters, starting at A")
     options = "\n".join(f"{key}. {value}" for key, value in question["options"].items())
     return (
         f"{question['question']}\n\n{options}\n\n"
         "Use evidence from the available papers and cite the relevant passage. "
         "End your answer with one line in the exact format 'Final answer: X', "
-        "where X is A, B, C or D. If the evidence is insufficient, "
+        f"where X is one of {', '.join(labels)}. If the evidence is insufficient, "
         "write 'Final answer: ABSTAIN'."
     )
 
@@ -118,6 +129,7 @@ def grade(
     status: str,
     declared_success: bool | None,
     citation_ids: tuple[str, ...] = (),
+    valid_options: tuple[str, ...] = ("A", "B", "C", "D"),
 ) -> dict:
     # Grade the raw answer. Remove only parenthesized citations that refer to actual contexts.
     # An unknown citation or an aside such as '(or C)' must not be silently discarded.
@@ -127,8 +139,11 @@ def grade(
 
     clean = re.sub(r"\(([^()\r\n]+)\)", remove_known_citations, answer)
     clean = clean.replace("**", "")
-    matches = re.findall(r"(?im)^\s*Final answer:\s*(ABSTAIN|[A-D])\s*[.!]?\s*$", clean)
+    matches = re.findall(r"(?im)^\s*Final answer:\s*(ABSTAIN|[A-Z])\s*[.!]?\s*$", clean)
+    matches = [item.upper() for item in matches]
     selected = matches[0].upper() if len(set(matches)) == 1 else None
+    if selected not in {*valid_options, "ABSTAIN"}:
+        selected = None
     # Accuracy is separate from successful termination and from source/claim verification.
     return {
         "selected": selected,

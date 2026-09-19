@@ -1,0 +1,103 @@
+{
+  "checked_utc": "2026-09-19T16:00:56.930282+00:00",
+  "reader": "paperqa.readers.parse_text, Python -X utf8",
+  "documents": [
+    {
+      "file": "PMC10409721.txt",
+      "sha256": "0d1e243f5ac9c208037eca815679d2e23b99a1ec0d773ffaa0a2ddbad10a8dd2",
+      "characters": 72124,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC11077091.txt",
+      "sha256": "31f89b28fa49e6fa43c24e8188d3336f791a942d398c3abb8e0c0d642a8bff1e",
+      "characters": 80209,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC9683785.txt",
+      "sha256": "576b0c7cac322b7283c60a3ae06b125b933896c87e1db6ad13d90b93a6e092ff",
+      "characters": 101921,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC9605863.txt",
+      "sha256": "5a90ab042c1c7986d428aca3a212388a3634355ee606fc4ac10a7d3d5a1fd484",
+      "characters": 35327,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC10748745.txt",
+      "sha256": "1528aac3f2a145a38f3ebb63936ea43a64c72a2a34305ffb90751a50a50c8442",
+      "characters": 51735,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC11077093.txt",
+      "sha256": "54c72ecc5ecdbc9d3b0810dee356447889d790519254f2455eb21f5f6dd0cd5d",
+      "characters": 82081,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC11077092.txt",
+      "sha256": "0b725a273d11f01013876f808e9f00bc7f976aef2ff91ba4fbe82fc68e89bb4a",
+      "characters": 77585,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC11077077.txt",
+      "sha256": "46f6a25b1d4c2ff9b36ce54fca01d6e1da9c0f6d40c2e06063edc1f4e9fd2fd1",
+      "characters": 63246,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC11062931.txt",
+      "sha256": "a390da355989a8b5ba049431212be347e42c4d06f1143c92e790e90ead05da20",
+      "characters": 105609,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC10765522.txt",
+      "sha256": "5cc0a94aabf167310f7772ee23c0fb260bc381ba276937388ef79ced894164a6",
+      "characters": 61870,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC10773119.txt",
+      "sha256": "359d98394ca3b4f21f07e54915109a9ac30923b1330a01418eb0e615cc27cc5c",
+      "characters": 59110,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC10530073.txt",
+      "sha256": "e5c13835cfcfe57ed3a5dd9b03e6a6706f24e4474f22cc2db63291df0ee16c6c",
+      "characters": 65722,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC9130329.txt",
+      "sha256": "d83aa4d2611641dc539aaf2dc3589fe5df78e98953d7799c598e87110ba790d0",
+      "characters": 78121,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC10764289.txt",
+      "sha256": "6ebf2d13f1682b078de8e7a429a20ec4bad9951b2ed887fd49983e6604bfa4e0",
+      "characters": 97376,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC10917522.txt",
+      "sha256": "00034ddf16c97544208e3550b98bf5bd052246d76b866d621ac013f1bfd4b14e",
+      "characters": 79616,
+      "upstream_reader_matches_utf8_source": true
+    },
+    {
+      "file": "PMC7649238.txt",
+      "sha256": "84d22922a0a58eb54cc6018344c458b5c69a37b54300a0f589ee7e555e3711f2",
+      "characters": 35814,
+      "upstream_reader_matches_utf8_source": true
+    }
+  ],
+  "note": "Text decoding equality only; not scientific correctness, visual layout or claim entailment."
+}

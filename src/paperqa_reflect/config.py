@@ -35,6 +35,10 @@ class ExperimentConfig(BaseModel):
     corpus_manifest: str
     questions: str
     gold: str
+    protocol: str = "smoke-v1"
+    split: str = "dev"
+    preindex: bool = False
+    index_timeout_seconds: int = Field(1800, gt=0)
 
     @model_validator(mode="after")
     def validate_local_experiment(self):

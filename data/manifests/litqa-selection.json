@@ -1,0 +1,313 @@
+{
+  "dataset": "futurehouse/lab-bench",
+  "configuration": "LitQA2",
+  "upstream_split": "train",
+  "revision": "5c77cec648430f30611808808861eb86f81d5eaa",
+  "url": "https://huggingface.co/datasets/futurehouse/lab-bench/resolve/5c77cec648430f30611808808861eb86f81d5eaa/LitQA2/train-00000-of-00001.parquet",
+  "sha256": "3e578fdaaa4728a77e884954dbf85ae0e3899791631a3be0838313b3e2334114",
+  "rows": 199,
+  "license": "CC-BY-SA-4.0",
+  "selection": "SHA256(prefix + id) ascending; first 16 eligible unique sources, alternate dev/holdout",
+  "prefix": "ikt464-pilot-v1:",
+  "eligibility": "Europe PMC OA JATS main body >=5000 characters; unique options, 2..26 choices; no source overlap",
+  "not_used_for_selection": [
+    "model outputs",
+    "answer correctness",
+    "key passage match"
+  ],
+  "selected_ids": [
+    "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "39c985ce-70e8-48e4-bd76-744cd07cb56a",
+    "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "c6e11fac-8f9c-4cf1-aa6e-4d25731ba74f",
+    "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "afb36e40-0836-4810-909e-eabfe17dcd8b",
+    "487539f9-2f17-4009-aa4a-c41322445f11",
+    "b2a0249b-2850-4576-8b78-8408c1e47324",
+    "658f7050-d137-477e-8693-26609080cecd",
+    "76184ccf-4bf0-469e-a442-11d04b4ff8b0",
+    "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "7a42c784-7ae0-48fe-a71f-0a547b8fabb3",
+    "77a41274-cd9c-48bc-a347-e0746907840d",
+    "7975ddb0-a784-4f85-a297-c80e1cb5dcf2",
+    "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "c3816cb5-8c87-4946-b133-43f415ab6b2a"
+  ],
+  "attempted": [
+    {
+      "rank": 1,
+      "id": "7e7150d6-bc73-4a29-a5b3-4ef8399ed947",
+      "source_dois": [
+        "10.1016/j.cell.2023.05.041",
+        "10.1101/2023.05.21.541555"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 2,
+      "id": "85c67ef3-322c-42b4-b745-c05e07e7b8ac",
+      "source_dois": [
+        "10.1016/j.celrep.2024.114044"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 3,
+      "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+      "source_dois": [
+        "10.1038/s41467-023-39770-1"
+      ],
+      "selected": "dev",
+      "file": "PMC10409721.txt"
+    },
+    {
+      "rank": 4,
+      "id": "c9bdb9b5-28c1-44da-93b6-b1fc9d8bf369",
+      "source_dois": [
+        "10.1016/j.cell.2024.04.015"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 5,
+      "id": "a18883e9-218a-4719-8d2c-cf94d740de1a",
+      "source_dois": [
+        "10.1016/j.stem.2021.12.011"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 6,
+      "id": "8d61a14b-60ef-43b0-8003-b60cb6657428",
+      "source_dois": [
+        "10.1038/s41587-023-01801-z"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 7,
+      "id": "39c985ce-70e8-48e4-bd76-744cd07cb56a",
+      "source_dois": [
+        "10.1093/nar/gkae252"
+      ],
+      "selected": "holdout",
+      "file": "PMC11077091.txt"
+    },
+    {
+      "rank": 8,
+      "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+      "source_dois": [
+        "10.7554/elife.76630"
+      ],
+      "selected": "dev",
+      "file": "PMC9683785.txt"
+    },
+    {
+      "rank": 9,
+      "id": "12321eab-6ad6-4218-8815-18bc51c14544",
+      "source_dois": [
+        "10.1101/2024.02.06.579151"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 10,
+      "id": "c6e11fac-8f9c-4cf1-aa6e-4d25731ba74f",
+      "source_dois": [
+        "10.1038/s41586-022-05256-1"
+      ],
+      "selected": "holdout",
+      "file": "PMC9605863.txt"
+    },
+    {
+      "rank": 11,
+      "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+      "source_dois": [
+        "10.1093/molbev/msad271"
+      ],
+      "selected": "dev",
+      "file": "PMC10748745.txt"
+    },
+    {
+      "rank": 12,
+      "id": "afb36e40-0836-4810-909e-eabfe17dcd8b",
+      "source_dois": [
+        "10.1093/nar/gkae102"
+      ],
+      "selected": "holdout",
+      "file": "PMC11077093.txt"
+    },
+    {
+      "rank": 13,
+      "id": "255fd5fb-9623-4030-8bf2-253247df7c82",
+      "source_dois": [
+        "10.1016/j.chom.2022.02.006"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 14,
+      "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+      "source_dois": [
+        "10.1093/nar/gkae130"
+      ],
+      "selected": "dev",
+      "file": "PMC11077092.txt"
+    },
+    {
+      "rank": 15,
+      "id": "20980744-f9ff-4e39-a08d-106eada6900c",
+      "source_dois": [
+        "10.1038/s41586-022-05570-8"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 16,
+      "id": "dd29920d-cb70-440f-961c-3e1103776c4f",
+      "source_dois": [
+        "10.1126/science.aba1624"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": [
+        "PMC9970000: HTTPStatusError: Server error '500 ' for url 'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9970000/fullTextXML'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+      ]
+    },
+    {
+      "rank": 17,
+      "id": "6aa10957-bdd9-4dab-a4e1-234a17cb87dd",
+      "source_dois": [
+        "10.1016/j.immuni.2022.03.018"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 18,
+      "id": "b2a0249b-2850-4576-8b78-8408c1e47324",
+      "source_dois": [
+        "10.1093/nar/gkae212"
+      ],
+      "selected": "holdout",
+      "file": "PMC11077077.txt"
+    },
+    {
+      "rank": 19,
+      "id": "4bb69c9d-2485-42d2-b8aa-aa647b407ca4",
+      "source_dois": [
+        "10.1101/2023.12.19.572360"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 20,
+      "id": "658f7050-d137-477e-8693-26609080cecd",
+      "source_dois": [
+        "10.1038/s41586-024-07298-z"
+      ],
+      "selected": "dev",
+      "file": "PMC11062931.txt"
+    },
+    {
+      "rank": 21,
+      "id": "76184ccf-4bf0-469e-a442-11d04b4ff8b0",
+      "source_dois": [
+        "10.1038/s41586-023-06845-4"
+      ],
+      "selected": "holdout",
+      "file": "PMC10765522.txt"
+    },
+    {
+      "rank": 22,
+      "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+      "source_dois": [
+        "10.1186/s12915-023-01805-w"
+      ],
+      "selected": "dev",
+      "file": "PMC10773119.txt"
+    },
+    {
+      "rank": 23,
+      "id": "7a42c784-7ae0-48fe-a71f-0a547b8fabb3",
+      "source_dois": [
+        "10.1126/sciadv.adk0171"
+      ],
+      "selected": "holdout",
+      "file": "PMC10530073.txt"
+    },
+    {
+      "rank": 24,
+      "id": "f7346ea0-5f1b-45e9-a1d6-493c754159c1",
+      "source_dois": [
+        "10.1007/s00125-024-06103-w"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": [
+        "PMC10954967: HTTPStatusError: Server error '500 ' for url 'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10954967/fullTextXML'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+      ]
+    },
+    {
+      "rank": 25,
+      "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+      "source_dois": [
+        "10.1038/s41467-022-30570-7"
+      ],
+      "selected": "dev",
+      "file": "PMC9130329.txt"
+    },
+    {
+      "rank": 26,
+      "id": "850f86d3-0139-43df-89fd-e606c30aaa8b",
+      "source_dois": [
+        "10.1016/j.immuni.2021.12.015"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 27,
+      "id": "7975ddb0-a784-4f85-a297-c80e1cb5dcf2",
+      "source_dois": [
+        "10.1038/s41586-023-06850-7"
+      ],
+      "selected": "holdout",
+      "file": "PMC10764289.txt"
+    },
+    {
+      "rank": 28,
+      "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+      "source_dois": [
+        "10.1093/g3journal/jkad293"
+      ],
+      "selected": "dev",
+      "file": "PMC10917522.txt"
+    },
+    {
+      "rank": 29,
+      "id": "178a5e56-340f-4ba8-a3e5-f024ca016f40",
+      "source_dois": [
+        "10.1101/2024.05.13.593833"
+      ],
+      "excluded": "no accessible Europe PMC OA JATS body",
+      "errors": []
+    },
+    {
+      "rank": 30,
+      "id": "c3816cb5-8c87-4946-b133-43f415ab6b2a",
+      "source_dois": [
+        "10.2147/cmar.s262421"
+      ],
+      "selected": "holdout",
+      "file": "PMC7649238.txt"
+    }
+  ]
+}

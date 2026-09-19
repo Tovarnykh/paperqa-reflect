@@ -1,0 +1,85 @@
+{
+  "run_id": "20260919T155917Z-d979c5",
+  "reviewer": "Codex assistant; not an independent domain expert or external judge",
+  "scope": "Central answer support and selected additional claims; not exhaustive claim-level scoring",
+  "updated_utc": "2026-09-19T16:25:00.715259+00:00",
+  "reviews": [
+    {
+      "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+      "central_answer": "IgE",
+      "assessment": "Matches the key and the article list of six reported isotypes; answer explicitly qualifies IgE as not mentioned in the supplied passages. No independent biological-absence conclusion.",
+      "source_context_ids": [
+        "pqac-5d900cc8",
+        "pqac-d5ed91f6"
+      ],
+      "additional_claims": "Cited titer comparison passage supports the described B*35:01 comparison; broad HLA interpretation should retain subgroup context."
+    },
+    {
+      "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+      "central_answer": "ABSTAIN",
+      "assessment": "Correct reference value 43.6% is present in corpus PMC9683785.txt (Results, full-length vs KOW comparison), but the retained evidence discusses expression/purification and gives no full-length identity value. An abstention on an answerable dataset item is counted as a miss; no invented number was supplied.",
+      "source_context_ids": [
+        "pqac-d02b3f6e"
+      ],
+      "additional_claims": "Description of insufficient supplied evidence is consistent with the retained context. Trajectory searched twice after reset and ended unsure. Target-article DOI presence is true although answer-bearing evidence was missed."
+    },
+    {
+      "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+      "central_answer": "Second longest (D)",
+      "assessment": "Correct key and explicit 47.28 Mb second-largest scaffold passage support the central answer. Agent hit 8-step cap after two resets; PaperQA fallback found the answer-bearing excerpt, so status remains truncated and correct_completed is false.",
+      "source_context_ids": [
+        "pqac-945a09b2",
+        "pqac-43e8d2ee"
+      ],
+      "additional_claims": "RCS for pqac-945a09b2 infers shorter physical length from fewer syntenic gene pairs; the final answer repeats this extra inference. The raw methods passage reports gene-pair counts, not a length conclusion. This is insufficient support for that added claim, despite the central answer being directly supported by pqac-43e8d2ee."
+    },
+    {
+      "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+      "central_answer": "aa 1-10 (D), incorrect; key aa 31-40",
+      "assessment": "The actual raw cited passage states deletions through residues 1-30 preserve interactions, while deletion through 1-40 decreases them. The RCS summary omits this decisive contrast and discusses only the first 53 residues and conserved-site mutants. The answer incorrectly infers that deleting the first 10 must disrupt interaction because they lie inside the first 53. Central answer contradicted by the retained raw passage.",
+      "source_context_ids": [
+        "pqac-a2a56f34"
+      ],
+      "additional_claims": "This separates source retrieval success from evidence-summary completeness and answer reasoning. Relevance score 10 does not validate the answer."
+    },
+    {
+      "id": "658f7050-d137-477e-8693-26609080cecd",
+      "central_answer": "300 Å (A)",
+      "assessment": "Matches the key and the direct raw passage distinguishing the 300 Å stalk from the approximately 250 Å crown width.",
+      "source_context_ids": [
+        "pqac-1293a0ee",
+        "pqac-eab346ab"
+      ],
+      "additional_claims": "Main quantitative claim reviewed; full atomic-claim annotation not performed."
+    },
+    {
+      "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+      "central_answer": "80 putative G4-forming sequences (C)",
+      "assessment": "Correct key and raw G4 Hunter passage support the central answer. Controller subsequently returned ordinary text Final answer: C instead of a tool call on all five internal retries; PaperQA marked the trajectory fail. Answer correctness and technical completion diverge.",
+      "source_context_ids": [
+        "pqac-c5562226"
+      ],
+      "additional_claims": "Counts and G-score are computational predictions; raw passage explicitly does not establish formation in living cells. Main answer retains putative wording; exhaustive supplementary claims not scored."
+    },
+    {
+      "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+      "central_answer": "ABSTAIN",
+      "assessment": "The dataset answer (enlarged granular cells) is present in the corpus, but the supplied evidence summaries do not establish that phenotype. Final abstention is a miss on this answerable item.",
+      "source_context_ids": [
+        "pqac-835b188a",
+        "pqac-7badcc4d",
+        "pqac-34fe85fe"
+      ],
+      "additional_claims": "The RCS summary for pqac-7badcc4d adds the question-specific alphaPrePro construct to an abstract that does not mention it; the answer repeats that attribution. The mild phenotype discussion in pqac-835b188a concerns other terminal-domain variants, not alphaPrePro. These are insufficiently supported transfers between conditions despite the final abstention."
+    },
+    {
+      "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+      "central_answer": "Flocculation (D)",
+      "assessment": "Correct key and cited raw paragraph explicitly list flocculation among functions enriched in deleted genes.",
+      "source_context_ids": [
+        "pqac-508173db"
+      ],
+      "additional_claims": "The extra inference that the strain therefore has reduced flocculation capacity is not demonstrated by the cited gene-enrichment paragraph. Distinguish gene annotation/enrichment from a measured strain phenotype."
+    }
+  ]
+}
