@@ -139,5 +139,7 @@ implemented here, and neither should be mixed silently with N3 or citation B3.
 - Pre-inference implementation checks:62 offline tests and Ruff on both hosts.
   Post-run checks: transfer hashes, immutable step hashes, actual setting/input/
   model parity, shown-summary reconstruction and offline upstream serializer replay.
+  The three inspected upstream files match across hosts after CRLF/LF normalization;
+  both Windows byte hashes and verified Linux/LF hashes are recorded in the JSON.
 - Frozen baseline tag remains unchanged; results belong to independent `exp/loop`.
   Source papers, credentials and raw API archives are excluded from publication.

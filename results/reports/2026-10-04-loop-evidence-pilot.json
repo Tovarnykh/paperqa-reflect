@@ -1239,6 +1239,13 @@
     "docs.py": "45b01887f5b0e1bc4c21a4c87291683ac2a472706a3c59e4ba9f5e42c1cd7e2a",
     "agents/tools.py": "1d7ec81d1752aa41b766784ac66b7072d2ba91b0f9bd153060bd7564d1b3f420"
   },
+  "upstream_source_sha256_host": "Windows; installed dependency files use CRLF",
+  "upstream_source_lf_sha256": {
+    "settings.py": "83fee9c186836b6ff590b106b31e4d315f875a926dbb427d322fc7d51c9f1489",
+    "docs.py": "d14055c94afd811e4307a1ef3f7d05ebdeaf57ddf188f8b394f81bfeedce83d5",
+    "agents/tools.py": "622c48b4a96efa99267d6e833b0e1d10078ec05da4f4a29fa1a1e9e8fae5fe7d"
+  },
+  "upstream_source_cross_host_check": "LF-normalized Windows hashes equal raw UiA Linux hashes for all three files; code content matches.",
   "quality_review": {
     "kind": "assistant trace/source diagnostic, not blinded expert or external judge",
     "rfah_n1": "Correct option already in first answer. Second answer propagates wrong disulfide location from RCS.",
