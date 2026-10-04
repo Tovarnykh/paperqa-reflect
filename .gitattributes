@@ -1,0 +1,3 @@
+# Preserve measured source/config/artifact bytes on Windows and Linux.
+# SHA256 manifests describe bytes, including line endings. Do not renormalize.
+* -text

@@ -1,0 +1,887 @@
+{
+  "note": "All attempts retained. Option match is not claim support. Timing includes model swaps. VRAM samples include desktop use and omit short peaks; model API size excludes some CPU/auxiliary allocations.",
+  "runs": [
+    {
+      "config": "configs\\compare-qwen35-dev-s42.json",
+      "name": "paperqa-model-comparison-qwen35-dev-s42",
+      "exit_code": 4294967295,
+      "run_path": "C:\\Users\\Eier\\Downloads\\AI\\Advanced ICT Project\\research\\paperqa-reflect\\results\\runs\\20261001T150121Z-5db7fa",
+      "wall_seconds": 688.735,
+      "metrics": {
+        "questions": 0,
+        "planned_questions": 8,
+        "series_complete": false,
+        "correct_completed": 0,
+        "accuracy": null,
+        "answered_completed": 0,
+        "coverage": null,
+        "precision_when_answered": null,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {},
+        "total_question_seconds": 0,
+        "median_question_seconds": null,
+        "tool_calls": {}
+      },
+      "raw_option_matches": 0,
+      "indexing": {
+        "seconds": 39.237,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 143,
+      "request_statuses": {
+        "success": 143
+      },
+      "finish_reasons": {
+        "stop": 109
+      },
+      "maximum_reported_prompt_tokens": 3392,
+      "power_states": {
+        "online": 68
+      },
+      "system_gpu_mib_observed_min_max": [
+        1836,
+        7884
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "gemma4:e4b-it-qat": 3007955598,
+        "bge-m3:567m": 940855787,
+        "qwen3.5:9b": 4904577923
+      },
+      "tool_execution_seconds": {
+        "paper_search": 0.344,
+        "gather_evidence": 472.455
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src\\paperqa_reflect\\__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src\\paperqa_reflect\\cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src\\paperqa_reflect\\config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src\\paperqa_reflect\\corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src\\paperqa_reflect\\data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src\\paperqa_reflect\\evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src\\paperqa_reflect\\reference.py": "c752a7cf98eac3f71f062f4d748416a1f39a34c5b62c33eafb0b033f1a4bdbad",
+          "src\\paperqa_reflect\\runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src\\paperqa_reflect\\tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src\\paperqa_reflect\\usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": []
+    },
+    {
+      "config": "configs\\compare-ministral3-dev-s42.json",
+      "name": "paperqa-model-comparison-ministral3-dev-s42",
+      "exit_code": 0,
+      "run_path": "C:\\Users\\Eier\\Downloads\\AI\\Advanced ICT Project\\research\\paperqa-reflect\\results\\runs\\20261001T151250Z-2d3330",
+      "wall_seconds": 1447.796,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 6,
+        "accuracy": 0.75,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 0.8571428571428571,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 1,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 1386.236,
+        "median_question_seconds": 174.81099999999998,
+        "tool_calls": {
+          "paper_search": 9,
+          "gather_evidence": 8,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 6,
+      "indexing": {
+        "seconds": 42.527,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 243,
+      "request_statuses": {
+        "success": 243
+      },
+      "finish_reasons": {
+        "stop": 206
+      },
+      "maximum_reported_prompt_tokens": 2982,
+      "power_states": {
+        "online": 143
+      },
+      "system_gpu_mib_observed_min_max": [
+        1079,
+        6995
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "qwen3.5:9b": 4904577923,
+        "bge-m3:567m": 940855787,
+        "ministral-3:8b": 5420634603
+      },
+      "tool_execution_seconds": {
+        "paper_search": 0.547,
+        "gather_evidence": 1171.53,
+        "gen_answer": 122.455,
+        "complete": 0.011,
+        "paper_search+paper_search": 0.085
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src\\paperqa_reflect\\__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src\\paperqa_reflect\\cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src\\paperqa_reflect\\config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src\\paperqa_reflect\\corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src\\paperqa_reflect\\data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src\\paperqa_reflect\\evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src\\paperqa_reflect\\reference.py": "c752a7cf98eac3f71f062f4d748416a1f39a34c5b62c33eafb0b033f1a4bdbad",
+          "src\\paperqa_reflect\\runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src\\paperqa_reflect\\tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src\\paperqa_reflect\\usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 173.57,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 186.864,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 164.165,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 188.27,
+          "selected": "C",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 147.538,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 152.131,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 197.646,
+          "selected": null,
+          "expected": "A",
+          "format_valid": false,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 176.052,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs\\compare-gemma4-dev-s42.json",
+      "name": "paperqa-model-comparison-gemma4-dev-s42",
+      "exit_code": 1,
+      "run_path": "C:\\Users\\Eier\\Downloads\\AI\\Advanced ICT Project\\research\\paperqa-reflect\\results\\runs\\20261001T153658Z-cb9318",
+      "wall_seconds": 917.547,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 1,
+        "accuracy": 0.125,
+        "answered_completed": 1,
+        "coverage": 0.125,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 2,
+        "statuses": {
+          "success": 1,
+          "fail": 7
+        },
+        "total_question_seconds": 860.798,
+        "median_question_seconds": 109.193,
+        "tool_calls": {
+          "paper_search": 6,
+          "gather_evidence": 6,
+          "gen_answer": 5,
+          "complete": 1
+        }
+      },
+      "raw_option_matches": 6,
+      "indexing": {
+        "seconds": 37.929,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 248,
+      "request_statuses": {
+        "success": 248
+      },
+      "finish_reasons": {
+        "stop": 210,
+        "tool_calls": 2
+      },
+      "maximum_reported_prompt_tokens": 2796,
+      "power_states": {
+        "online": 91
+      },
+      "system_gpu_mib_observed_min_max": [
+        1545,
+        4936
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "ministral-3:8b": 5420634603,
+        "bge-m3:567m": 940855787,
+        "gemma4:e4b-it-qat": 3007955598
+      },
+      "tool_execution_seconds": {
+        "paper_search": 0.387,
+        "gather_evidence": 475.068,
+        "gen_answer": 27.153,
+        "complete": 0.001
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src\\paperqa_reflect\\__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src\\paperqa_reflect\\cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src\\paperqa_reflect\\config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src\\paperqa_reflect\\corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src\\paperqa_reflect\\data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src\\paperqa_reflect\\evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src\\paperqa_reflect\\reference.py": "c752a7cf98eac3f71f062f4d748416a1f39a34c5b62c33eafb0b033f1a4bdbad",
+          "src\\paperqa_reflect\\runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src\\paperqa_reflect\\tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src\\paperqa_reflect\\usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 125.596,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "fail",
+          "seconds": 225.358,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "fail",
+          "seconds": 12.682,
+          "selected": null,
+          "expected": "D",
+          "format_valid": false,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "fail",
+          "seconds": 157.736,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "fail",
+          "seconds": 108.547,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "fail",
+          "seconds": 105.858,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "fail",
+          "seconds": 109.839,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "fail",
+          "seconds": 15.182,
+          "selected": null,
+          "expected": "D",
+          "format_valid": false,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs\\compare-gemma4-nothink-dev-s42.json",
+      "name": "paperqa-model-comparison-gemma4-nothink-dev-s42",
+      "exit_code": 0,
+      "run_path": "C:\\Users\\Eier\\Downloads\\AI\\Advanced ICT Project\\research\\paperqa-reflect\\results\\runs\\20261001T155401Z-08e06c",
+      "wall_seconds": 797.14,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 744.058,
+        "median_question_seconds": 91.5445,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 8,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "indexing": {
+        "seconds": 36.474,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 237,
+      "request_statuses": {
+        "success": 237
+      },
+      "finish_reasons": {
+        "stop": 200
+      },
+      "maximum_reported_prompt_tokens": 2796,
+      "power_states": {
+        "online": 79
+      },
+      "system_gpu_mib_observed_min_max": [
+        1606,
+        5250
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "gemma4:e4b-it-qat": 3007955598,
+        "bge-m3:567m": 940855787
+      },
+      "tool_execution_seconds": {
+        "paper_search": 0.558,
+        "gather_evidence": 647.307,
+        "gen_answer": 45.676,
+        "complete": 0.009
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src\\paperqa_reflect\\__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src\\paperqa_reflect\\cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src\\paperqa_reflect\\config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src\\paperqa_reflect\\corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src\\paperqa_reflect\\data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src\\paperqa_reflect\\evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src\\paperqa_reflect\\reference.py": "c752a7cf98eac3f71f062f4d748416a1f39a34c5b62c33eafb0b033f1a4bdbad",
+          "src\\paperqa_reflect\\runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src\\paperqa_reflect\\tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src\\paperqa_reflect\\usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 93.726,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 97.832,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 89.363,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 107.04,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 94.584,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 86.259,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 86.182,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 89.072,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs\\compare-qwen35-stable-dev-s42.json",
+      "name": "paperqa-model-comparison-qwen35-stable-dev-s42",
+      "exit_code": 4294967295,
+      "run_path": "C:\\Users\\Eier\\Downloads\\AI\\Advanced ICT Project\\research\\paperqa-reflect\\results\\runs\\20261001T160719Z-ee6ac2",
+      "wall_seconds": 1862.906,
+      "metrics": {
+        "questions": 1,
+        "planned_questions": 8,
+        "series_complete": false,
+        "correct_completed": 0,
+        "accuracy": null,
+        "answered_completed": 0,
+        "coverage": null,
+        "precision_when_answered": null,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "truncated": 1
+        },
+        "total_question_seconds": 1813.815,
+        "median_question_seconds": 1813.815,
+        "tool_calls": {
+          "paper_search": 21,
+          "gather_evidence": 18
+        }
+      },
+      "raw_option_matches": 1,
+      "indexing": {
+        "seconds": 37.179,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 424,
+      "request_statuses": {
+        "success": 424
+      },
+      "finish_reasons": {
+        "stop": 377
+      },
+      "maximum_reported_prompt_tokens": 9358,
+      "power_states": {
+        "online": 184
+      },
+      "system_gpu_mib_observed_min_max": [
+        1514,
+        6714
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "gemma4:e4b-it-qat": 3007955598,
+        "bge-m3:567m": 940855787,
+        "qwen3.5:9b": 4904577923
+      },
+      "tool_execution_seconds": {
+        "paper_search+paper_search+paper_search": 0.14,
+        "gather_evidence+paper_search": 1341.583
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src\\paperqa_reflect\\__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src\\paperqa_reflect\\cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src\\paperqa_reflect\\config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src\\paperqa_reflect\\corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src\\paperqa_reflect\\data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src\\paperqa_reflect\\evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src\\paperqa_reflect\\reference.py": "c752a7cf98eac3f71f062f4d748416a1f39a34c5b62c33eafb0b033f1a4bdbad",
+          "src\\paperqa_reflect\\runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src\\paperqa_reflect\\tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src\\paperqa_reflect\\usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "truncated",
+          "seconds": 1813.815,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs\\compare-gemma4-nothink-dev-s43.json",
+      "name": "paperqa-model-comparison-gemma4-nothink-dev-s43",
+      "exit_code": 0,
+      "run_path": "C:\\Users\\Eier\\Downloads\\AI\\Advanced ICT Project\\research\\paperqa-reflect\\results\\runs\\20261001T163831Z-ec119c",
+      "wall_seconds": 796.875,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 6,
+        "accuracy": 0.75,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 0.75,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 742.389,
+        "median_question_seconds": 91.9985,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 8,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 6,
+      "indexing": {
+        "seconds": 36.925,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 237,
+      "request_statuses": {
+        "success": 237
+      },
+      "finish_reasons": {
+        "stop": 200
+      },
+      "maximum_reported_prompt_tokens": 2796,
+      "power_states": {
+        "online": 79
+      },
+      "system_gpu_mib_observed_min_max": [
+        1568,
+        5166
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "qwen3.5:9b": 4904577923,
+        "bge-m3:567m": 940855787,
+        "gemma4:e4b-it-qat": 3007955598
+      },
+      "tool_execution_seconds": {
+        "paper_search": 0.407,
+        "gather_evidence": 643.216,
+        "gen_answer": 45.997,
+        "complete": 0.011
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src\\paperqa_reflect\\__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src\\paperqa_reflect\\cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src\\paperqa_reflect\\config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src\\paperqa_reflect\\corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src\\paperqa_reflect\\data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src\\paperqa_reflect\\evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src\\paperqa_reflect\\reference.py": "c752a7cf98eac3f71f062f4d748416a1f39a34c5b62c33eafb0b033f1a4bdbad",
+          "src\\paperqa_reflect\\runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src\\paperqa_reflect\\tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src\\paperqa_reflect\\usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 93.798,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 101.767,
+          "selected": "C",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 93.482,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 103.362,
+          "selected": "A",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 89.186,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 88.721,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 90.515,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 81.558,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    }
+  ]
+}

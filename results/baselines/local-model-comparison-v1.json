@@ -1,0 +1,253 @@
+{
+  "id": "paperqa-local-model-comparison-v1",
+  "recorded_utc": "2026-10-01T16:53:47.258033+00:00",
+  "status": "comparison_complete_provisional_next_candidate_not_final_freeze",
+  "assistant_recommendation": "Continue baseline tuning with Gemma 4 E4B QAT: faster full runs and reliable termination in both tested seeds. No established quality winner.",
+  "recommended_candidate_config": "configs\\compare-gemma4-nothink-dev-s42.json",
+  "config_sha256": "beeebaca2a7f9c392db4495f2d3f4fa5540442ca62b9992abfc49f7567f3ec0f",
+  "config": {
+    "profile": "paperqa-high-quality",
+    "name": "paperqa-model-comparison-gemma4-nothink-dev-s42",
+    "provider": "ollama",
+    "endpoint": "http://127.0.0.1:11435",
+    "agent_model": "gemma4:e4b-it-qat",
+    "summary_model": "gemma4:e4b-it-qat",
+    "answer_model": "gemma4:e4b-it-qat",
+    "embedding_model": "bge-m3:567m",
+    "embedding_dimensions": 1024,
+    "embedding_batch_tokens": 8192,
+    "context_tokens": 16384,
+    "max_output_tokens": 4096,
+    "seed": 42,
+    "reasoning_effort": "none",
+    "agent_reasoning_effort": "none",
+    "tool_call_compatibility": true,
+    "request_timeout_seconds": 600,
+    "agent_timeout_seconds": 1800,
+    "question_timeout_seconds": 2400,
+    "max_concurrent_requests": 1,
+    "corpus_dir": "data/corpus/litqa-pilot",
+    "corpus_manifest": "data/manifests/litqa-pilot.json",
+    "questions": "data/questions/litqa-dev.jsonl",
+    "gold": "data/gold/litqa-dev.jsonl",
+    "tool_transport": "json-schema-v1",
+    "protocol": "local-model-comparison-v1",
+    "sampling": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 64
+    },
+    "agent_sampling": null
+  },
+  "model_digests": {
+    "bge-m3:567m": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+    "gemma4:e4b-it-qat": "ee665637121887cf3befff38abbb1be4ee117c7db867d97a67e29049ecd7e15f"
+  },
+  "packages": {
+    "paper-qa": "2026.8.12",
+    "paper-qa-pypdf": "2026.8.12",
+    "fhlmi": "0.45.0",
+    "fhaviary": "0.37.0",
+    "litellm": "1.84.1",
+    "pypdf": "6.19.0"
+  },
+  "ollama_version": "0.30.10",
+  "common_hashes": {
+    "code_sha256": {
+      "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+      "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+      "src\\paperqa_reflect\\__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+      "src\\paperqa_reflect\\cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+      "src\\paperqa_reflect\\config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+      "src\\paperqa_reflect\\corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+      "src\\paperqa_reflect\\data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+      "src\\paperqa_reflect\\evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+      "src\\paperqa_reflect\\reference.py": "c752a7cf98eac3f71f062f4d748416a1f39a34c5b62c33eafb0b033f1a4bdbad",
+      "src\\paperqa_reflect\\runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+      "src\\paperqa_reflect\\tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+      "src\\paperqa_reflect\\usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+    },
+    "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+    "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+    "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+  },
+  "observed_runs": [
+    {
+      "run_id": "20261001T150121Z-5db7fa",
+      "config": "configs\\compare-qwen35-dev-s42.json",
+      "metrics": {
+        "questions": 0,
+        "planned_questions": 8,
+        "series_complete": false,
+        "correct_completed": 0,
+        "accuracy": null,
+        "answered_completed": 0,
+        "coverage": null,
+        "precision_when_answered": null,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {},
+        "total_question_seconds": 0,
+        "median_question_seconds": null,
+        "tool_calls": {}
+      },
+      "classification": "partial_preserved"
+    },
+    {
+      "run_id": "20261001T151250Z-2d3330",
+      "config": "configs\\compare-ministral3-dev-s42.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 6,
+        "accuracy": 0.75,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 0.8571428571428571,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 1,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 1386.236,
+        "median_question_seconds": 174.81099999999998,
+        "tool_calls": {
+          "paper_search": 9,
+          "gather_evidence": 8,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "classification": "completed"
+    },
+    {
+      "run_id": "20261001T153658Z-cb9318",
+      "config": "configs\\compare-gemma4-dev-s42.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 1,
+        "accuracy": 0.125,
+        "answered_completed": 1,
+        "coverage": 0.125,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 2,
+        "statuses": {
+          "success": 1,
+          "fail": 7
+        },
+        "total_question_seconds": 860.798,
+        "median_question_seconds": 109.193,
+        "tool_calls": {
+          "paper_search": 6,
+          "gather_evidence": 6,
+          "gen_answer": 5,
+          "complete": 1
+        }
+      },
+      "classification": "completed"
+    },
+    {
+      "run_id": "20261001T155401Z-08e06c",
+      "config": "configs\\compare-gemma4-nothink-dev-s42.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 744.058,
+        "median_question_seconds": 91.5445,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 8,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "classification": "completed"
+    },
+    {
+      "run_id": "20261001T160719Z-ee6ac2",
+      "config": "configs\\compare-qwen35-stable-dev-s42.json",
+      "metrics": {
+        "questions": 1,
+        "planned_questions": 8,
+        "series_complete": false,
+        "correct_completed": 0,
+        "accuracy": null,
+        "answered_completed": 0,
+        "coverage": null,
+        "precision_when_answered": null,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "truncated": 1
+        },
+        "total_question_seconds": 1813.815,
+        "median_question_seconds": 1813.815,
+        "tool_calls": {
+          "paper_search": 21,
+          "gather_evidence": 18
+        }
+      },
+      "classification": "partial_preserved"
+    },
+    {
+      "run_id": "20261001T163831Z-ec119c",
+      "config": "configs\\compare-gemma4-nothink-dev-s43.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 6,
+        "accuracy": 0.75,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 0.75,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 742.389,
+        "median_question_seconds": 91.9985,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 8,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "classification": "completed"
+    }
+  ],
+  "historical_qwen_run": "results/runs/20261001T134551Z-27a165",
+  "historical_qwen_result": "7/8 correct completed; not reproduced by current repeat, not reused for timing comparison.",
+  "gemma_repetition": "8/8 and 6/8 on the same eight dev questions; not sixteen independent questions.",
+  "holdout_run": false,
+  "paid_api_calls": false,
+  "new_research_mechanism_added": false,
+  "comparison_rule": "Future mechanism comparisons keep models, sampling, corpus, prompts, transport and common budgets paired. Do not use rejected compatibility profiles as the sole weak comparator.",
+  "limitations": [
+    "Eight public answerable dev questions only.",
+    "Adaptive compatibility fixes and Qwen termination policy were not preregistered equal hyperparameter search.",
+    "Manual source review is not blind, independent or exhaustive claim-level annotation.",
+    "Quality winner not established; Gemma stochastic errors remain.",
+    "Current Qwen repeat is incomplete; seven questions have no final grade.",
+    "Local timing includes model swaps; electricity and hardware cost not measured."
+  ],
+  "report": "results/reports/2026-10-01-local-model-comparison.md",
+  "aggregate": "results/comparisons/2026-10-01-local-models.json"
+}

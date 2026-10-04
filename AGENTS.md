@@ -28,3 +28,11 @@ claim a run succeeded from a plausible answer if status is fail/truncated.
 
 Explain results to the user in Russian using concrete examples. Future verifier
 and stopping experiments remain exploratory; no detailed hour allocations.
+
+## Git and experiment isolation
+
+Read docs/git-workflow.md before new research changes. Check the active branch;
+commit each completed meaningful change with its checks, and keep raw archives
+and secrets ignored. Start loop work from paperqa-baseline-v1, not exp/citation.
+Keep citation and loop interventions independent until an explicit combination
+experiment. Do not change the frozen baseline tag or silently normalize its bytes.

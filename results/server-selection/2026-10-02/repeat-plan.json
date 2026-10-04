@@ -1,0 +1,104 @@
+{
+  "first_comparison": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/comparisons/20261002T171555Z",
+  "reason": "Repeat the best two completed configurations by correct completed answers; include all configurations tied with second place. No post-hoc calibrated source-fidelity ranking is claimed. Predeclared protocol permits material ties.",
+  "configs": [
+    "configs/uia-qwen38-dev-s43.json",
+    "configs/uia-gptoss20-native-dev-s43.json",
+    "configs/uia-gemma26-dev-s43.json"
+  ],
+  "initial_outcomes_sha256": "b85b630cc645ca5769b5bf832274c8eb9e6e219d4711a677aaa34480aea0b0d3",
+  "selected_initial_results": [
+    {
+      "config": "configs/uia-qwen38-dev-s42.json",
+      "name": "paperqa-uia-qwen38-dev-s42",
+      "exit_code": 0,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T175947Z-2dc0f1",
+      "wall_seconds": 2322.27,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 2239.054,
+        "median_question_seconds": 216.44,
+        "tool_calls": {
+          "paper_search": 11,
+          "gather_evidence": 10,
+          "gen_answer": 9,
+          "complete": 8
+        }
+      }
+    },
+    {
+      "config": "configs/uia-gptoss20-native-dev-s42.json",
+      "name": "paperqa-uia-gptoss20-native-dev-s42",
+      "exit_code": 1,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T183829Z-c104df",
+      "wall_seconds": 1468.633,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 7,
+        "accuracy": 0.875,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 1,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 7,
+          "unsure": 1
+        },
+        "total_question_seconds": 1377.853,
+        "median_question_seconds": 153.83100000000002,
+        "tool_calls": {
+          "paper_search": 11,
+          "gather_evidence": 9,
+          "gen_answer": 7,
+          "complete": 8
+        }
+      }
+    },
+    {
+      "config": "configs/uia-gemma26-dev-s42.json",
+      "name": "paperqa-uia-gemma26-dev-s42",
+      "exit_code": 1,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T171555Z-43641a",
+      "wall_seconds": 2631.645,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 7,
+        "accuracy": 0.875,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 1,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 7,
+          "unsure": 1
+        },
+        "total_question_seconds": 2536.031,
+        "median_question_seconds": 262.4035,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 10,
+          "gen_answer": 9,
+          "complete": 8
+        }
+      }
+    }
+  ]
+}

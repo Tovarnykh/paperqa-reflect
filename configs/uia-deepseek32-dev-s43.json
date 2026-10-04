@@ -1,0 +1,33 @@
+{
+  "profile": "paperqa-high-quality",
+  "name": "paperqa-uia-deepseek32-dev-s43",
+  "provider": "ollama",
+  "endpoint": "http://127.0.0.1:11436",
+  "agent_model": "deepseek-r1:32b",
+  "summary_model": "deepseek-r1:32b",
+  "answer_model": "deepseek-r1:32b",
+  "embedding_model": "bge-m3:567m",
+  "embedding_dimensions": 1024,
+  "embedding_batch_tokens": 8192,
+  "context_tokens": 16384,
+  "max_output_tokens": 4096,
+  "seed": 43,
+  "reasoning_effort": null,
+  "agent_reasoning_effort": null,
+  "tool_call_compatibility": true,
+  "request_timeout_seconds": 600,
+  "agent_timeout_seconds": 1800,
+  "question_timeout_seconds": 2400,
+  "max_concurrent_requests": 1,
+  "corpus_dir": "data/corpus/litqa-pilot",
+  "corpus_manifest": "data/manifests/litqa-pilot.json",
+  "questions": "data/questions/litqa-dev.jsonl",
+  "gold": "data/gold/litqa-dev.jsonl",
+  "tool_transport": "json-schema-v1",
+  "protocol": "uia-baseline-selection-v1",
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95
+  },
+  "agent_sampling": null
+}

@@ -1,179 +1,69 @@
 # paperqa-reflect
 
-Исследовательский проект UiA IKT464: локальные модели и self-reflection для синтеза
-научных свидетельств на основе PaperQA. Сейчас реализован запуск обычного агента
-PaperQA на локальных моделях. Собственного verifier или нового правила остановки пока нет.
+UiA IKT464 research repository: reproducible local PaperQA and separately evaluated
+extensions. The fixed development corpus has eight questions; the reserved split
+is for final evaluation after configurations are frozen.
 
-Полная серия из пяти отладочных вопросов завершена: [результаты и ошибки в объяснениях](results/reports/2026-09-19-smoke-series.md).
-Для исследовательского пилота подготовлены 16 статей, 8 рабочих и 8 резервных
-вопросов LitQA2. [Протокол сравнения](docs/evaluation-protocol-v1.md) фиксирует
-данные, метрики и правила работы с резервом.
-**Восьмивопросный baseline выполнен:** [таблица, разбор ошибок и следующий шаг](results/reports/2026-09-19-litqa-pilot.md).
-Пять правильных букв, из них три со штатным завершением; ограниченный пилот
-готов для первых сравнений локальных моделей.
+## Frozen working baseline
 
-## Быстрый запуск в Windows
+The selected comparator is **Qwen3.8 27B Q4_K_M + BGE-M3**, PaperQA pinned through
+`uv.lock`, Ollama 0.35.0 on the UiA V100 32 GiB. Seeds 42 and 43 each completed 8/8
+dev questions with correct options. These repeated questions are not independent
+validation, and correct options do not establish faithful source attribution.
 
-Нужны Git, Python 3.12, [uv](https://docs.astral.sh/uv/) и
-[Ollama](https://docs.ollama.com/). Команды выполняются из корня этого репозитория.
+- [Frozen manifest, model digests and source hashes](results/baselines/uia-local-reference-v1.json)
+- [Selection results and limitations](results/reports/2026-10-02-uia-model-selection.md)
+- [Selection protocol](docs/uia-baseline-selection-v1.md)
+- [Data and evaluation protocol](docs/evaluation-protocol-v1.md)
+- [Branches, worktrees and artifact policy](docs/git-workflow.md)
 
-```powershell
+`paperqa-baseline-v1` identifies this comparator, including its measured local
+tool transport and runtime configuration. It is not an unmodified upstream clone
+or a reproduction of the published PaperQA2 benchmark. No claim verifier, answer
+rewrite or loop intervention is included in this baseline checkout.
+
+## Setup and checks
+
+Use Python 3.12 and run from this repository root:
+
+```sh
 uv sync --frozen
-powershell -ExecutionPolicy Bypass -File scripts/start-ollama.ps1
-uv run --frozen pqa-reflect doctor
-uv run --frozen pqa-reflect prepare-smoke
-uv run --frozen pqa-reflect run --limit 1
-```
-
-Скрипт запускает отдельный скрытый Ollama на `127.0.0.1:11435`, использует уже
-существующую папку `%USERPROFILE%\.ollama\models` и ждёт готовности сервера.
-Логи сервера и PID: `.cache/ollama/`. Он продолжает работать после завершения команды.
-Повторный запуск использует отвечающий сервер. Его настройки памяти при этом не меняются.
-
-Нужны модели `qwen3:8b` и `nomic-embed-text:latest`. Они уже были установлены на
-рабочем ноутбуке; скрипты проекта ничего автоматически не скачивают из моделей.
-На новой машине загрузить их можно командами:
-
-```powershell
-$env:OLLAMA_HOST = '127.0.0.1:11435'
-ollama pull qwen3:8b
-ollama pull nomic-embed-text:latest
-```
-
-Установка Python-зависимостей и `prepare-smoke` требуют интернета. Последняя команда
-скачивает один PDF из закреплённого коммита PaperQA и проверяет SHA-256. Если точная
-копия уже есть, можно использовать `prepare-smoke --source 'путь-к-paper.pdf'`.
-Запуски моделей идут на локальный Ollama; ключи платных API не нужны. При первом
-использовании отдельные библиотеки могут загрузить служебные файлы токенизатора.
-
-`doctor` проверяет доступность сервера, наличие моделей и совместимость API
-зависимостей. Успешный `doctor` сам по себе ещё не доказывает успешный inference.
-CLI автоматически включает Python UTF-8 mode: это необходимо для корректного
-чтения научных символов upstream TXT-reader в Windows. `doctor` показывает
-`python_utf8_mode: 1`; прямой вызов Python можно делать с `-X utf8`.
-
-## Что запускается
-
-`configs/local-qwen3-8b.json` задаёт модели отдельно для управления агентом,
-резюмирования, ответа и embeddings. Пока первые три роли используют Qwen3 8B
-Q4_K_M, последняя — nomic-embed-text. Это доступная начальная конфигурация для
-отладки, а не вывод о лучшей модели.
-
-Запускается настоящий `agent_query` с `ToolSelector`: модель выбирает инструменты
-`paper_search`, `gather_evidence`, `gen_answer`, `reset`, `complete`.
-Порядок инструментов не прописан нашим кодом. Библиотека PaperQA не изменена.
-В конфигурации v2 уточнён system prompt управляющей роли: она должна вызывать
-инструменты и завершать работу через `complete`. Это настройка совместимости
-локальной модели: в первом прогоне она дала текст вместо финального tool call.
-
-Для небольшого первого прогона: контекст 8192 токена, thinking выключен,
-temperature 0, seed 42, до 768 выходных токенов на вызов, до 8 шагов агента,
-900 секунд на агентный цикл и 1200 секунд на весь вопрос с индексированием и
-возможным fallback-ответом PaperQA. Контекстный отбор ограничен тремя фрагментами,
-чанки — 3000 символов с перекрытием 250. Это **отличается от настроек по умолчанию**.
-Парсинг только текста через pypdf; получение метаданных из внешних сервисов выключено.
-Настройки требуют отдельной проверки перед исследовательскими сравнениями.
-
-## Данные и оценка
-
-Первый набор — один полный научный PDF (41 страница) из тестовых материалов
-PaperQA и пять простых вопросов по основному тексту. Источник и хеш находятся в
-`data/manifests/smoke.json`; эталоны проверены по тексту и изображениям страниц 2–3.
-Это технический **smoke/dev set**, не LitQA2 и не независимый научный benchmark.
-Эти вопросы не подходят для оценки итогового улучшения после отладки на них.
-
-- `data/corpus/smoke/` — только исходный PDF; единственная индексируемая папка.
-- `data/questions/smoke.jsonl` — вопросы и варианты, доступные агенту.
-- `data/gold/smoke.jsonl` — правильные ответы и опорные места, только для оценки.
-
-В корпусе запрещены дополнительные файлы; при запуске проверяются его состав и
-хеши. Wiki, эталоны и предыдущие ответы остаются вне индекса.
-
-Для серии всех пяти вопросов:
-
-```powershell
-uv run --frozen pqa-reflect run --limit 5
-uv run --frozen pqa-reflect run --question-id smoke-03
-```
-
-Каждый запуск создаёт `results/runs/<UTC-time>-<id>/`. Внутри — конфигурация,
-развёрнутые настройки PaperQA, версии библиотек, хеши данных/кода/lock-файла,
-Git HEAD и незакоммиченные изменения, digest моделей, журнал инструментов,
-evidence с исходными фрагментами, ответы, ошибки и сводка. Для каждого запуска
-создаётся отдельный индекс; первый вопрос включает время его построения.
-Состояние прогрева моделей пока не контролируется, поэтому времена smoke-прогонов
-не следует использовать как строгий тест производительности.
-
-Автооценка читает только явную строку `Final answer: X` в сыром ответе; она
-допускает Markdown bold и следующие за буквой ссылки на известные Context ID.
-Неоднозначный формат не угадывается. Совпадение буквы и успешное завершение считаются отдельно.
-Timeout, ошибка или заявленная неуверенность не засчитываются как успешный ответ,
-даже если буква совпала. Проверка правильности цитат и утверждений пока ручная.
-Код возврата `run` отражает техническое завершение агента, а не точность ответов.
-
-## Воспроизводимость и дальнейшая работа
-
-PaperQA закреплён на коммите `57e89f7223b0960d5ee5ea048c69e3c47e088572`
-(версия пакета 2026.8.12), Python — 3.12, зависимости — в `uv.lock`.
-`fhlmi==0.45.0` закреплён отдельно: проверенные 0.48.0 и 1.0.7 уже не имеют
-`get_router()`, требуемого агентом этой версии PaperQA.
-
-При сравнении копируем конфигурацию, меняем один изучаемый фактор и используем
-одни и те же данные. Digest модели важнее изменяемого тега Ollama. Seed и lock-файл
-помогают повторить условия, но не гарантируют побитово одинаковый GPU inference.
-Для университета можно поднять Ollama на сервере и сделать SSH-туннель на локальный
-порт; фактические доступные GPU/VRAM надо проверить перед выбором моделей.
-
-## Рабочий baseline перед выбором моделей
-
-В `configs/litqa-dev-qwen3-8b.json` сохранена начальная конфигурация сравнения.
-Вопросы адаптированы из закреплённой версии LitQA2; источник и условия использования:
-[data/ATTRIBUTION.md](data/ATTRIBUTION.md). Корпус содержит 16 OA-статей из Europe PMC
-в детерминированном текстовом представлении: основной текст, abstract, подписи
-и таблицы, без изображений и внешних приложений. Точные источники и SHA-256
-находятся в `data/manifests/litqa-pilot.json`.
-
-```powershell
-uv run --frozen pqa-reflect prepare-corpus --config configs/litqa-dev-qwen3-8b.json
-uv run --frozen pqa-reflect run --config configs/litqa-dev-qwen3-8b.json --limit 8
-```
-
-Первой команде нужен интернет только при отсутствии корпуса; она проверяет хеш
-скачанного XML и извлечённого текста. Изменившийся источник не подменяется молча.
-На исходной машине XML-снимки также сохранены в `.cache/datasets/lab-bench/`.
-Исходный алгоритм формирования split сохранён в `scripts/prepare-litqa-pilot.py`
-(зависимость `uv run --group data`); он отказывается перезаписывать замороженный набор.
-Для обычного воспроизведения запускать отбор вопросов заново не нужно.
-
-Индекс в этой конфигурации строится отдельно и проверяется на наличие всех
-16 документов. `indexing.json` хранит его время; `summary.json` — accuracy,
-coverage, precision, статусы и время вопросов; `review.json` — ответ, эталон,
-цитируемые и исходные фрагменты для проверки. Буквы A–Z допустимы по числу
-вариантов конкретного вопроса. Целевой DOI в evidence не доказывает поддержку
-каждого утверждения.
-
-`litqa-holdout-qwen3-8b.json` — **резерв**, не набор для подбора моделей.
-Запуск требует явного `--allow-holdout` после фиксации сравниваемых вариантов.
-Восемь вопросов — небольшой пилот; его необходимо отличать от полной оценки LitQA2.
-Все неудачные попытки сохраняются. Ограничения прогрева/тайминга и условия
-расширения итогового набора описаны в протоколе.
-
-Следующий шаг: объяснить результаты исходной конфигурации и выбрать кандидатов
-для одной модельной роли. Изменения модели, квантования, контекста и политики
-загрузки проверяются по отдельности. Verifier и новое управление поиском пока
-не реализованы; переход к ним зависит от результатов и оставшегося времени.
-
-```powershell
-uv run --frozen pytest -q
+uv run --frozen python -X utf8 -m pytest -q
 uv run --frozen ruff check .
-uv run --frozen ruff format --check .
+uv run --frozen python scripts/verify_baseline.py
 ```
 
-В Git входят код, конфигурации, небольшие наборы вопросов/эталонов, manifest,
-lock-файл и краткие отчёты в `results/reports/`. Веса, PDF, индексы, окружение,
-секреты и сырые журналы исключены через `.gitignore`. Учебная wiki остаётся
-в родительском workspace и не является обязательной зависимостью репозитория.
+Source documents and run archives are deliberately outside Git. Restore the
+exact corpus using its manifest, or copy the already verified corpus into the
+new worktree; do not regenerate the dev/holdout selection:
 
-Источники: [официальный PaperQA](https://github.com/Future-House/paper-qa/tree/57e89f7223b0960d5ee5ea048c69e3c47e088572),
-[Ollama tool calling](https://docs.ollama.com/capabilities/tool-calling),
-[Ollama thinking](https://docs.ollama.com/capabilities/thinking).
+```sh
+uv run --frozen pqa-reflect prepare-corpus --config configs/uia-qwen38-dev-s42.json
+uv run --frozen pqa-reflect doctor --config configs/uia-qwen38-dev-s42.json
+```
+
+The selected profiles require the local Ollama endpoint `127.0.0.1:11436` and the
+exact model digests in the frozen manifest. The existing UiA runtime/model store
+lives outside this repository under `/home/coder/advanced-ict-project/.runtime`.
+Starting that runtime is a separate operation; the older smoke startup helpers
+default to port 11435 and are not the selected server profile. No models or paid
+API calls are needed for the offline tests above.
+
+A full dev run is explicit and uses GPU time:
+
+```sh
+uv run --frozen pqa-reflect run --config configs/uia-qwen38-dev-s42.json --limit 8
+```
+
+Use the s43 profile for the paired repeat. Never time two experiments concurrently
+on the same GPU. Preserve failed attempts as well as successful runs.
+
+## Earlier engineering work
+
+The laptop profiles, smoke fixtures and reports are retained for provenance;
+they do not replace the selected UiA comparator. See
+[laptop comparison](results/reports/2026-10-01-local-model-comparison.md),
+[local reference setup](docs/strong-baseline.md) and
+[debugging walkthrough](docs/debug-walkthrough.md).
+Only `data/corpus/<set>` is indexed. Questions, keys, reports and the parent
+workspace wiki must never enter the retrieval corpus.

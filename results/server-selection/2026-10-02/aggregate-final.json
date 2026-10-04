@@ -1,0 +1,1442 @@
+{
+  "note": "All attempts retained. Option match is not claim support. Timing includes model swaps. VRAM samples include desktop use and omit short peaks; model API size excludes some CPU/auxiliary allocations.",
+  "runs": [
+    {
+      "config": "configs/uia-gemma26-dev-s42.json",
+      "name": "paperqa-uia-gemma26-dev-s42",
+      "exit_code": 1,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T171555Z-43641a",
+      "wall_seconds": 2631.645,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 7,
+        "accuracy": 0.875,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 1,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 7,
+          "unsure": 1
+        },
+        "total_question_seconds": 2536.031,
+        "median_question_seconds": 262.4035,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 10,
+          "gen_answer": 9,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 7,
+      "indexing": {
+        "seconds": 84.61,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 283,
+      "request_statuses": {
+        "success": 283
+      },
+      "finish_reasons": {
+        "stop": 244
+      },
+      "maximum_reported_prompt_tokens": 2849,
+      "power_states": {
+        "unknown": 255
+      },
+      "system_gpu_mib_observed_min_max": [
+        0,
+        16272
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "bge-m3:567m": 940855787,
+        "gemma4:26b-a4b-it-qat": 15137106819
+      },
+      "tool_execution_seconds": {
+        "paper_search": 1.238,
+        "gather_evidence": 2191.067,
+        "gen_answer": 110.715,
+        "complete": 0.118
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+          "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 250.935,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 269.403,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 263.172,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "unsure",
+          "seconds": 559.349,
+          "selected": "ABSTAIN",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": true,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 261.635,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 233.513,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 250.392,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 447.632,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs/uia-qwen38-dev-s42.json",
+      "name": "paperqa-uia-qwen38-dev-s42",
+      "exit_code": 0,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T175947Z-2dc0f1",
+      "wall_seconds": 2322.27,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 2239.054,
+        "median_question_seconds": 216.44,
+        "tool_calls": {
+          "paper_search": 11,
+          "gather_evidence": 10,
+          "gen_answer": 9,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "indexing": {
+        "seconds": 72.059,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 284,
+      "request_statuses": {
+        "success": 284
+      },
+      "finish_reasons": {
+        "stop": 245
+      },
+      "maximum_reported_prompt_tokens": 4108,
+      "power_states": {
+        "unknown": 226
+      },
+      "system_gpu_mib_observed_min_max": [
+        0,
+        19152
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "bge-m3:567m": 940855787,
+        "qwen3.8:27b": 17435396668
+      },
+      "tool_execution_seconds": {
+        "paper_search": 2.04,
+        "gather_evidence": 1505.295,
+        "gen_answer": 222.636,
+        "complete": 0.005,
+        "gather_evidence+paper_search": 155.863,
+        "paper_search+paper_search": 0.698
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+          "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 209.76,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 396.216,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 238.791,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 555.259,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 208.356,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 223.12,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 204.802,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 202.75,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs/uia-gptoss20-native-dev-s42.json",
+      "name": "paperqa-uia-gptoss20-native-dev-s42",
+      "exit_code": 1,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T183829Z-c104df",
+      "wall_seconds": 1468.633,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 7,
+        "accuracy": 0.875,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 1,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 7,
+          "unsure": 1
+        },
+        "total_question_seconds": 1377.853,
+        "median_question_seconds": 153.83100000000002,
+        "tool_calls": {
+          "paper_search": 11,
+          "gather_evidence": 9,
+          "gen_answer": 7,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "indexing": {
+        "seconds": 76.735,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 261,
+      "request_statuses": {
+        "success": 261
+      },
+      "finish_reasons": {
+        "tool_calls": 35,
+        "stop": 188
+      },
+      "maximum_reported_prompt_tokens": 2432,
+      "power_states": {
+        "unknown": 143
+      },
+      "system_gpu_mib_observed_min_max": [
+        0,
+        19152
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "bge-m3:567m": 940855787,
+        "gpt-oss:20b": 12856296733
+      },
+      "tool_execution_seconds": {
+        "paper_search": 2.12,
+        "gather_evidence": 1194.585,
+        "gen_answer": 56.689,
+        "complete": 0.015
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+          "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 164.639,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 188.794,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 127.833,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 178.303,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 133.676,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 309.262,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "unsure",
+          "seconds": 143.023,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": true,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 132.323,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs/uia-gemmae4-dev-s42.json",
+      "name": "paperqa-uia-gemmae4-dev-s42",
+      "exit_code": 1,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T190258Z-d34f30",
+      "wall_seconds": 1165.749,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 6,
+        "accuracy": 0.75,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 0.8571428571428571,
+        "explicit_or_declared_abstentions": 1,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 7,
+          "unsure": 1
+        },
+        "total_question_seconds": 1083.583,
+        "median_question_seconds": 132.29250000000002,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 8,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 6,
+      "indexing": {
+        "seconds": 72.739,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 237,
+      "request_statuses": {
+        "success": 237
+      },
+      "finish_reasons": {
+        "stop": 200
+      },
+      "maximum_reported_prompt_tokens": 2826,
+      "power_states": {
+        "unknown": 114
+      },
+      "system_gpu_mib_observed_min_max": [
+        0,
+        12952
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "bge-m3:567m": 940855787,
+        "gemma4:e4b-it-qat": 3216454449
+      },
+      "tool_execution_seconds": {
+        "paper_search": 1.32,
+        "gather_evidence": 934.392,
+        "gen_answer": 68.435,
+        "complete": 0.065
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+          "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 146.992,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 144.915,
+          "selected": "C",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 117.373,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "unsure",
+          "seconds": 155.135,
+          "selected": "ABSTAIN",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": true,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 125.081,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 133.741,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 130.844,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 129.502,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs/uia-deepseek32-dev-s42.json",
+      "name": "paperqa-uia-deepseek32-dev-s42",
+      "exit_code": 1,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T192224Z-2a879f",
+      "wall_seconds": 8959.843,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 1,
+        "accuracy": 0.125,
+        "answered_completed": 3,
+        "coverage": 0.375,
+        "precision_when_answered": 0.3333333333333333,
+        "explicit_or_declared_abstentions": 5,
+        "invalid_answer_formats": 2,
+        "statuses": {
+          "success": 3,
+          "unsure": 5
+        },
+        "total_question_seconds": 8883.858,
+        "median_question_seconds": 947.799,
+        "tool_calls": {
+          "gather_evidence": 15,
+          "paper_search": 12,
+          "gen_answer": 11,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 2,
+      "indexing": {
+        "seconds": 65.153,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 366,
+      "request_statuses": {
+        "success": 366
+      },
+      "finish_reasons": {
+        "stop": 327
+      },
+      "maximum_reported_prompt_tokens": 3202,
+      "power_states": {
+        "unknown": 882
+      },
+      "system_gpu_mib_observed_min_max": [
+        0,
+        21826
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "bge-m3:567m": 940855787,
+        "deepseek-r1:32b": 22125425458
+      },
+      "tool_execution_seconds": {
+        "gather_evidence": 4538.562,
+        "paper_search": 2.164,
+        "gen_answer": 2262.243,
+        "complete": 0.15
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+          "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 846.187,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "unsure",
+          "seconds": 890.403,
+          "selected": null,
+          "expected": "B",
+          "format_valid": false,
+          "abstained": true,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 1682.438,
+          "selected": "C",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 1133.861,
+          "selected": "D",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "unsure",
+          "seconds": 736.86,
+          "selected": "ABSTAIN",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": true,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "unsure",
+          "seconds": 880.153,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": true,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "unsure",
+          "seconds": 1708.761,
+          "selected": "ABSTAIN",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": true,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "unsure",
+          "seconds": 1005.195,
+          "selected": null,
+          "expected": "D",
+          "format_valid": false,
+          "abstained": true,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs/uia-qwen38-dev-s43.json",
+      "name": "paperqa-uia-qwen38-dev-s43",
+      "exit_code": 0,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T215145Z-f6be20",
+      "wall_seconds": 2176.907,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 2093.872,
+        "median_question_seconds": 232.727,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 9,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "indexing": {
+        "seconds": 74.889,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 259,
+      "request_statuses": {
+        "success": 259
+      },
+      "finish_reasons": {
+        "stop": 221
+      },
+      "maximum_reported_prompt_tokens": 2885,
+      "power_states": {
+        "unknown": 211
+      },
+      "system_gpu_mib_observed_min_max": [
+        0,
+        21810
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "bge-m3:567m": 940855787,
+        "qwen3.8:27b": 17435396668
+      },
+      "tool_execution_seconds": {
+        "paper_search": 1.859,
+        "gather_evidence": 1660.221,
+        "gen_answer": 145.354,
+        "complete": 0.006
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+          "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 237.398,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 235.991,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 244.494,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 496.211,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 216.526,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 229.463,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 224.021,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 209.768,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs/uia-gptoss20-native-dev-s43.json",
+      "name": "paperqa-uia-gptoss20-native-dev-s43",
+      "exit_code": 1,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T222802Z-c6fde3",
+      "wall_seconds": 1376.919,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 5,
+        "accuracy": 0.625,
+        "answered_completed": 6,
+        "coverage": 0.75,
+        "precision_when_answered": 0.8333333333333334,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 6,
+          "fail": 2
+        },
+        "total_question_seconds": 1279.765,
+        "median_question_seconds": 157.44299999999998,
+        "tool_calls": {
+          "paper_search": 11,
+          "gather_evidence": 7,
+          "gen_answer": 8,
+          "complete": 6
+        }
+      },
+      "raw_option_matches": 7,
+      "indexing": {
+        "seconds": 82.526,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 261,
+      "request_statuses": {
+        "success": 260,
+        "failure": 1
+      },
+      "finish_reasons": {
+        "tool_calls": 32,
+        "stop": 191
+      },
+      "maximum_reported_prompt_tokens": 2557,
+      "power_states": {
+        "unknown": 134
+      },
+      "system_gpu_mib_observed_min_max": [
+        0,
+        19152
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "bge-m3:567m": 940855787,
+        "gpt-oss:20b": 12856296733
+      },
+      "tool_execution_seconds": {
+        "paper_search": 2.592,
+        "gather_evidence": 886.333,
+        "gen_answer": 248.072,
+        "complete": 0.059
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+          "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 158.897,
+          "selected": "A",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": false,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 122.059,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "fail",
+          "seconds": 155.989,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 183.705,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 137.025,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "fail",
+          "seconds": 168.697,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": false,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 144.522,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 208.871,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    },
+    {
+      "config": "configs/uia-gemma26-dev-s43.json",
+      "name": "paperqa-uia-gemma26-dev-s43",
+      "exit_code": 0,
+      "run_path": "/home/coder/advanced-ict-project/research/paperqa-reflect/results/runs/20261002T225059Z-3d778e",
+      "wall_seconds": 3108.834,
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 3003.248,
+        "median_question_seconds": 259.084,
+        "tool_calls": {
+          "paper_search": 10,
+          "gather_evidence": 12,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "indexing": {
+        "seconds": 89.635,
+        "documents": 16,
+        "status": "success"
+      },
+      "request_count": 323,
+      "request_statuses": {
+        "success": 323
+      },
+      "finish_reasons": {
+        "stop": 282
+      },
+      "maximum_reported_prompt_tokens": 2826,
+      "power_states": {
+        "unknown": 300
+      },
+      "system_gpu_mib_observed_min_max": [
+        0,
+        16272
+      ],
+      "model_size_vram_bytes_observed_max": {
+        "bge-m3:567m": 940855787,
+        "gemma4:26b-a4b-it-qat": 15137106819
+      },
+      "tool_execution_seconds": {
+        "paper_search+paper_search": 0.121,
+        "gather_evidence+gather_evidence+gather_evidence": 670.593,
+        "gen_answer": 95.657,
+        "complete": 0.006,
+        "paper_search": 1.504,
+        "gather_evidence": 1810.248,
+        "gather_evidence+paper_search": 193.734
+      },
+      "hashes": {
+        "code_sha256": {
+          "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+          "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+          "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+          "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+          "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+          "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+          "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+          "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+          "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+          "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+          "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+          "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+        },
+        "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+        "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+        "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+      },
+      "per_question": [
+        {
+          "id": "22306bd7-7e84-415d-aebb-11c6312eb081",
+          "status": "success",
+          "seconds": 255.192,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+          "status": "success",
+          "seconds": 267.136,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+          "status": "success",
+          "seconds": 714.231,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "487539f9-2f17-4009-aa4a-c41322445f11",
+          "status": "success",
+          "seconds": 786.908,
+          "selected": "B",
+          "expected": "B",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "658f7050-d137-477e-8693-26609080cecd",
+          "status": "success",
+          "seconds": 251.784,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+          "status": "success",
+          "seconds": 230.456,
+          "selected": "C",
+          "expected": "C",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "77a41274-cd9c-48bc-a347-e0746907840d",
+          "status": "success",
+          "seconds": 262.976,
+          "selected": "A",
+          "expected": "A",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        },
+        {
+          "id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+          "status": "success",
+          "seconds": 234.565,
+          "selected": "D",
+          "expected": "D",
+          "format_valid": true,
+          "abstained": false,
+          "option_matches_key": true,
+          "correct_completed": true,
+          "claim_support_checked": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1128 @@
+[
+  {
+    "run": "20261002T171555Z-43641a",
+    "profile": "paperqa-uia-gemma26-dev-s42",
+    "question": "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-318873b8",
+      "pqac-436dfb9f",
+      "pqac-b797ca88"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-318873b8",
+      "pqac-b797ca88",
+      "pqac-436dfb9f"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T171555Z-43641a",
+    "profile": "paperqa-uia-gemma26-dev-s42",
+    "question": "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-5b160b77",
+      "pqac-c5ff7b45"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-5b160b77",
+      "pqac-c5ff7b45"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T171555Z-43641a",
+    "profile": "paperqa-uia-gemma26-dev-s42",
+    "question": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-59e3e6d1",
+      "pqac-625448a2"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-625448a2",
+      "pqac-59e3e6d1"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T171555Z-43641a",
+    "profile": "paperqa-uia-gemma26-dev-s42",
+    "question": "487539f9-2f17-4009-aa4a-c41322445f11",
+    "status": "unsure",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-6d4ee133",
+      "pqac-cbb3c841",
+      "pqac-f5f23904"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-f5f23904",
+      "pqac-6d4ee133",
+      "pqac-cbb3c841"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T171555Z-43641a",
+    "profile": "paperqa-uia-gemma26-dev-s42",
+    "question": "658f7050-d137-477e-8693-26609080cecd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-88e16be1",
+      "pqac-b54d0c6f",
+      "pqac-cd32ec46"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-88e16be1",
+      "pqac-b54d0c6f",
+      "pqac-cd32ec46"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T171555Z-43641a",
+    "profile": "paperqa-uia-gemma26-dev-s42",
+    "question": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-28c76295",
+      "pqac-67f6e213"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-28c76295",
+      "pqac-67f6e213"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T171555Z-43641a",
+    "profile": "paperqa-uia-gemma26-dev-s42",
+    "question": "77a41274-cd9c-48bc-a347-e0746907840d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-4c10b916"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-4c10b916"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T171555Z-43641a",
+    "profile": "paperqa-uia-gemma26-dev-s42",
+    "question": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-38614c28",
+      "pqac-e25fe086",
+      "pqac-ee1c1c84"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-e25fe086",
+      "pqac-ee1c1c84",
+      "pqac-38614c28"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T175947Z-2dc0f1",
+    "profile": "paperqa-uia-qwen38-dev-s42",
+    "question": "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-53afd14d",
+      "pqac-f79b02de"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-f79b02de",
+      "pqac-53afd14d"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T175947Z-2dc0f1",
+    "profile": "paperqa-uia-qwen38-dev-s42",
+    "question": "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-162101e0",
+      "pqac-bbada5ad"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-162101e0",
+      "pqac-bbada5ad"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T175947Z-2dc0f1",
+    "profile": "paperqa-uia-qwen38-dev-s42",
+    "question": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-0e5014ba",
+      "pqac-b5ed0dce"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-0e5014ba",
+      "pqac-b5ed0dce"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T175947Z-2dc0f1",
+    "profile": "paperqa-uia-qwen38-dev-s42",
+    "question": "487539f9-2f17-4009-aa4a-c41322445f11",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-3fa8f7c7",
+      "pqac-af839e78",
+      "pqac-cba74028"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-3fa8f7c7",
+      "pqac-cba74028",
+      "pqac-af839e78"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T175947Z-2dc0f1",
+    "profile": "paperqa-uia-qwen38-dev-s42",
+    "question": "658f7050-d137-477e-8693-26609080cecd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-17dfb2dd",
+      "pqac-6e9f29fe"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-17dfb2dd",
+      "pqac-6e9f29fe"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T175947Z-2dc0f1",
+    "profile": "paperqa-uia-qwen38-dev-s42",
+    "question": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-3fc32417",
+      "pqac-6005b4b4",
+      "pqac-6df62a63",
+      "pqac-72d451a6",
+      "pqac-ab166aa7"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-72d451a6",
+      "pqac-3fc32417",
+      "pqac-6005b4b4",
+      "pqac-ab166aa7",
+      "pqac-6df62a63"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T175947Z-2dc0f1",
+    "profile": "paperqa-uia-qwen38-dev-s42",
+    "question": "77a41274-cd9c-48bc-a347-e0746907840d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-93a11786",
+      "pqac-c83bc526"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-c83bc526",
+      "pqac-93a11786"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T175947Z-2dc0f1",
+    "profile": "paperqa-uia-qwen38-dev-s42",
+    "question": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-5798634e",
+      "pqac-c0336695"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-5798634e",
+      "pqac-c0336695"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T183829Z-c104df",
+    "profile": "paperqa-uia-gptoss20-native-dev-s42",
+    "question": "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-2d2aeb6e",
+      "pqac-8e6d700b",
+      "pqac-8f43e66b",
+      "pqac-d1fc927a"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-d1fc927a",
+      "pqac-2d2aeb6e",
+      "pqac-8f43e66b",
+      "pqac-8e6d700b"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T183829Z-c104df",
+    "profile": "paperqa-uia-gptoss20-native-dev-s42",
+    "question": "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-558436c5"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-558436c5"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T183829Z-c104df",
+    "profile": "paperqa-uia-gptoss20-native-dev-s42",
+    "question": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-88544534"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-88544534"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T183829Z-c104df",
+    "profile": "paperqa-uia-gptoss20-native-dev-s42",
+    "question": "487539f9-2f17-4009-aa4a-c41322445f11",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-a52a3dd4"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-a52a3dd4"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T183829Z-c104df",
+    "profile": "paperqa-uia-gptoss20-native-dev-s42",
+    "question": "658f7050-d137-477e-8693-26609080cecd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-1529bc29",
+      "pqac-6b844be8"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-6b844be8",
+      "pqac-1529bc29"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T183829Z-c104df",
+    "profile": "paperqa-uia-gptoss20-native-dev-s42",
+    "question": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-59f9e60d",
+      "pqac-8f5c02a1"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-8f5c02a1",
+      "pqac-59f9e60d"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T183829Z-c104df",
+    "profile": "paperqa-uia-gptoss20-native-dev-s42",
+    "question": "77a41274-cd9c-48bc-a347-e0746907840d",
+    "status": "unsure",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-aede6413"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-aede6413"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T183829Z-c104df",
+    "profile": "paperqa-uia-gptoss20-native-dev-s42",
+    "question": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-58de631f"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-58de631f"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T190258Z-d34f30",
+    "profile": "paperqa-uia-gemmae4-dev-s42",
+    "question": "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-61014b0d",
+      "pqac-95ea97eb",
+      "pqac-e134349e",
+      "pqac-e38b19c0",
+      "pqac-e9921231"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-e9921231",
+      "pqac-61014b0d",
+      "pqac-e134349e",
+      "pqac-95ea97eb",
+      "pqac-e38b19c0"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T190258Z-d34f30",
+    "profile": "paperqa-uia-gemmae4-dev-s42",
+    "question": "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-1508e2f2",
+      "pqac-4f872a84",
+      "pqac-c56f215f"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-c56f215f",
+      "pqac-4f872a84",
+      "pqac-1508e2f2"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T190258Z-d34f30",
+    "profile": "paperqa-uia-gemmae4-dev-s42",
+    "question": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-6960502b",
+      "pqac-d6b2d924"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-d6b2d924",
+      "pqac-6960502b"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T190258Z-d34f30",
+    "profile": "paperqa-uia-gemmae4-dev-s42",
+    "question": "487539f9-2f17-4009-aa4a-c41322445f11",
+    "status": "unsure",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-a0816e7f"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-a0816e7f"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T190258Z-d34f30",
+    "profile": "paperqa-uia-gemmae4-dev-s42",
+    "question": "658f7050-d137-477e-8693-26609080cecd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-153e9adf",
+      "pqac-2704eaba"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-2704eaba",
+      "pqac-153e9adf"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T190258Z-d34f30",
+    "profile": "paperqa-uia-gemmae4-dev-s42",
+    "question": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-c26eaf88",
+      "pqac-c7948efd",
+      "pqac-cd186b99"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-c26eaf88",
+      "pqac-c7948efd",
+      "pqac-cd186b99"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T190258Z-d34f30",
+    "profile": "paperqa-uia-gemmae4-dev-s42",
+    "question": "77a41274-cd9c-48bc-a347-e0746907840d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-48951a23",
+      "pqac-c31618eb",
+      "pqac-cb306c73",
+      "pqac-e65b48b5",
+      "pqac-f6bd61c0"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-cb306c73",
+      "pqac-f6bd61c0",
+      "pqac-e65b48b5",
+      "pqac-48951a23",
+      "pqac-c31618eb"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T190258Z-d34f30",
+    "profile": "paperqa-uia-gemmae4-dev-s42",
+    "question": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-3d3f75c5",
+      "pqac-7a905653"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-3d3f75c5",
+      "pqac-7a905653"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T192224Z-2a879f",
+    "profile": "paperqa-uia-deepseek32-dev-s42",
+    "question": "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-1d2b7e0b",
+      "pqac-6d227028"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-1d2b7e0b",
+      "pqac-6d227028"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T192224Z-2a879f",
+    "profile": "paperqa-uia-deepseek32-dev-s42",
+    "question": "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "status": "unsure",
+    "has_answer": true,
+    "cited_ids": [],
+    "unresolved_ids": [],
+    "used_contexts": [],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T192224Z-2a879f",
+    "profile": "paperqa-uia-deepseek32-dev-s42",
+    "question": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-7dd12e8a"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-7dd12e8a"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T192224Z-2a879f",
+    "profile": "paperqa-uia-deepseek32-dev-s42",
+    "question": "487539f9-2f17-4009-aa4a-c41322445f11",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-83424d98",
+      "pqac-d61090e8"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-d61090e8",
+      "pqac-83424d98"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T192224Z-2a879f",
+    "profile": "paperqa-uia-deepseek32-dev-s42",
+    "question": "658f7050-d137-477e-8693-26609080cecd",
+    "status": "unsure",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-07dce818",
+      "pqac-705178f8",
+      "pqac-91e5905b",
+      "pqac-963ccafa",
+      "pqac-bfcfd169"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-07dce818",
+      "pqac-91e5905b",
+      "pqac-705178f8",
+      "pqac-bfcfd169",
+      "pqac-963ccafa"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T192224Z-2a879f",
+    "profile": "paperqa-uia-deepseek32-dev-s42",
+    "question": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "status": "unsure",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-286d9f7f",
+      "pqac-50d7654a",
+      "pqac-777c2e35",
+      "pqac-d09e24f4"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-50d7654a",
+      "pqac-777c2e35",
+      "pqac-d09e24f4",
+      "pqac-286d9f7f"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T192224Z-2a879f",
+    "profile": "paperqa-uia-deepseek32-dev-s42",
+    "question": "77a41274-cd9c-48bc-a347-e0746907840d",
+    "status": "unsure",
+    "has_answer": true,
+    "cited_ids": [],
+    "unresolved_ids": [],
+    "used_contexts": [],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T192224Z-2a879f",
+    "profile": "paperqa-uia-deepseek32-dev-s42",
+    "question": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "status": "unsure",
+    "has_answer": true,
+    "cited_ids": [],
+    "unresolved_ids": [],
+    "used_contexts": [],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T215145Z-f6be20",
+    "profile": "paperqa-uia-qwen38-dev-s43",
+    "question": "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-13420beb",
+      "pqac-430fb8af",
+      "pqac-615e71a1",
+      "pqac-c2277f0b"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-c2277f0b",
+      "pqac-13420beb",
+      "pqac-615e71a1",
+      "pqac-430fb8af"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T215145Z-f6be20",
+    "profile": "paperqa-uia-qwen38-dev-s43",
+    "question": "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-0d184fac",
+      "pqac-2bd2246a",
+      "pqac-489d13a0",
+      "pqac-b6d520ec"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-489d13a0",
+      "pqac-2bd2246a",
+      "pqac-0d184fac",
+      "pqac-b6d520ec"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T215145Z-f6be20",
+    "profile": "paperqa-uia-qwen38-dev-s43",
+    "question": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-3a608de8",
+      "pqac-6008f2e8"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-6008f2e8",
+      "pqac-3a608de8"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T215145Z-f6be20",
+    "profile": "paperqa-uia-qwen38-dev-s43",
+    "question": "487539f9-2f17-4009-aa4a-c41322445f11",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-0f74bfc5",
+      "pqac-29a3d3dc",
+      "pqac-2cc28749",
+      "pqac-e3be5ba6"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-0f74bfc5",
+      "pqac-29a3d3dc",
+      "pqac-2cc28749",
+      "pqac-e3be5ba6"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T215145Z-f6be20",
+    "profile": "paperqa-uia-qwen38-dev-s43",
+    "question": "658f7050-d137-477e-8693-26609080cecd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-629489ce",
+      "pqac-e6a8065f"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-e6a8065f",
+      "pqac-629489ce"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T215145Z-f6be20",
+    "profile": "paperqa-uia-qwen38-dev-s43",
+    "question": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-0d3cbac4",
+      "pqac-6ef0f407",
+      "pqac-85f5da17",
+      "pqac-8765d67b",
+      "pqac-e24048d2"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-e24048d2",
+      "pqac-6ef0f407",
+      "pqac-0d3cbac4",
+      "pqac-8765d67b",
+      "pqac-85f5da17"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T215145Z-f6be20",
+    "profile": "paperqa-uia-qwen38-dev-s43",
+    "question": "77a41274-cd9c-48bc-a347-e0746907840d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-15c4ca0b",
+      "pqac-ea26fd5c"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-ea26fd5c",
+      "pqac-15c4ca0b"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T215145Z-f6be20",
+    "profile": "paperqa-uia-qwen38-dev-s43",
+    "question": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-2bd67a65"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-2bd67a65"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T222802Z-c6fde3",
+    "profile": "paperqa-uia-gptoss20-native-dev-s43",
+    "question": "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-1d74322a",
+      "pqac-acceae44"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-1d74322a",
+      "pqac-acceae44"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T222802Z-c6fde3",
+    "profile": "paperqa-uia-gptoss20-native-dev-s43",
+    "question": "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-3af2489c"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-3af2489c"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T222802Z-c6fde3",
+    "profile": "paperqa-uia-gptoss20-native-dev-s43",
+    "question": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "status": "fail",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-9fa69c9e"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-9fa69c9e"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T222802Z-c6fde3",
+    "profile": "paperqa-uia-gptoss20-native-dev-s43",
+    "question": "487539f9-2f17-4009-aa4a-c41322445f11",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-0f66774d",
+      "pqac-58f8013a",
+      "pqac-5f0c470b"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-5f0c470b",
+      "pqac-58f8013a",
+      "pqac-0f66774d"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T222802Z-c6fde3",
+    "profile": "paperqa-uia-gptoss20-native-dev-s43",
+    "question": "658f7050-d137-477e-8693-26609080cecd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-224eae47",
+      "pqac-319cd323"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-224eae47",
+      "pqac-319cd323"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T222802Z-c6fde3",
+    "profile": "paperqa-uia-gptoss20-native-dev-s43",
+    "question": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "status": "fail",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-02eb7a66"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-02eb7a66"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T222802Z-c6fde3",
+    "profile": "paperqa-uia-gptoss20-native-dev-s43",
+    "question": "77a41274-cd9c-48bc-a347-e0746907840d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-bd6d5891"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-bd6d5891"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T222802Z-c6fde3",
+    "profile": "paperqa-uia-gptoss20-native-dev-s43",
+    "question": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-297a865e",
+      "pqac-8afc2200",
+      "pqac-9191eabc",
+      "pqac-fdcc3dfc"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-297a865e",
+      "pqac-9191eabc",
+      "pqac-8afc2200",
+      "pqac-fdcc3dfc"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T225059Z-3d778e",
+    "profile": "paperqa-uia-gemma26-dev-s43",
+    "question": "22306bd7-7e84-415d-aebb-11c6312eb081",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-2a9d5063",
+      "pqac-b1380c9b",
+      "pqac-fd8590ce"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-b1380c9b",
+      "pqac-2a9d5063",
+      "pqac-fd8590ce"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T225059Z-3d778e",
+    "profile": "paperqa-uia-gemma26-dev-s43",
+    "question": "b105af85-833e-48bc-ac78-48f73c9673fd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-080c8bf1",
+      "pqac-386f2e15",
+      "pqac-c86f69f3"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-c86f69f3",
+      "pqac-080c8bf1",
+      "pqac-386f2e15"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T225059Z-3d778e",
+    "profile": "paperqa-uia-gemma26-dev-s43",
+    "question": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-1ea153ec",
+      "pqac-67c87aca",
+      "pqac-d9fe523c",
+      "pqac-e55b66af"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-67c87aca",
+      "pqac-1ea153ec",
+      "pqac-d9fe523c",
+      "pqac-e55b66af"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T225059Z-3d778e",
+    "profile": "paperqa-uia-gemma26-dev-s43",
+    "question": "487539f9-2f17-4009-aa4a-c41322445f11",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-ad65b4b9",
+      "pqac-c624df06",
+      "pqac-cca91212",
+      "pqac-eb5e6533"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-ad65b4b9",
+      "pqac-c624df06",
+      "pqac-cca91212",
+      "pqac-eb5e6533"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T225059Z-3d778e",
+    "profile": "paperqa-uia-gemma26-dev-s43",
+    "question": "658f7050-d137-477e-8693-26609080cecd",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-46923f16",
+      "pqac-4942b488",
+      "pqac-5031cd90"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-4942b488",
+      "pqac-46923f16",
+      "pqac-5031cd90"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T225059Z-3d778e",
+    "profile": "paperqa-uia-gemma26-dev-s43",
+    "question": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-9d6a27b6",
+      "pqac-d4ba5acb"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-d4ba5acb",
+      "pqac-9d6a27b6"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T225059Z-3d778e",
+    "profile": "paperqa-uia-gemma26-dev-s43",
+    "question": "77a41274-cd9c-48bc-a347-e0746907840d",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-a6c89ca5"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-a6c89ca5"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  },
+  {
+    "run": "20261002T225059Z-3d778e",
+    "profile": "paperqa-uia-gemma26-dev-s43",
+    "question": "983f1ef5-fc7d-4f4a-8f48-e704641eae12",
+    "status": "success",
+    "has_answer": true,
+    "cited_ids": [
+      "pqac-26b8e79b",
+      "pqac-9bdc9ea9"
+    ],
+    "unresolved_ids": [],
+    "used_contexts": [
+      "pqac-9bdc9ea9",
+      "pqac-26b8e79b"
+    ],
+    "note": "Identifier resolution only, not factual support."
+  }
+]

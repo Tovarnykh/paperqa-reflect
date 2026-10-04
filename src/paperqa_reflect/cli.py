@@ -7,9 +7,10 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .config import build_settings, load_config
-from .data import prepare_corpus
-from .runner import inspect_ollama, run
+from .config import build_settings, load_config, write_json
+from .data import prepare_corpus, validate_corpus
+from .reference import provider_info, settings_changes
+from .runner import run
 
 
 def main():
@@ -23,7 +24,9 @@ def main():
         )
         raise SystemExit(child.returncode)
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["doctor", "prepare-smoke", "prepare-corpus", "run"])
+    parser.add_argument(
+        "command", choices=["plan", "doctor", "prepare-smoke", "prepare-corpus", "run"]
+    )
     parser.add_argument("--root", type=Path, default=Path.cwd())
     parser.add_argument("--config", type=Path, default=Path("configs/local-qwen3-8b.json"))
     parser.add_argument(
@@ -45,18 +48,27 @@ def main():
     if args.command in {"prepare-smoke", "prepare-corpus"}:
         docs = prepare_corpus(root, config, args.source)
         print(f"Verified {len(docs)} source document(s) in {root / config.corpus_dir}")
-    elif args.command == "doctor":
-        info = inspect_ollama(config)
+    elif args.command in {"plan", "doctor"}:
+        documents = validate_corpus(root, config)
+        info = (
+            provider_info(config) if args.command == "doctor" else {"availability": "not checked"}
+        )
         settings = build_settings(config, root, root / ".cache/doctor", root / ".cache/unused.csv")
         settings.make_aviary_tool_selector("ToolSelector")
         settings.get_embedding_model()
+        if args.command == "plan":
+            directory = root / "results/plans" / config_path.stem
+            write_json(directory / "settings.json", settings.model_dump(mode="json"))
+            if getattr(config, "profile", None):
+                write_json(directory / "upstream-deviations.json", settings_changes(settings))
         print(
             json.dumps(
                 {
-                    "status": "ready",
-                    "ollama": info,
+                    "status": "configuration_valid",
+                    "provider": info,
+                    "documents": len(documents),
                     "python_utf8_mode": sys.flags.utf8_mode,
-                    "note": "Configuration/API compatibility and installed models checked; no inference.",
+                    "note": "No inference; plan is offline. Doctor additionally checks provider prerequisites. Neither proves quality or a working API call.",
                 },
                 indent=2,
             )

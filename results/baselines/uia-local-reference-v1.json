@@ -1,0 +1,413 @@
+{
+  "id": "paperqa-uia-local-reference-v1",
+  "recorded_utc": "2026-10-03T08:12:51.077130+00:00",
+  "status": "selected_working_baseline_dev_only",
+  "decision": "Use Qwen3.8 27B Q4_K_M for controller, RCS and answer with BGE-M3. Two completed 8/8 dev runs and lower runtime than the close Gemma26 alternative. This is a practical bounded selection, not a global-best or independent scientific result.",
+  "recommended_config": "configs/uia-qwen38-dev-s42.json",
+  "config_sha256": "580793a8766b41f1b06da9734851c7b6a6ba478905177a5dbb651c44278db9fd",
+  "config": {
+    "profile": "paperqa-high-quality",
+    "name": "paperqa-uia-qwen38-dev-s42",
+    "provider": "ollama",
+    "endpoint": "http://127.0.0.1:11436",
+    "agent_model": "qwen3.8:27b",
+    "summary_model": "qwen3.8:27b",
+    "answer_model": "qwen3.8:27b",
+    "embedding_model": "bge-m3:567m",
+    "embedding_dimensions": 1024,
+    "embedding_batch_tokens": 8192,
+    "context_tokens": 16384,
+    "max_output_tokens": 4096,
+    "seed": 42,
+    "reasoning_effort": "none",
+    "agent_reasoning_effort": "low",
+    "tool_call_compatibility": true,
+    "request_timeout_seconds": 600,
+    "agent_timeout_seconds": 1800,
+    "question_timeout_seconds": 2400,
+    "max_concurrent_requests": 1,
+    "corpus_dir": "data/corpus/litqa-pilot",
+    "corpus_manifest": "data/manifests/litqa-pilot.json",
+    "questions": "data/questions/litqa-dev.jsonl",
+    "gold": "data/gold/litqa-dev.jsonl",
+    "tool_transport": "json-schema-v1",
+    "protocol": "uia-baseline-selection-v1",
+    "sampling": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0,
+      "repeat_penalty": 1,
+      "presence_penalty": 1.5
+    },
+    "agent_sampling": {
+      "temperature": 1,
+      "top_p": 0.95,
+      "presence_penalty": 0
+    }
+  },
+  "repeat_config": "configs/uia-qwen38-dev-s43.json",
+  "repeat_config_sha256": "f8629d5b8948652d55c0748f6ee3a3d8bc5195e8dd1789825a8a46d3567fc50a",
+  "models": {
+    "qwen3.8:27b": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+    "bge-m3:567m": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab"
+  },
+  "packages": {
+    "paper-qa": "2026.8.12",
+    "paper-qa-pypdf": "2026.8.12",
+    "fhlmi": "0.45.0",
+    "fhaviary": "0.37.0",
+    "litellm": "1.84.1",
+    "pypdf": "6.19.0"
+  },
+  "ollama_version": "0.35.0",
+  "hardware": {
+    "gpu": "Tesla V100-SXM3-32GB",
+    "vram_mib": 32768,
+    "host_ram_limit_gib": 96,
+    "cpu_quota": 6
+  },
+  "protocol": "docs/uia-baseline-selection-v1.md",
+  "common_hashes": {
+    "code_sha256": {
+      "pyproject.toml": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+      "uv.lock": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+      "src/paperqa_reflect/__init__.py": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+      "src/paperqa_reflect/cli.py": "8a1d8aa53a35170eedee5105fb8bb89781b99f9d4ea12782e28e5fdce389e91e",
+      "src/paperqa_reflect/config.py": "4f363272939a1b2100e874035968edabdcd62503929dedd78c2f24970d6cce98",
+      "src/paperqa_reflect/corpus.py": "fc3725f65e060d23f7197c3e053e7d9d05d15dbe34eba2da716ea4366a9cb361",
+      "src/paperqa_reflect/data.py": "1c595d58d5463e48eb51ea4f42031938f329133b25ab553e401e41c4afb62109",
+      "src/paperqa_reflect/evaluation.py": "433eeb558f21859ee072c5b139ff7fd4dae132e3f5c1572acd2173e7d51b768b",
+      "src/paperqa_reflect/reference.py": "670913657ff33743c46a4da1b7eb5b96ab6a2d63b327fa8f092b2c7b487eace9",
+      "src/paperqa_reflect/runner.py": "32138061ed5bb79fb22d5c86fcc2f702f3b6143cf503b8ddd72801bd80d28640",
+      "src/paperqa_reflect/tool_transport.py": "0fd3bdf09d424e25a333a507191af72edce538fc46d409f0901fcb5972975ee7",
+      "src/paperqa_reflect/usage.py": "7f2840c0ec5157c503525f3748d524ca7aecf328f67e2a3877c2f8b0882afdb6"
+    },
+    "questions_sha256": "42e7fe7a1e2e446562a856cfdd0d02e388131e6ea3f0a2aa3581f1ac82c739e4",
+    "gold_sha256": "933c368787dea3e007854a49cbc2d496d15315de74645ecb911c1cd05578301c",
+    "corpus_manifest_sha256": "46d69fcbd13792c9686844d89f91216dd5626811c14148cabad221d41d25221c"
+  },
+  "observed_runs": [
+    {
+      "run_id": "20261002T171555Z-43641a",
+      "config": "configs/uia-gemma26-dev-s42.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 7,
+        "accuracy": 0.875,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 1,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 7,
+          "unsure": 1
+        },
+        "total_question_seconds": 2536.031,
+        "median_question_seconds": 262.4035,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 10,
+          "gen_answer": 9,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 7,
+      "wall_seconds": 2631.645,
+      "request_statuses": {
+        "success": 283
+      }
+    },
+    {
+      "run_id": "20261002T175947Z-2dc0f1",
+      "config": "configs/uia-qwen38-dev-s42.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 2239.054,
+        "median_question_seconds": 216.44,
+        "tool_calls": {
+          "paper_search": 11,
+          "gather_evidence": 10,
+          "gen_answer": 9,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "wall_seconds": 2322.27,
+      "request_statuses": {
+        "success": 284
+      }
+    },
+    {
+      "run_id": "20261002T183829Z-c104df",
+      "config": "configs/uia-gptoss20-native-dev-s42.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 7,
+        "accuracy": 0.875,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 1,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 7,
+          "unsure": 1
+        },
+        "total_question_seconds": 1377.853,
+        "median_question_seconds": 153.83100000000002,
+        "tool_calls": {
+          "paper_search": 11,
+          "gather_evidence": 9,
+          "gen_answer": 7,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "wall_seconds": 1468.633,
+      "request_statuses": {
+        "success": 261
+      }
+    },
+    {
+      "run_id": "20261002T190258Z-d34f30",
+      "config": "configs/uia-gemmae4-dev-s42.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 6,
+        "accuracy": 0.75,
+        "answered_completed": 7,
+        "coverage": 0.875,
+        "precision_when_answered": 0.8571428571428571,
+        "explicit_or_declared_abstentions": 1,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 7,
+          "unsure": 1
+        },
+        "total_question_seconds": 1083.583,
+        "median_question_seconds": 132.29250000000002,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 8,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 6,
+      "wall_seconds": 1165.749,
+      "request_statuses": {
+        "success": 237
+      }
+    },
+    {
+      "run_id": "20261002T192224Z-2a879f",
+      "config": "configs/uia-deepseek32-dev-s42.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 1,
+        "accuracy": 0.125,
+        "answered_completed": 3,
+        "coverage": 0.375,
+        "precision_when_answered": 0.3333333333333333,
+        "explicit_or_declared_abstentions": 5,
+        "invalid_answer_formats": 2,
+        "statuses": {
+          "success": 3,
+          "unsure": 5
+        },
+        "total_question_seconds": 8883.858,
+        "median_question_seconds": 947.799,
+        "tool_calls": {
+          "gather_evidence": 15,
+          "paper_search": 12,
+          "gen_answer": 11,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 2,
+      "wall_seconds": 8959.843,
+      "request_statuses": {
+        "success": 366
+      }
+    },
+    {
+      "run_id": "20261002T215145Z-f6be20",
+      "config": "configs/uia-qwen38-dev-s43.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 2093.872,
+        "median_question_seconds": 232.727,
+        "tool_calls": {
+          "paper_search": 8,
+          "gather_evidence": 9,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "wall_seconds": 2176.907,
+      "request_statuses": {
+        "success": 259
+      }
+    },
+    {
+      "run_id": "20261002T222802Z-c6fde3",
+      "config": "configs/uia-gptoss20-native-dev-s43.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 5,
+        "accuracy": 0.625,
+        "answered_completed": 6,
+        "coverage": 0.75,
+        "precision_when_answered": 0.8333333333333334,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 6,
+          "fail": 2
+        },
+        "total_question_seconds": 1279.765,
+        "median_question_seconds": 157.44299999999998,
+        "tool_calls": {
+          "paper_search": 11,
+          "gather_evidence": 7,
+          "gen_answer": 8,
+          "complete": 6
+        }
+      },
+      "raw_option_matches": 7,
+      "wall_seconds": 1376.919,
+      "request_statuses": {
+        "success": 260,
+        "failure": 1
+      }
+    },
+    {
+      "run_id": "20261002T225059Z-3d778e",
+      "config": "configs/uia-gemma26-dev-s43.json",
+      "metrics": {
+        "questions": 8,
+        "planned_questions": 8,
+        "series_complete": true,
+        "correct_completed": 8,
+        "accuracy": 1.0,
+        "answered_completed": 8,
+        "coverage": 1.0,
+        "precision_when_answered": 1.0,
+        "explicit_or_declared_abstentions": 0,
+        "invalid_answer_formats": 0,
+        "statuses": {
+          "success": 8
+        },
+        "total_question_seconds": 3003.248,
+        "median_question_seconds": 259.084,
+        "tool_calls": {
+          "paper_search": 10,
+          "gather_evidence": 12,
+          "gen_answer": 8,
+          "complete": 8
+        }
+      },
+      "raw_option_matches": 8,
+      "wall_seconds": 3108.834,
+      "request_statuses": {
+        "success": 323
+      }
+    }
+  ],
+  "filtered_gpu_observations": [
+    {
+      "name": "paperqa-uia-gemma26-dev-s42",
+      "run_id": "20261002T171555Z-43641a",
+      "max_system_gpu_mib_while_target_llm_resident": 16272
+    },
+    {
+      "name": "paperqa-uia-qwen38-dev-s42",
+      "run_id": "20261002T175947Z-2dc0f1",
+      "max_system_gpu_mib_while_target_llm_resident": 19152
+    },
+    {
+      "name": "paperqa-uia-gptoss20-native-dev-s42",
+      "run_id": "20261002T183829Z-c104df",
+      "max_system_gpu_mib_while_target_llm_resident": 12952
+    },
+    {
+      "name": "paperqa-uia-gemmae4-dev-s42",
+      "run_id": "20261002T190258Z-d34f30",
+      "max_system_gpu_mib_while_target_llm_resident": 4708
+    },
+    {
+      "name": "paperqa-uia-deepseek32-dev-s42",
+      "run_id": "20261002T192224Z-2a879f",
+      "max_system_gpu_mib_while_target_llm_resident": 21826
+    },
+    {
+      "name": "paperqa-uia-qwen38-dev-s43",
+      "run_id": "20261002T215145Z-f6be20",
+      "max_system_gpu_mib_while_target_llm_resident": 19152
+    },
+    {
+      "name": "paperqa-uia-gptoss20-native-dev-s43",
+      "run_id": "20261002T222802Z-c6fde3",
+      "max_system_gpu_mib_while_target_llm_resident": 12952
+    },
+    {
+      "name": "paperqa-uia-gemma26-dev-s43",
+      "run_id": "20261002T225059Z-3d778e",
+      "max_system_gpu_mib_while_target_llm_resident": 16272
+    }
+  ],
+  "report": "results/reports/2026-10-02-uia-model-selection.md",
+  "source_review": "results/reports/2026-10-02-uia-source-review.md",
+  "evidence_archive": {
+    "file": "selection-evidence-20261003T080758Z.tar.gz",
+    "sha256": "55a971a2b817679fa1cf2e42c63f5b5c45a63b7520a58c803029d52fdfb49188",
+    "verified_files": 1101
+  },
+  "limits": [
+    "Eight unique dev questions repeated, not sixteen independent tests. Eight reserved questions untouched.",
+    "Public biomedical text-only LitQA pilot with OA-selection and possible pretraining contamination; not full LitQA2 or arbitrary-domain performance.",
+    "Correct MCQ choice is not a fully supported explanation: Qwen has verified RCS and answer inconsistencies.",
+    "Manual source review is nonblind and limited, not an independently annotated claim-support metric.",
+    "Model-specific sampling and gpt-oss native transport mean practical-configuration comparison, not isolated causal effects of weights.",
+    "GPU telemetry is sampled; filtered values exclude prior-model unload residue but are not guaranteed instantaneous peaks.",
+    "No hosted API judge or paid API call; university credits and electricity were not monetized."
+  ],
+  "next_step": "Use this fixed working configuration for the next dev experiments; expand predeclared evaluation and independent claim-support checks before final research claims. Do not consume holdout for tuning."
+}

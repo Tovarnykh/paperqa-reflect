@@ -65,8 +65,13 @@ class ExperimentConfig(BaseModel):
         return {self.agent_model, self.summary_model, self.answer_model, self.embedding_model}
 
 
-def load_config(path: Path) -> ExperimentConfig:
-    return ExperimentConfig.model_validate_json(path.read_text(encoding="utf-8"))
+def load_config(path: Path):
+    values = json.loads(path.read_text(encoding="utf-8"))
+    if values.get("profile") == "paperqa-high-quality":
+        from .reference import ReferenceConfig
+
+        return ReferenceConfig.model_validate(values)
+    return ExperimentConfig.model_validate(values)
 
 
 def local_runtime(root: Path):
@@ -78,6 +83,10 @@ def local_runtime(root: Path):
 
 def build_settings(config: ExperimentConfig, root: Path, index_dir: Path, manifest: Path):
     local_runtime(root)
+    if getattr(config, "profile", None) == "paperqa-high-quality":
+        from .reference import reference_settings
+
+        return reference_settings(config, root, index_dir, manifest)
     from paperqa import Settings
 
     def llm(model):

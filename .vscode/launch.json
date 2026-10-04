@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PaperQA: один вопрос пошагово",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "pythonArgs": ["-X", "utf8"],
+      "module": "paperqa_reflect.cli",
+      "args": [
+        "run",
+        "--config", "configs/debug-qwen3-8b.json",
+        "--question-id", "smoke-01",
+        "--limit", "1"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "stopOnEntry": false,
+      "env": {"PYTHONUTF8": "1"},
+      "preLaunchTask": "PaperQA: prepare local debug"
+    }
+  ]
+}

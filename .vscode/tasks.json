@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "PaperQA: start local Ollama",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile", "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}/scripts/start-ollama.ps1"
+      ],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "PaperQA: check debug setup",
+      "type": "process",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": [
+        "-X", "utf8", "-m", "paperqa_reflect.cli", "doctor",
+        "--config", "configs/debug-qwen3-8b.json"
+      ],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "PaperQA: prepare local debug",
+      "dependsOrder": "sequence",
+      "dependsOn": ["PaperQA: start local Ollama", "PaperQA: check debug setup"],
+      "problemMatcher": []
+    }
+  ]
+}

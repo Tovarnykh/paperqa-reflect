@@ -726,6 +726,7 @@ source = { editable = "." }
 dependencies = [
     { name = "fhlmi" },
     { name = "httpx" },
+    { name = "jsonschema" },
     { name = "paper-qa" },
     { name = "pypdf" },
 ]
@@ -743,6 +744,7 @@ dev = [
 requires-dist = [
     { name = "fhlmi", specifier = "==0.45.0" },
     { name = "httpx", specifier = ">=0.28" },
+    { name = "jsonschema", specifier = ">=4.26" },
     { name = "paper-qa", git = "https://github.com/Future-House/paper-qa.git?rev=57e89f7223b0960d5ee5ea048c69e3c47e088572" },
     { name = "pypdf", specifier = ">=6" },
 ]

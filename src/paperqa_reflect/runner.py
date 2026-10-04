@@ -20,6 +20,8 @@ import httpx
 from .config import build_settings, write_json
 from .data import grade, jsonl, paperqa_manifest, question_prompt, sha256, validate_corpus
 from .evaluation import aggregate, evidence_diagnostics, runtime_snapshot
+from .reference import provider_info, settings_changes
+from .usage import UsageLedger
 
 
 def inspect_ollama(config):
@@ -33,12 +35,25 @@ def inspect_ollama(config):
     if missing:
         raise ValueError(f"Models missing from Ollama: {sorted(missing)}. No models downloaded.")
     selected = {name: available[name] for name in sorted(config.models)}
-    embedding_length = selected[config.embedding_model].get("details", {}).get("embedding_length")
-    if embedding_length is not None and embedding_length != config.embedding_dimensions:
-        raise ValueError(f"Unexpected embedding dimension reported by Ollama: {embedding_length}")
     if any(model.get("remote_host") or model.get("remote_model") for model in selected.values()):
         raise ValueError("Remote/cloud Ollama models are not allowed in this local configuration.")
-    return {"version": version.json()["version"], "models": selected}
+    # Verify embedding dimensions against /api/show metadata without inference.
+    with httpx.Client(base_url=config.endpoint, timeout=15, trust_env=False) as client:
+        shown = client.post("/api/show", json={"model": config.embedding_model})
+        shown.raise_for_status()
+    metadata = shown.json().get("model_info", {})
+    embedding_length = next(
+        (value for key, value in metadata.items() if key.endswith(".embedding_length")), None
+    )
+    if embedding_length != config.embedding_dimensions:
+        raise ValueError(
+            f"Unexpected or missing embedding dimension from Ollama: {embedding_length}"
+        )
+    return {
+        "version": version.json()["version"],
+        "models": selected,
+        "embedding_metadata": metadata,
+    }
 
 
 def git_state(root):
@@ -132,7 +147,7 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
         if not questions:
             raise ValueError(f"Unknown question ID: {question_id}")
     questions = questions[:limit]
-    model_info = inspect_ollama(config)
+    model_info = provider_info(config)
     run_id = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid4().hex[:6]
     output = root / "results/runs" / run_id
     output.mkdir(parents=True)
@@ -149,6 +164,8 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
 
     write_json(output / "config.json", config.model_dump())
     write_json(output / "settings.json", settings.model_dump(mode="json"))
+    if getattr(config, "profile", None):
+        write_json(output / "upstream-deviations.json", settings_changes(settings))
     with zipfile.ZipFile(output / "source-snapshot.zip", "w", zipfile.ZIP_DEFLATED) as archive:
         for relative in code_hashes(root):
             archive.write(root / relative, relative)
@@ -168,7 +185,8 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
             "gold_sha256": sha256(root / config.gold),
             "corpus_manifest_sha256": sha256(root / config.corpus_manifest),
             "corpus": documents,
-            "ollama": model_info,
+            "provider": getattr(config, "provider", "ollama"),
+            "model_info": model_info,
             "runtime_start": runtime_snapshot(),
             "packages": {
                 name: importlib.metadata.version(name)
@@ -186,6 +204,30 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
     )
     print(f"Run: {output}", flush=True)
     records = []
+    ledger = UsageLedger(
+        output,
+        getattr(config, "provider", "ollama"),
+        getattr(config, "stop_after_observed_usd", None),
+    )
+    ledger.install()
+
+    def save_summary():
+        write_json(
+            output / "summary.json",
+            {
+                "run_id": run_id,
+                "planned_questions": len(questions),
+                "completed_questions": len(records),
+                "correct_completed": sum(row["grade"]["correct_completed"] for row in records),
+                "records": records,
+                "metrics": aggregate(records, len(questions)),
+                "usage": ledger.totals(),
+                "protocol": config.protocol,
+                "warning": "Pilot only; not a full LitQA2 evaluation or citation entailment verification.",
+            },
+        )
+
+    save_summary()
     try:
         if config.preindex:
             from paperqa.agents.search import get_directory_index
@@ -221,6 +263,20 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
                 )
                 raise
         for question in questions:
+            await ledger.flush()
+            stop_reason = ledger.stop_reason()
+            if stop_reason:
+                write_json(
+                    output / "stopped.json",
+                    {
+                        "reason": stop_reason,
+                        "planned_questions": len(questions),
+                        "completed_questions": len(records),
+                    },
+                )
+                print(f"  Stopped: {stop_reason}", flush=True)
+                break
+            ledger.phase = question["id"]
             qdir = output / question["id"]
             qdir.mkdir()
             prompt = question_prompt(question)
@@ -309,25 +365,21 @@ async def run(config, config_path: Path, root: Path, limit: int, question_id: st
             )
             write_json(qdir / "grade.json", {**record["grade"], "reference": key})
             records.append(record)
-            write_json(
-                output / "summary.json",
-                {
-                    "run_id": run_id,
-                    "planned_questions": len(questions),
-                    "completed_questions": len(records),
-                    "correct_completed": sum(row["grade"]["correct_completed"] for row in records),
-                    "records": records,
-                    "metrics": aggregate(records, len(questions)),
-                    "protocol": config.protocol,
-                    "warning": "Development pilot; not a full LitQA2 evaluation or citation entailment verification.",
-                },
-            )
+            await ledger.flush()
+            save_summary()
             print(
                 f"  {question['id']}: {record['status']}, {record['seconds']} s, "
                 f"selected={record['grade']['selected']}",
                 flush=True,
             )
     finally:
-        logging.getLogger().removeHandler(log_handler)
-        log_handler.close()
-    return output, all(row["status"] == "success" for row in records)
+        try:
+            await ledger.flush()
+        finally:
+            ledger.uninstall()
+            save_summary()
+            logging.getLogger().removeHandler(log_handler)
+            log_handler.close()
+    return output, len(records) == len(questions) and all(
+        row["status"] == "success" for row in records
+    )

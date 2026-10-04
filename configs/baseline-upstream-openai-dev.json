@@ -1,0 +1,19 @@
+{
+  "profile": "paperqa-high-quality",
+  "name": "paperqa-hq-upstream-openai-dev-control-v1",
+  "provider": "openai",
+  "agent_model": "gpt-4o-2024-11-20",
+  "summary_model": "gpt-4o-2024-11-20",
+  "answer_model": "gpt-4o-2024-11-20",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dimensions": 1536,
+  "request_timeout_seconds": 240,
+  "agent_timeout_seconds": 500,
+  "question_timeout_seconds": 900,
+  "max_concurrent_requests": 10,
+  "stop_after_observed_usd": 3.0,
+  "corpus_dir": "data/corpus/litqa-pilot",
+  "corpus_manifest": "data/manifests/litqa-pilot.json",
+  "questions": "data/questions/litqa-dev.jsonl",
+  "gold": "data/gold/litqa-dev.jsonl"
+}

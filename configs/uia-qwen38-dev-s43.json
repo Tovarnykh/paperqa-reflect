@@ -1,0 +1,41 @@
+{
+  "profile": "paperqa-high-quality",
+  "name": "paperqa-uia-qwen38-dev-s43",
+  "provider": "ollama",
+  "endpoint": "http://127.0.0.1:11436",
+  "agent_model": "qwen3.8:27b",
+  "summary_model": "qwen3.8:27b",
+  "answer_model": "qwen3.8:27b",
+  "embedding_model": "bge-m3:567m",
+  "embedding_dimensions": 1024,
+  "embedding_batch_tokens": 8192,
+  "context_tokens": 16384,
+  "max_output_tokens": 4096,
+  "seed": 43,
+  "reasoning_effort": "none",
+  "agent_reasoning_effort": "low",
+  "tool_call_compatibility": true,
+  "request_timeout_seconds": 600,
+  "agent_timeout_seconds": 1800,
+  "question_timeout_seconds": 2400,
+  "max_concurrent_requests": 1,
+  "corpus_dir": "data/corpus/litqa-pilot",
+  "corpus_manifest": "data/manifests/litqa-pilot.json",
+  "questions": "data/questions/litqa-dev.jsonl",
+  "gold": "data/gold/litqa-dev.jsonl",
+  "tool_transport": "json-schema-v1",
+  "protocol": "uia-baseline-selection-v1",
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0,
+    "repeat_penalty": 1,
+    "presence_penalty": 1.5
+  },
+  "agent_sampling": {
+    "temperature": 1,
+    "top_p": 0.95,
+    "presence_penalty": 0
+  }
+}
