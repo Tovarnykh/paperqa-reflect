@@ -4,6 +4,31 @@ UiA IKT464 research repository: reproducible local PaperQA and separately evalua
 extensions. The fixed development corpus has eight questions; the reserved split
 is for final evaluation after configurations are frozen.
 
+## Current citation branch
+
+This checkout is `exp/citation`; independent loop development is in the sibling
+`../paperqa-loop` worktree on `exp/loop`, starting at `paperqa-baseline-v1`.
+The Git checkpoints were created on 4 October from preserved experiment files;
+they are not historical September commits. [Organization checks](results/reports/2026-10-04-git-organization.md).
+
+The completed citation dev cycle compares B0 baseline, B1 ordinary review plus
+rewrite, B2 local claim verification plus rewrite, and B3 one rewrite without
+review. B3 used 8 local calls / 167.609 seconds; 7 answers exactly matched B1.
+The fixed external judge rated B3 above B0 in 7 cases, tied in 1, and tied with B1
+in all 8. All variants retained 8/8 correct options. B2 did not outperform B1.
+These are dev findings, not independent generalization evidence. B3 is the
+economical candidate; the verifier result is retained even though it is negative.
+
+- [B0/B1/B2 comparison](results/reports/2026-10-03-main-dev-comparison.md)
+- [B3 ablation and limitations](results/reports/2026-10-03-rewrite-only-ablation.md)
+- [Local verifier](docs/local-verifier.md) and [external evaluator](docs/external-judge.md)
+- [Measurement v2](docs/measurement-repair-v2.md); use explicit `--extraction-version v2`
+- [Original README checkpoint history](docs/history/README-before-git-organization.md)
+
+No loop intervention has been implemented. The next research step is a narrow
+controller-evidence hypothesis on `exp/loop`. Combine mechanisms only in a later
+separate experiment. No model/API runs are part of Git organization.
+
 ## Frozen working baseline
 
 The selected comparator is **Qwen3.8 27B Q4_K_M + BGE-M3**, PaperQA pinned through
@@ -20,7 +45,7 @@ validation, and correct options do not establish faithful source attribution.
 `paperqa-baseline-v1` identifies this comparator, including its measured local
 tool transport and runtime configuration. It is not an unmodified upstream clone
 or a reproduction of the published PaperQA2 benchmark. No claim verifier, answer
-rewrite or loop intervention is included in this baseline checkout.
+rewrite or loop intervention is included in the tagged baseline tree.
 
 ## Setup and checks
 
