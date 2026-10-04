@@ -1,0 +1,102 @@
+{
+  "control-01": {
+    "fidelity": {
+      "c001": "faithful"
+    },
+    "coverage": "complete"
+  },
+  "control-02": {
+    "fidelity": {
+      "c001": "distorted"
+    },
+    "coverage": "incomplete"
+  },
+  "control-03": {
+    "fidelity": {
+      "c001": "faithful",
+      "c002": "faithful",
+      "c003": "faithful"
+    },
+    "coverage": "complete"
+  },
+  "control-04": {
+    "fidelity": {
+      "c001": "faithful"
+    },
+    "coverage": "incomplete"
+  },
+  "control-05": {
+    "fidelity": {
+      "c001": "distorted"
+    },
+    "coverage": "incomplete"
+  },
+  "control-06": {
+    "fidelity": {
+      "c001": "distorted"
+    },
+    "coverage": "incomplete"
+  },
+  "control-07": {
+    "fidelity": {
+      "c001": "faithful"
+    },
+    "coverage": "complete"
+  },
+  "control-08": {
+    "fidelity": {
+      "c001": "distorted"
+    },
+    "coverage": "incomplete"
+  },
+  "control-09": {
+    "fidelity": {
+      "c001": "faithful"
+    },
+    "coverage": "complete"
+  },
+  "control-10": {
+    "fidelity": {
+      "c001": "distorted"
+    },
+    "coverage": "incomplete"
+  },
+  "control-11": {
+    "fidelity": {
+      "c001": "faithful",
+      "c002": "faithful"
+    },
+    "coverage": "complete"
+  },
+  "control-12": {
+    "fidelity": {},
+    "coverage": "incomplete"
+  },
+  "control-13": {
+    "fidelity": {
+      "c001": "faithful"
+    },
+    "coverage": "incomplete"
+  },
+  "control-14": {
+    "fidelity": {
+      "c001": "faithful",
+      "c002": "faithful"
+    },
+    "coverage": "complete"
+  },
+  "control-15": {
+    "fidelity": {
+      "c001": "faithful",
+      "c002": "faithful",
+      "c003": "faithful"
+    },
+    "coverage": "complete"
+  },
+  "control-16": {
+    "fidelity": {
+      "c001": "distorted"
+    },
+    "coverage": "incomplete"
+  }
+}

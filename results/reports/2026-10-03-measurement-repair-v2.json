@@ -1,0 +1,386 @@
+{
+  "kind": "bounded-measurement-repair-v2",
+  "strict_calibration_passed": false,
+  "calibration_exact_match": 15,
+  "calibration_total": 16,
+  "calibration_coverage_match": 16,
+  "posthoc_binary_acceptance_match": 16,
+  "working_decision": "Use v2 provisionally; stop extraction tuning and resume main development experiment.",
+  "groups": {
+    "old-synthetic": {
+      "inputs": 12,
+      "fidelity": {
+        "faithful": 31,
+        "unclear": 2
+      },
+      "coverage": {
+        "complete": 11,
+        "unclear": 1
+      }
+    },
+    "new-synthetic": {
+      "inputs": 12,
+      "fidelity": {
+        "faithful": 26
+      },
+      "coverage": {
+        "complete": 12
+      }
+    },
+    "new-fresh": {
+      "inputs": 2,
+      "fidelity": {
+        "faithful": 7
+      },
+      "coverage": {
+        "complete": 2
+      }
+    },
+    "old-historical": {
+      "inputs": 6,
+      "fidelity": {
+        "faithful": 88,
+        "unclear": 4
+      },
+      "coverage": {
+        "complete": 4,
+        "unclear": 2
+      }
+    },
+    "new-historical": {
+      "inputs": 6,
+      "fidelity": {
+        "faithful": 66
+      },
+      "coverage": {
+        "complete": 6
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "new-synthetic-10",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-historical-dev-01-B1",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 6
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-historical-dev-01-B1",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 4
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-historical-dev-01-B2",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 7
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-09",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-historical-dev-01-B0",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 9
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-historical-dev-02-B2",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 12,
+        "unclear": 2
+      },
+      "coverage": "unclear"
+    },
+    {
+      "case_id": "new-synthetic-05",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-08",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 1
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-12",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 7
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-11",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 3
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-06",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-fresh-01",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 5
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-07",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-03",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 5
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-06",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-08",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-09",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-11",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-05",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-03",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 5
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-04",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-12",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 4
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-historical-dev-02-B0",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 35
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-historical-dev-02-B0",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 22
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-historical-dev-02-B1",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 14
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-historical-dev-02-B2",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 11
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-historical-dev-01-B2",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 6
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-historical-dev-02-B1",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 19,
+        "unclear": 2
+      },
+      "coverage": "unclear"
+    },
+    {
+      "case_id": "old-historical-dev-01-B0",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 9
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-02",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-07",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-01",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 1
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-fresh-02",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-10",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "new-synthetic-04",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 1
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "old-synthetic-01",
+      "status": "checked",
+      "fidelity": {
+        "unclear": 2
+      },
+      "coverage": "unclear"
+    },
+    {
+      "case_id": "old-synthetic-02",
+      "status": "checked",
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    }
+  ],
+  "stage_upper_usd": "0.257955",
+  "project_ledger": {
+    "accounted": {
+      "usd": "1.201638",
+      "requests": 177
+    }
+  },
+  "plans": {
+    "calibration": "20261003T170321Z-83dc40",
+    "comparison": "20261003T171115Z-789ac6",
+    "local": "20261003T170428Z-c10eda"
+  },
+  "limitations": [
+    "Single fallible model judge; not independently annotated accuracy",
+    "Small development/regression sample; differing claim granularity",
+    "Exact-label calibration failed; diagnostic continuation recorded before comparison",
+    "Old B1 extraction also affected by historical sentence-boundary repair"
+  ]
+}

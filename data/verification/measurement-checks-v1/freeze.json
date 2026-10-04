@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-03",
+  "control_cases": 12,
+  "extraction_inputs": 12,
+  "origin": "Assistant-authored logical controls, not independent scientific gold",
+  "files": {
+    "control-expectations.json": "d5105ebe972b6f7c21bac9a3319c6933845bbdb5ce55734e20d3a50e5f3ef4c5",
+    "synthetic-sources.json": "b46d434795505b227beb2a6bfa979408283f0f4ff7ef5ffd2d540ddf4a0f3fab",
+    "controls/cases.jsonl": "d696c8c92d984777073e5f6da101f26ef2ec382042c83ddee21be24b921726fc",
+    "controls/manifest.json": "36dd42bd44e9daecbffb41999cf5d86dcede0dfdc9f67dff7ebbb99323844cff"
+  }
+}

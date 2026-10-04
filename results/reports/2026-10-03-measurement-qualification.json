@@ -1,0 +1,196 @@
+{
+  "kind": "measurement-qualification-v1-aggregate",
+  "qualification_passed": false,
+  "controls_checked": 12,
+  "controls_match_expected": true,
+  "local_cases": 12,
+  "local_technical_failures": 0,
+  "local_wall_seconds": 99.915014,
+  "api_cost_upper_usd": "0.147635",
+  "project_ledger": {
+    "accounted": {
+      "usd": "0.943683",
+      "requests": 123
+    }
+  },
+  "plans": {
+    "calibration": "20261003T164253Z-914c38",
+    "audit": "20261003T164633Z-d5f3ca",
+    "local_extraction": "20261003T164401Z-8e8318"
+  },
+  "groups": {
+    "synthetic": {
+      "inputs": 12,
+      "fidelity": {
+        "faithful": 30,
+        "distorted": 3
+      },
+      "coverage": {
+        "complete": 11,
+        "incomplete": 1
+      }
+    },
+    "historical": {
+      "inputs": 6,
+      "fidelity": {
+        "faithful": 86,
+        "distorted": 6
+      },
+      "coverage": {
+        "complete": 3,
+        "incomplete": 3
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "historical-dev-01-B0",
+      "claims": 9,
+      "fidelity": {
+        "faithful": 9
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "historical-dev-01-B1",
+      "claims": 6,
+      "fidelity": {
+        "faithful": 6
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "historical-dev-01-B2",
+      "claims": 7,
+      "fidelity": {
+        "faithful": 7
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "historical-dev-02-B0",
+      "claims": 35,
+      "fidelity": {
+        "faithful": 33,
+        "distorted": 2
+      },
+      "coverage": "incomplete"
+    },
+    {
+      "case_id": "historical-dev-02-B1",
+      "claims": 21,
+      "fidelity": {
+        "faithful": 19,
+        "distorted": 2
+      },
+      "coverage": "incomplete"
+    },
+    {
+      "case_id": "historical-dev-02-B2",
+      "claims": 14,
+      "fidelity": {
+        "faithful": 12,
+        "distorted": 2
+      },
+      "coverage": "incomplete"
+    },
+    {
+      "case_id": "synthetic-01",
+      "claims": 2,
+      "fidelity": {
+        "distorted": 2
+      },
+      "coverage": "incomplete"
+    },
+    {
+      "case_id": "synthetic-02",
+      "claims": 2,
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-03",
+      "claims": 5,
+      "fidelity": {
+        "faithful": 5
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-04",
+      "claims": 2,
+      "fidelity": {
+        "distorted": 1,
+        "faithful": 1
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-05",
+      "claims": 2,
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-06",
+      "claims": 2,
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-07",
+      "claims": 2,
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-08",
+      "claims": 2,
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-09",
+      "claims": 2,
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-10",
+      "claims": 2,
+      "fidelity": {
+        "faithful": 2
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-11",
+      "claims": 3,
+      "fidelity": {
+        "faithful": 3
+      },
+      "coverage": "complete"
+    },
+    {
+      "case_id": "synthetic-12",
+      "claims": 7,
+      "fidelity": {
+        "faithful": 7
+      },
+      "coverage": "complete"
+    }
+  ],
+  "review_note": "Raw model labels are not accuracy: four clear composition flags, five rubric-sensitive flags. Original verdicts unchanged."
+}

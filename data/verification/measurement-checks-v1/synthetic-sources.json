@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": "synthetic-01",
+    "source_text": "The assembly consists of exactly four solar panels and one battery."
+  },
+  {
+    "case_id": "synthetic-02",
+    "source_text": "Five large files account for 91.8% of the archive; smaller files account for the remaining 8.2%."
+  },
+  {
+    "case_id": "synthetic-03",
+    "source_text": "Rod A is 47.28 cm long, rod B is 45.89 cm long, and rod C is 89.58 cm long; A is longer than B but shorter than C."
+  },
+  {
+    "case_id": "synthetic-04",
+    "source_text": "During run A, voltage dropped by 8% only when the temperature was below 5 degrees C."
+  },
+  {
+    "case_id": "synthetic-05",
+    "source_text": "None of the twelve inspected containers leaked; the remaining containers were not examined."
+  },
+  {
+    "case_id": "synthetic-06",
+    "source_text": "The pilot suggests that the alarm may reduce delays, but the effect remains uncertain."
+  },
+  {
+    "case_id": "synthetic-07",
+    "source_text": "Higher attendance was associated with higher scores, but a causal effect was not established."
+  },
+  {
+    "case_id": "synthetic-08",
+    "source_text": "The shipment contains either a red badge or a blue badge, but not both."
+  },
+  {
+    "case_id": "synthetic-09",
+    "source_text": "Team Amber reported that device A was faster; Team Blue did not replicate that finding."
+  },
+  {
+    "case_id": "synthetic-10",
+    "source_text": "Three defects had been fixed by June; two additional defects were fixed in July."
+  },
+  {
+    "case_id": "synthetic-11",
+    "source_text": "All six tested devices booted except device D; device D did not boot."
+  },
+  {
+    "case_id": "synthetic-12",
+    "source_text": "Ranking from longest to shortest: 1. Rod C (89.58 cm), 2. Rod A (47.28 cm), 3. Rod B (45.89 cm)."
+  }
+]

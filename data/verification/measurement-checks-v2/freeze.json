@@ -1,0 +1,15 @@
+{
+  "kind": "bounded-measurement-repair-v2",
+  "controls": 16,
+  "local_inputs": 20,
+  "prior_audit_inputs": 18,
+  "origin": "Authored logical controls, development inputs and saved model answers; no independent scientific gold",
+  "files": {
+    "audit-prompt.txt": "767a4a633a42509a93a5d85be3ddb82e933cb8a709614d3ec6d362e25d4625d3",
+    "control-expectations.json": "58fa97711b431e58eecd45f5f6916eef70097d8571f6081923c7f0d8805cf345",
+    "extraction-prompt.txt": "9e525f9231947764b42e380efdc05ad5725dbf02767229dd5a61ab7e9f52a15c",
+    "local-sources.json": "450b6fd3a9c04ba3907af69d4065fc59715b2c14285670f0c6406be4a18e1b85",
+    "controls/cases.jsonl": "65b1a7d2c7aa2bf3632dfe1a99086e941f772f089a9adaa33b21df20d0008ec9",
+    "controls/manifest.json": "9c1436a656b4eaa775621b0669c6697e9947427fd95f30c72371d08fcfc37ef1"
+  }
+}

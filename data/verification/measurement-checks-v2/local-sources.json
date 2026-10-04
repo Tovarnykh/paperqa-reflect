@@ -1,0 +1,185 @@
+[
+  {
+    "case_id": "synthetic-01",
+    "source_text": "The assembly consists of exactly four solar panels and one battery."
+  },
+  {
+    "case_id": "synthetic-02",
+    "source_text": "Five large files account for 91.8% of the archive; smaller files account for the remaining 8.2%."
+  },
+  {
+    "case_id": "synthetic-03",
+    "source_text": "Rod A is 47.28 cm long, rod B is 45.89 cm long, and rod C is 89.58 cm long; A is longer than B but shorter than C."
+  },
+  {
+    "case_id": "synthetic-04",
+    "source_text": "During run A, voltage dropped by 8% only when the temperature was below 5 degrees C."
+  },
+  {
+    "case_id": "synthetic-05",
+    "source_text": "None of the twelve inspected containers leaked; the remaining containers were not examined."
+  },
+  {
+    "case_id": "synthetic-06",
+    "source_text": "The pilot suggests that the alarm may reduce delays, but the effect remains uncertain."
+  },
+  {
+    "case_id": "synthetic-07",
+    "source_text": "Higher attendance was associated with higher scores, but a causal effect was not established."
+  },
+  {
+    "case_id": "synthetic-08",
+    "source_text": "The shipment contains either a red badge or a blue badge, but not both."
+  },
+  {
+    "case_id": "synthetic-09",
+    "source_text": "Team Amber reported that device A was faster; Team Blue did not replicate that finding."
+  },
+  {
+    "case_id": "synthetic-10",
+    "source_text": "Three defects had been fixed by June; two additional defects were fixed in July."
+  },
+  {
+    "case_id": "synthetic-11",
+    "source_text": "All six tested devices booted except device D; device D did not boot."
+  },
+  {
+    "case_id": "synthetic-12",
+    "source_text": "Ranking from longest to shortest: 1. Rod C (89.58 cm), 2. Rod A (47.28 cm), 3. Rod B (45.89 cm)."
+  },
+  {
+    "case_id": "fresh-01",
+    "source_text": "The monitoring group contained nine nodes: six workers and three coordinators. Under load above 70%, two workers may pause; no coordinator paused during the test."
+  },
+  {
+    "case_id": "fresh-02",
+    "source_text": "At pressures above 4 bar, valve V may close; it did not close in any of the seven trials at 2 bar."
+  },
+  {
+    "case_id": "historical-dev-01-B0",
+    "source_text": "The study identified 80 putative G4-forming sequences (PQSs) within the TMPRSS2 gene using the G4 hunter algorithm. These sequences were classified as stable G-quadruplex structures based on a G score threshold higher than 2.0, which serves as the criterion for stability in this in silico analysis (pqac-72d451a6, pqac-6005b4b4). While supplementary materials reference specific regions such as the promoter and 5'-UTR, and note that four G4 regions were visualized in IGV screenshots, the total count of PQSs identified across the entire gene remains 80 (pqac-3fc32417, pqac-6df62a63). The text explicitly confirms this number as the result of the algorithmic screening process for stable G4 structures within the human TMPRSS2 gene sequence (pqac-ab166aa7).\n\nFinal answer: C",
+    "question": {
+      "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+      "question": "How many putative G4-forming sequences are located within the human gene TMPRSS2?",
+      "options": {
+        "A": "72",
+        "B": "37",
+        "C": "80",
+        "D": "48",
+        "E": "24",
+        "F": "50",
+        "G": "65",
+        "H": "20"
+      }
+    },
+    "sources": {
+      "pqac-3fc32417": "",
+      "pqac-6005b4b4": "",
+      "pqac-6df62a63": "",
+      "pqac-72d451a6": "",
+      "pqac-ab166aa7": ""
+    }
+  },
+  {
+    "case_id": "historical-dev-01-B1",
+    "source_text": "The study explicitly states that using the G4 hunter algorithm, 80 putative G4-forming sequences (PQSs) were identified within the TMPRSS2 gene (pqac-72d451a6, pqac-6005b4b4). These sequences were classified as stable G4 structures based on a G score higher than 2.0 (pqac-72d451a6, pqac-6005b4b4). While the researchers selected four specific PQS for further in vitro and cellular analysis (pqac-6005b4b4), the total count of putative G4-forming sequences identified in silico across the gene is 80 (pqac-72d451a6, pqac-6005b4b4).\n\nFinal answer: C",
+    "question": {
+      "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+      "question": "How many putative G4-forming sequences are located within the human gene TMPRSS2?",
+      "options": {
+        "A": "72",
+        "B": "37",
+        "C": "80",
+        "D": "48",
+        "E": "24",
+        "F": "50",
+        "G": "65",
+        "H": "20"
+      }
+    },
+    "sources": {
+      "pqac-6005b4b4": "",
+      "pqac-72d451a6": ""
+    }
+  },
+  {
+    "case_id": "historical-dev-01-B2",
+    "source_text": "The study identified 80 putative G4-forming sequences (PQSs) within the TMPRSS2 gene using the G4 hunter algorithm (pqac-72d451a6, pqac-6005b4b4). These sequences were classified as stable G-quadruplex structures based on a G score higher than 2.0 (pqac-72d451a6, pqac-6005b4b4). While the supplementary materials note that four specific G4 regions were visualized in IGV screenshots for further analysis (pqac-3fc32417), the total count of PQSs identified across the entire gene remains 80 (pqac-72d451a6, pqac-6005b4b4).\n\nFinal answer: C",
+    "question": {
+      "id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57",
+      "question": "How many putative G4-forming sequences are located within the human gene TMPRSS2?",
+      "options": {
+        "A": "72",
+        "B": "37",
+        "C": "80",
+        "D": "48",
+        "E": "24",
+        "F": "50",
+        "G": "65",
+        "H": "20"
+      }
+    },
+    "sources": {
+      "pqac-3fc32417": "",
+      "pqac-6005b4b4": "",
+      "pqac-72d451a6": ""
+    }
+  },
+  {
+    "case_id": "historical-dev-02-B0",
+    "source_text": "The grape phylloxera genome assembly comprises five chromosome-level scaffolds: four autosomes and one X chromosome. The specific lengths are Chromosome 1 at 89.58 Mb, Chromosome 2 at 45.89 Mb, the X chromosome at 47.28 Mb, Chromosome 3 at 43.29 Mb, and Chromosome 4 at 33.59 Mb (pqac-6008f2e8). To determine the relative rank of the X chromosome, we compare its length against the autosomes. The X chromosome (47.28 Mb) is longer than Chromosomes 3 (43.29 Mb) and 4 (33.59 Mb), but shorter than Chromosome 1 (89.58 Mb) and Chromosome 2 (45.89 Mb) (pqac-6008f2e8).\n\nRanking all five chromosomes from longest to shortest yields the following order:\n1. Chromosome 1 (89.58 Mb)\n2. X chromosome (47.28 Mb)\n3. Chromosome 2 (45.89 Mb)\n4. Chromosome 3 (43.29 Mb)\n5. Chromosome 4 (33.59 Mb)\n\nThis ranking confirms that the X chromosome is the second-longest element in the assembly, positioned between the longest autosome (Chromosome 1) and the second-longest autosome (Chromosome 2). The source explicitly identifies the X chromosome as the \"second-largest chromosome\" in the genome assembly (pqac-3a608de8). Therefore, among all chromosomes, the X chromosome holds the rank of second longest.\n\nFinal answer: D",
+    "question": {
+      "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+      "question": "What is the relative length of the phylloxera X-chromosome when compared to the other, autosomal, chromosomes?",
+      "options": {
+        "A": "Shortest",
+        "B": "Longest",
+        "C": "Second shortest",
+        "D": "Second longest",
+        "E": "Third longest"
+      }
+    },
+    "sources": {
+      "pqac-3a608de8": "",
+      "pqac-6008f2e8": ""
+    }
+  },
+  {
+    "case_id": "historical-dev-02-B1",
+    "source_text": "The grape phylloxera genome assembly comprises five chromosome-level scaffolds: four autosomes and one X chromosome (pqac-6008f2e8). According to Table 1, the specific lengths are Chromosome 1 at 89.58 Mb, Chromosome 2 at 45.89 Mb, Chromosome 3 at 43.29 Mb, Chromosome 4 at 33.59 Mb, and the X chromosome at 47.28 Mb (pqac-6008f2e8). To determine the relative rank of the X chromosome, we compare its length against the autosomes. The X chromosome (47.28 Mb) is longer than Chromosome 2 (45.89 Mb), Chromosome 3 (43.29 Mb), and Chromosome 4 (33.59 Mb), but shorter than Chromosome 1 (89.58 Mb) (pqac-6008f2e8). Ranking all five chromosomes from longest to shortest yields the following order: 1. Chromosome 1 (89.58 Mb), 2. X chromosome (47.28 Mb), 3. Chromosome 2 (45.89 Mb), 4. Chromosome 3 (43.29 Mb), 5. Chromosome 4 (33.59 Mb) (pqac-6008f2e8). This ranking confirms that the X chromosome is the second-longest element in the assembly. The source explicitly identifies the X chromosome as the \"second-largest chromosome\" in the genome assembly (pqac-3a608de8). Therefore, among all chromosomes, the X chromosome holds the rank of second longest.\n\nFinal answer: D",
+    "question": {
+      "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+      "question": "What is the relative length of the phylloxera X-chromosome when compared to the other, autosomal, chromosomes?",
+      "options": {
+        "A": "Shortest",
+        "B": "Longest",
+        "C": "Second shortest",
+        "D": "Second longest",
+        "E": "Third longest"
+      }
+    },
+    "sources": {
+      "pqac-3a608de8": "",
+      "pqac-6008f2e8": ""
+    }
+  },
+  {
+    "case_id": "historical-dev-02-B2",
+    "source_text": "The grape phylloxera genome assembly consists of five chromosome-level scaffolds: four autosomes and one X chromosome (pqac-6008f2e8). According to Table 1 in the source, the lengths are: Chromosome 1 at 89.58 Mb, Chromosome 2 at 45.89 Mb, Chromosome 3 at 43.29 Mb, Chromosome 4 at 33.59 Mb, and the X chromosome at 47.28 Mb (pqac-6008f2e8). Comparing these lengths, the X chromosome (47.28 Mb) is shorter than Chromosome 1 (89.58 Mb) but longer than Chromosome 2 (45.89 Mb), Chromosome 3 (43.29 Mb), and Chromosome 4 (33.59 Mb) (pqac-6008f2e8). The source explicitly identifies the X chromosome as the \"second-largest chromosome\" in the assembly (pqac-3a608de8). Therefore, the X chromosome is the second longest among all chromosomes.\n\nFinal answer: D",
+    "question": {
+      "id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d",
+      "question": "What is the relative length of the phylloxera X-chromosome when compared to the other, autosomal, chromosomes?",
+      "options": {
+        "A": "Shortest",
+        "B": "Longest",
+        "C": "Second shortest",
+        "D": "Second longest",
+        "E": "Third longest"
+      }
+    },
+    "sources": {
+      "pqac-3a608de8": "",
+      "pqac-6008f2e8": ""
+    }
+  }
+]
