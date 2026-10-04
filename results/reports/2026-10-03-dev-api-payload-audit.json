@@ -1,0 +1,187 @@
+{
+  "destination": "https://api.openai.com/v1/responses",
+  "model": "gpt-6.1-sol",
+  "planned_paid_calls": 48,
+  "questions": 8,
+  "distinct_generated_answer_texts": 22,
+  "public_question_dataset": "https://huggingface.co/datasets/futurehouse/lab-bench/resolve/5c77cec648430f30611808808861eb86f81d5eaa/LitQA2/train-00000-of-00001.parquet",
+  "public_question_license": "CC-BY-SA-4.0",
+  "payload_fields": [
+    "anonymous case ID",
+    "public LitQA question/options",
+    "public OA passages",
+    "locally generated answers"
+  ],
+  "excluded": [
+    "API key in input",
+    "private project/wiki documents",
+    "gold labels",
+    "user identity",
+    "local file paths"
+  ],
+  "source_matches": {
+    "pqac-0e5014ba": {
+      "passage_sha256": "787e73f73edde164639f41d31515b7a662242090a1404cf74034dfbabe4b0596",
+      "file": "PMC10748745.txt",
+      "file_sha256": "1528aac3f2a145a38f3ebb63936ea43a64c72a2a34305ffb90751a50a50c8442",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10748745/fullTextXML",
+      "doi": "10.1093/molbev/msad271",
+      "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial License (https://creativecommons.org/licenses/by-nc/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re-use, please contact journals.permissions@oup.com"
+    },
+    "pqac-b5ed0dce": {
+      "passage_sha256": "b33a6d1317f13034370c508d1fa0af1a397dca590f53e6008d823cf9d6c4a704",
+      "file": "PMC10748745.txt",
+      "file_sha256": "1528aac3f2a145a38f3ebb63936ea43a64c72a2a34305ffb90751a50a50c8442",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10748745/fullTextXML",
+      "doi": "10.1093/molbev/msad271",
+      "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial License (https://creativecommons.org/licenses/by-nc/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re-use, please contact journals.permissions@oup.com"
+    },
+    "pqac-162101e0": {
+      "passage_sha256": "ac745d4984b2a6dce2f0e4aff5d5a4d07b183b9746d430b5c6568cca392aa731",
+      "file": "PMC9683785.txt",
+      "file_sha256": "576b0c7cac322b7283c60a3ae06b125b933896c87e1db6ad13d90b93a6e092ff",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9683785/fullTextXML",
+      "doi": "10.7554/elife.76630",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/This article is distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use and redistribution provided that the original author and source are credited."
+    },
+    "pqac-bbada5ad": {
+      "passage_sha256": "6988019c486e51417cdacc6a3f9621aaa2ac0e2f10938b87dbf41d80bbeb46d5",
+      "file": "PMC9683785.txt",
+      "file_sha256": "576b0c7cac322b7283c60a3ae06b125b933896c87e1db6ad13d90b93a6e092ff",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9683785/fullTextXML",
+      "doi": "10.7554/elife.76630",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/This article is distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use and redistribution provided that the original author and source are credited."
+    },
+    "pqac-3fa8f7c7": {
+      "passage_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+      "file": "PMC11077092.txt",
+      "file_sha256": "0b725a273d11f01013876f808e9f00bc7f976aef2ff91ba4fbe82fc68e89bb4a",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11077092/fullTextXML",
+      "doi": "10.1093/nar/gkae130",
+      "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited."
+    },
+    "pqac-af839e78": {
+      "passage_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+      "file": "PMC11077092.txt",
+      "file_sha256": "0b725a273d11f01013876f808e9f00bc7f976aef2ff91ba4fbe82fc68e89bb4a",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11077092/fullTextXML",
+      "doi": "10.1093/nar/gkae130",
+      "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited."
+    },
+    "pqac-cba74028": {
+      "passage_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+      "file": "PMC11077092.txt",
+      "file_sha256": "0b725a273d11f01013876f808e9f00bc7f976aef2ff91ba4fbe82fc68e89bb4a",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11077092/fullTextXML",
+      "doi": "10.1093/nar/gkae130",
+      "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited."
+    },
+    "pqac-93a11786": {
+      "passage_sha256": "83482a75b7616c4ef53978b7af39c6a304f3090fd1e40b42f565f5051ecae233",
+      "file": "PMC9130329.txt",
+      "file_sha256": "d83aa4d2611641dc539aaf2dc3589fe5df78e98953d7799c598e87110ba790d0",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9130329/fullTextXML",
+      "doi": "10.1038/s41467-022-30570-7",
+      "license_text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/."
+    },
+    "pqac-c83bc526": {
+      "passage_sha256": "771f6bac5eabf679b54c0a1ff2d7cbbc05f6979783fc47b112deac3268f2a30e",
+      "file": "PMC9130329.txt",
+      "file_sha256": "d83aa4d2611641dc539aaf2dc3589fe5df78e98953d7799c598e87110ba790d0",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9130329/fullTextXML",
+      "doi": "10.1038/s41467-022-30570-7",
+      "license_text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/."
+    },
+    "pqac-3fc32417": {
+      "passage_sha256": "c79e897c61882e2744ee5b7f33b7bdcbeda190c716398277c47fba9ab254a7bb",
+      "file": "PMC10773119.txt",
+      "file_sha256": "359d98394ca3b4f21f07e54915109a9ac30923b1330a01418eb0e615cc27cc5c",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10773119/fullTextXML",
+      "doi": "10.1186/s12915-023-01805-w",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data."
+    },
+    "pqac-6005b4b4": {
+      "passage_sha256": "3b51f8586412b583af16b8276e1296e997dc8954841bd74fb166ca13e0977640",
+      "file": "PMC10773119.txt",
+      "file_sha256": "359d98394ca3b4f21f07e54915109a9ac30923b1330a01418eb0e615cc27cc5c",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10773119/fullTextXML",
+      "doi": "10.1186/s12915-023-01805-w",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data."
+    },
+    "pqac-6df62a63": {
+      "passage_sha256": "c4d80a74dbfff604e04c05778c7f7d613a596606ccfbbcc5d9cdf544448cab2e",
+      "file": "PMC10773119.txt",
+      "file_sha256": "359d98394ca3b4f21f07e54915109a9ac30923b1330a01418eb0e615cc27cc5c",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10773119/fullTextXML",
+      "doi": "10.1186/s12915-023-01805-w",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data."
+    },
+    "pqac-72d451a6": {
+      "passage_sha256": "ef8701900dc9f3de6d778f13ab62c1c03c091f987fc3982e38f8a49765ff9d2c",
+      "file": "PMC10773119.txt",
+      "file_sha256": "359d98394ca3b4f21f07e54915109a9ac30923b1330a01418eb0e615cc27cc5c",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10773119/fullTextXML",
+      "doi": "10.1186/s12915-023-01805-w",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data."
+    },
+    "pqac-ab166aa7": {
+      "passage_sha256": "4df2b474549b2ba0225593366b380adb447dcdc85a7dd46d6c1b1a249100ab5d",
+      "file": "PMC10773119.txt",
+      "file_sha256": "359d98394ca3b4f21f07e54915109a9ac30923b1330a01418eb0e615cc27cc5c",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10773119/fullTextXML",
+      "doi": "10.1186/s12915-023-01805-w",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data."
+    },
+    "pqac-17dfb2dd": {
+      "passage_sha256": "7a35f9be65433de8b7dabe43b3248228181f02c560285203046241c1ef5dfaff",
+      "file": "PMC11062931.txt",
+      "file_sha256": "a390da355989a8b5ba049431212be347e42c4d06f1143c92e790e90ead05da20",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11062931/fullTextXML",
+      "doi": "10.1038/s41586-024-07298-z",
+      "license_text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/."
+    },
+    "pqac-6e9f29fe": {
+      "passage_sha256": "4b8b0b75064767b3cd21ceaeb845dd71127d951188db6bc0a031757fd8032de5",
+      "file": "PMC11062931.txt",
+      "file_sha256": "a390da355989a8b5ba049431212be347e42c4d06f1143c92e790e90ead05da20",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11062931/fullTextXML",
+      "doi": "10.1038/s41586-024-07298-z",
+      "license_text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/."
+    },
+    "pqac-5798634e": {
+      "passage_sha256": "a8a47afdb7e00e13d6599cbbe39fef841247732698e1dba21c1b87923f68dce8",
+      "file": "PMC10917522.txt",
+      "file_sha256": "00034ddf16c97544208e3550b98bf5bd052246d76b866d621ac013f1bfd4b14e",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10917522/fullTextXML",
+      "doi": "10.1093/g3journal/jkad293",
+      "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited."
+    },
+    "pqac-c0336695": {
+      "passage_sha256": "749e0bbbb4d0ec439218294b94659b452129bf380e53ff2825db273d34258b46",
+      "file": "PMC10917522.txt",
+      "file_sha256": "00034ddf16c97544208e3550b98bf5bd052246d76b866d621ac013f1bfd4b14e",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10917522/fullTextXML",
+      "doi": "10.1093/g3journal/jkad293",
+      "license_text": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited."
+    },
+    "pqac-53afd14d": {
+      "passage_sha256": "654e57ad6182b4884d20624a9e2d909d7e7523815b4a113ec61f27fbe3cd60f4",
+      "file": "PMC10409721.txt",
+      "file_sha256": "0d1e243f5ac9c208037eca815679d2e23b99a1ec0d773ffaa0a2ddbad10a8dd2",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10409721/fullTextXML",
+      "doi": "10.1038/s41467-023-39770-1",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/."
+    },
+    "pqac-f79b02de": {
+      "passage_sha256": "2741de560cc8b97722d1f4b8f00501e962a9998f778f09aaca7b5f7be9dd589f",
+      "file": "PMC10409721.txt",
+      "file_sha256": "0d1e243f5ac9c208037eca815679d2e23b99a1ec0d773ffaa0a2ddbad10a8dd2",
+      "public_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10409721/fullTextXML",
+      "doi": "10.1038/s41467-023-39770-1",
+      "license_text": "https://creativecommons.org/licenses/by/4.0/Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/."
+    }
+  },
+  "sources_verified": 20,
+  "plan_sha256": "249ed4a5366c1f4838e306dc35d6392e198beae6caf68550e8e9a8572e520a88",
+  "authorization_context": "User supplied OpenAI key and explicitly approved API verification of baseline and modified-agent outputs; current request approves proceeding with planned dev comparison."
+}
