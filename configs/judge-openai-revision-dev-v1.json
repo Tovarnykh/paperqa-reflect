@@ -1,0 +1,23 @@
+{
+  "name": "External citation judge for bounded revision engineering pilot",
+  "model": "gpt-6.1-sol",
+  "model_version_note": "Official model page lists this ID, no dated snapshot; record returned model per response.",
+  "reasoning_effort": "medium",
+  "max_output_tokens": 4096,
+  "max_input_tokens": 60000,
+  "timeout_seconds": 600,
+  "shuffle_seed": 20261003,
+  "execution_host": "DESKTOP-A8E6CEQ",
+  "budget_group": "external-judge-pilot-v1",
+  "group_budget_usd": "5.00",
+  "project_budget_usd": "100.00",
+  "pricing": {
+    "input_usd_per_million": "2.00",
+    "cached_input_usd_per_million": "0.10",
+    "cache_write_usd_per_million": "2.50",
+    "output_usd_per_million": "10.00",
+    "checked_on": "2026-10-03",
+    "valid_days": 14,
+    "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+  }
+}
