@@ -18,10 +18,14 @@ N3 used one fewer gather on each selected question; N1 abstained on COSA-1.
 The pairs diverged before the changed observation, so this does not isolate a
 causal improvement. A separate verified finding: a useful new summary reached
 the controller but ranked sixth and was excluded from the answer's five records.
-The expanded [Stage B protocol](docs/loop-evidence-stage-b-v1.md) fixes32 fresh
-attempts across all8 dev questions and two seeds. Use `scripts/run_loop_stage_b.py`
-for a dry plan; `--run` starts the bounded series. The independent evaluator is
-frozen before inference. No answer-selection fix or citation treatment is included.
+[Stage B is complete](results/reports/2026-10-04-loop-evidence-stage-b.md): 32 fresh
+attempts on eight dev questions and two seeds. N3 reduced gather calls 25 to 19,
+but had 15 correct answers plus one abstention versus N1's 16 correct. Mirrored
+external judging: N3 preferred in 3 pairs, N1 in 2, ties in 10, order disagreement
+in 1. Keep N1 as the comparator; N3 is a measured trade-off, not an established
+quality-preserving improvement. No answer-selection fix or citation treatment was
+included. The [frozen protocol](docs/loop-evidence-stage-b-v1.md) and all failures
+remain preserved; do not rerun the completed schedule to seek a better result.
 
 The selected comparator is **Qwen3.8 27B Q4_K_M + BGE-M3**, PaperQA pinned through
 `uv.lock`, Ollama 0.35.0 on the UiA V100 32 GiB. Seeds 42 and 43 each completed 8/8
