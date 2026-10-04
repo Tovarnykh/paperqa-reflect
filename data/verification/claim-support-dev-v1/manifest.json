@@ -1,0 +1,42 @@
+{
+  "id": "claim-support-dev-v1",
+  "prepared_date": "2026-10-03",
+  "status": "development_packet_assistant_draft_labels",
+  "baseline": "results/baselines/uia-local-reference-v1.json",
+  "baseline_sha256": "3ffd9fc62ad8758a27f9ada972e65eea68fa86505ade548e4141b9c6711a35c7",
+  "selection_sha256": "65c48b4c2b98b2657a467f2fc14cd75e966d54711c86a6f080511172b71a3c2e",
+  "generator_sha256": "e37c03df183c25f7dc1b5dc62c52bc3977a51f6e51bceb79ee42bda36482f0c7",
+  "saved_answers_in_inventory": 16,
+  "unique_questions_in_inventory": 8,
+  "answers_represented_in_cases": 9,
+  "cases": 26,
+  "unique_passages": 16,
+  "label_counts_by_origin": {
+    "controlled": {
+      "contradicted": 2,
+      "insufficient": 2,
+      "supported": 2
+    },
+    "natural": {
+      "supported": 15,
+      "insufficient": 3,
+      "contradicted": 2
+    }
+  },
+  "case_selection": "purposive diagnostic coverage; not exhaustive or prevalence estimation",
+  "original_passages": "exact complete saved c.text.text; no RCS, cropping, or normalization",
+  "independent_annotation_complete": false,
+  "holdout_questions_opened": false,
+  "model_calls": 0,
+  "api_cost_usd": 0,
+  "files": {
+    "cases.jsonl": "42753832224dd0f6ae8108866630fab6807af0d46149d76759f09269779c8e26",
+    "passages.jsonl": "838bb1e3ec8070c694e63f10a40857f3c01ad5adf4c7bf2f6bb6c816389f7e4c",
+    "annotations.assistant.jsonl": "8115f93797f5afc871b6208383c7c6dc2fa7bca92194f4406e839ef95d23515d",
+    "provenance.jsonl": "8c47ac99088c44c998d544a54329fb761a1f61e9a8a3bd9c679d635d40a7e27b",
+    "answer-inventory.json": "b255482241226674869efb86bfb3d7e8ee2d00b3f35854103d4a84c031af7be8",
+    "human-review.blank.jsonl": "dbecaf0fe08b117b5955d6d439270e575f5890a68b3bd7745488d0d4fc151d0e",
+    "review-worksheet.md": "9e887e03ecbfd989f3d7bcf20df69d20358ffe875d2a53a7ba2deba3e68e5c26",
+    "passages.local.md": "c727cb4abd5c730fce4727b11ad7874937ff18b4b7af794fba196bc62b246f3d"
+  }
+}

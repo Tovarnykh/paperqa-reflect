@@ -1,0 +1,13 @@
+{
+  "name": "claim-observer-qwen38-v1",
+  "endpoint": "http://127.0.0.1:11436",
+  "model": "qwen3.8:27b",
+  "model_digest": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+  "ollama_version": "0.35.0",
+  "context_tokens": 32768,
+  "max_output_tokens": 1024,
+  "seed": 42,
+  "temperature": 0,
+  "request_timeout_seconds": 600,
+  "server_log": ".cache/ollama-linux-11436/stderr.log"
+}
