@@ -40,3 +40,4 @@ data/verification/rewrite-only-v1/
 !/results/server-selection/*/repeat-plan.json
 *.pid
 /results/loop-pilot/
+/results/loop-stage-b/

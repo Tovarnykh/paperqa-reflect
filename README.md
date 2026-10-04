@@ -18,7 +18,10 @@ N3 used one fewer gather on each selected question; N1 abstained on COSA-1.
 The pairs diverged before the changed observation, so this does not isolate a
 causal improvement. A separate verified finding: a useful new summary reached
 the controller but ranked sixth and was excluded from the answer's five records.
-No broader evaluation or answer-selection fix has been run.
+The expanded [Stage B protocol](docs/loop-evidence-stage-b-v1.md) fixes32 fresh
+attempts across all8 dev questions and two seeds. Use `scripts/run_loop_stage_b.py`
+for a dry plan; `--run` starts the bounded series. The independent evaluator is
+frozen before inference. No answer-selection fix or citation treatment is included.
 
 The selected comparator is **Qwen3.8 27B Q4_K_M + BGE-M3**, PaperQA pinned through
 `uv.lock`, Ollama 0.35.0 on the UiA V100 32 GiB. Seeds 42 and 43 each completed 8/8

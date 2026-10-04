@@ -1,0 +1,142 @@
+{
+  "kind": "loop-stage-b-external-evaluator-freeze-v1",
+  "created_utc": "2026-10-04T13:00:59.722863+00:00",
+  "repository_relative_path": "research/paperqa-reflect",
+  "pinned_commit": "201b3fb3cb02350a99495e1a10bd5be46d3ee325",
+  "verified_current_commit": "a3bd504f1ef638e1fa5e47ece3f7de62cd1dfa8f",
+  "recipe_kind": "source-grounded-answer-pairs-v2.1",
+  "files": {
+    "src/paperqa_reflect/__init__.py": {
+      "sha256": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+      "pinned_git_blob_sha256": "7298188fd12b0ceea1858f51083604a82d43c271f8ef507f529fb9823271d0b6",
+      "byte_equal_to_pinned_commit": true
+    },
+    "src/paperqa_reflect/pairwise.py": {
+      "sha256": "054f62d9f7012826edaa777a45a2c506bd30aeb0520505c57f508ca938394f09",
+      "pinned_git_blob_sha256": "054f62d9f7012826edaa777a45a2c506bd30aeb0520505c57f508ca938394f09",
+      "byte_equal_to_pinned_commit": true
+    },
+    "src/paperqa_reflect/judge.py": {
+      "sha256": "4ded0fa5fda52cfdd55b683b2895d2ab1eeb2805ab34e2da5166ffcab4defdb8",
+      "pinned_git_blob_sha256": "4ded0fa5fda52cfdd55b683b2895d2ab1eeb2805ab34e2da5166ffcab4defdb8",
+      "byte_equal_to_pinned_commit": true
+    },
+    "src/paperqa_reflect/revision.py": {
+      "sha256": "91438e2e8eff49d0b02346fc4676793f21df31103812c83fe3558adb20d14e10",
+      "pinned_git_blob_sha256": "91438e2e8eff49d0b02346fc4676793f21df31103812c83fe3558adb20d14e10",
+      "byte_equal_to_pinned_commit": true
+    },
+    "src/paperqa_reflect/verifier.py": {
+      "sha256": "edddebcb9a8d709fba2f61d13ed6e9117de6a063d9dcde3236b3ae93e932642e",
+      "pinned_git_blob_sha256": "edddebcb9a8d709fba2f61d13ed6e9117de6a063d9dcde3236b3ae93e932642e",
+      "byte_equal_to_pinned_commit": true
+    },
+    "configs/judge-openai-revision-dev-v1.json": {
+      "sha256": "b1f9280c4d39e5cb3f7bac9393ca66a9a211b370dc4f0817d63f1cc6ed35096a",
+      "pinned_git_blob_sha256": "b1f9280c4d39e5cb3f7bac9393ca66a9a211b370dc4f0817d63f1cc6ed35096a",
+      "byte_equal_to_pinned_commit": true
+    },
+    "pyproject.toml": {
+      "sha256": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+      "pinned_git_blob_sha256": "fd7ccf96fcc798e29801931befd6ddc441dd36cdcd057742a43933b186cce8b7",
+      "byte_equal_to_pinned_commit": true
+    },
+    "uv.lock": {
+      "sha256": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+      "pinned_git_blob_sha256": "61b3b1f8641460285883b3d76309c6ae8a2e26f18a9281e2928d5d1a72f8b109",
+      "byte_equal_to_pinned_commit": true
+    }
+  },
+  "prompt_sha256": "ec524ab57602066d738de9dea91979aa9885b2c48ea09fe31a40a90b2f1ef34b",
+  "schema_canonical_sha256": "9fe55be4857cdc8197bf8af443c1133e330dc27e92b86b4f847a1ee0499cb879",
+  "recipe_canonical_sha256": "b45a1fde6d323e000193d2015d45b1ce132a763b5e4fe237dd029d1d774681f9",
+  "recipe_hash_definition": "SHA256 of canonical UTF-8 JSON (ensure_ascii=False, sort_keys=True, separators comma/colon) containing kind,prompt,schema,config,request_template. request_template uses the included placeholder_case via pairwise.request_for.",
+  "placeholder_case": {
+    "case_id": "item-000",
+    "question": {
+      "question": "QUESTION",
+      "options": {}
+    },
+    "sources": {
+      "pqac-SOURCE": "ORIGINAL PASSAGE"
+    },
+    "answers": {
+      "A": "ANSWER A",
+      "B": "ANSWER B"
+    }
+  },
+  "config": {
+    "name": "External citation judge for bounded revision engineering pilot",
+    "model": "gpt-6.1-sol",
+    "model_version_note": "Official model page lists this ID, no dated snapshot; record returned model per response.",
+    "reasoning_effort": "medium",
+    "max_output_tokens": 4096,
+    "max_input_tokens": 60000,
+    "timeout_seconds": 600,
+    "shuffle_seed": 20261003,
+    "execution_host": "DESKTOP-A8E6CEQ",
+    "budget_group": "external-judge-pilot-v1",
+    "group_budget_usd": "5.00",
+    "project_budget_usd": "100.00",
+    "pricing": {
+      "input_usd_per_million": "2.00",
+      "cached_input_usd_per_million": "0.10",
+      "cache_write_usd_per_million": "2.50",
+      "output_usd_per_million": "10.00",
+      "checked_on": "2026-10-03",
+      "valid_days": 14,
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+    }
+  },
+  "python": "3.12.14",
+  "packages": {
+    "httpx": "0.28.1",
+    "httpcore": "1.0.9",
+    "anyio": "4.15.1",
+    "certifi": "2026.7.22",
+    "idna": "3.20",
+    "h11": "0.16.0",
+    "jsonschema": "4.26.0",
+    "attrs": "26.1.0",
+    "jsonschema-specifications": "2025.9.1",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.6.3",
+    "typing_extensions": "4.16.0"
+  },
+  "source_dependency_graph": {
+    "pairwise": [
+      "judge",
+      "revision.ROOT/STRING/obj",
+      "verifier.digest/read_json/write_json"
+    ],
+    "judge": [
+      "verifier",
+      "httpx",
+      "jsonschema"
+    ],
+    "revision": [
+      "verifier",
+      "httpx",
+      "jsonschema"
+    ],
+    "verifier": [
+      "httpx",
+      "jsonschema"
+    ]
+  },
+  "execution": "Offline import and byte-hash inspection only; no API calls, API key or budget ledger access; no source modifications.",
+  "bound": {
+    "maximum_generation_attempts": 32,
+    "maximum_comparison_pairs": 16,
+    "mirrors_per_pair": 2,
+    "maximum_paid_judgments": 32,
+    "max_input_tokens_per_judgment": 60000,
+    "max_output_tokens_per_judgment": 4096,
+    "maximum_plan_reservation_at_input_limit_usd": "6.110720"
+  },
+  "limitations": [
+    "Packet content is frozen after local generation; this manifest freezes evaluator recipe only.",
+    "The existing USD5 budget group is shared with prior citation work. Preflight whole-plan reservation against current remaining project and group headroom before paid calls. The existing run_plan full-plan check compares against group cap, not remaining headroom.",
+    "No experimental treatment, source-selection or judge outcome is implied by this manifest."
+  ]
+}
