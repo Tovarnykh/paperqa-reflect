@@ -10,6 +10,14 @@ is for final evaluation after configurations are frozen.
 `agent_evidence_n=1` versus `3`, with identical source-state logging in both arms.
 Read [the frozen pilot protocol](docs/loop-evidence-v1.md). This is an existing
 PaperQA settings ablation; no efficacy result is implied by implementation.
+
+The user has authorized the [Stage C N1/N3/N8 comparison](docs/loop-evidence-stage-c-v1.md):
+48 fresh, counterbalanced attempts on the same eight dev questions and two seeds.
+N8 is an observed-saturation diagnostic, not an established optimum. The new
+`scripts/run_loop_stage_c.py` prepares a dry plan by default; `--run` executes
+the fixed schedule. Historical Stage A/B runs are preserved separately. No N8
+efficacy result is implied by this preparation; parent wiki records launch status.
+
 The initial Git organization (citation branch, loop branch, baseline branch/tag)
 was published to GitHub on 4 October after explicit user authorization.
 
