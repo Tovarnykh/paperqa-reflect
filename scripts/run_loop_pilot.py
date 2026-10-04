@@ -122,6 +122,7 @@ def main(execute):
         if comparable != original:
             raise ValueError("Model, sampling or another baseline condition changed")
     for key, attr in [("questions_sha256", "questions"),
+                      ("gold_sha256", "gold"),
                       ("corpus_manifest_sha256", "corpus_manifest")]:
         if sha256(ROOT / getattr(configs[1], attr)) != baseline["common_hashes"][key]:
             raise ValueError("Frozen dev inputs changed")

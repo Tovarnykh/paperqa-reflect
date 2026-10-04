@@ -30,6 +30,12 @@ The frozen baseline tag remains unchanged; this instrumented branch deliberately
 has different source hashes in reference.py and runner.py. verify_baseline.py is
 a checker for the frozen tree and will report those two changes here.
 
+Preflight found legacy Git newline normalization in the dev questions, dev key
+and corpus manifest: parsed JSON was identical but archived byte hashes differed.
+Before inference, exact archived bytes were restored in both experiment branches;
+the historical baseline tag was retained. The runner checks all three input hashes.
+This common storage repair is not a data/content change or a treatment difference.
+
 ## Stage A: diagnostic paired pilot, four fresh runs
 
 Use the selected UiA V10032 GiB, Ollama0.35.0 on11436, exact Qwen3.8 27B Q4_K_M /
