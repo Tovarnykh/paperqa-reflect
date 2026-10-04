@@ -6,6 +6,13 @@ is for final evaluation after configurations are frozen.
 
 ## Frozen working baseline
 
+**Current branch: `exp/loop`.** The first intervention is a paired test of
+`agent_evidence_n=1` versus `3`, with identical source-state logging in both arms.
+Read [the frozen pilot protocol](docs/loop-evidence-v1.md). This is an existing
+PaperQA settings ablation; no efficacy result is implied by implementation.
+The initial Git organization (citation branch, loop branch, baseline branch/tag)
+was published to GitHub on 4 October after explicit user authorization.
+
 The selected comparator is **Qwen3.8 27B Q4_K_M + BGE-M3**, PaperQA pinned through
 `uv.lock`, Ollama 0.35.0 on the UiA V100 32 GiB. Seeds 42 and 43 each completed 8/8
 dev questions with correct options. These repeated questions are not independent
@@ -20,7 +27,8 @@ validation, and correct options do not establish faithful source attribution.
 `paperqa-baseline-v1` identifies this comparator, including its measured local
 tool transport and runtime configuration. It is not an unmodified upstream clone
 or a reproduction of the published PaperQA2 benchmark. No claim verifier, answer
-rewrite or loop intervention is included in this baseline checkout.
+rewrite or loop intervention is included in the tagged baseline tree. This
+`exp/loop` checkout adds only the documented visibility setting and shared logging.
 
 ## Setup and checks
 
@@ -30,7 +38,7 @@ Use Python 3.12 and run from this repository root:
 uv sync --frozen
 uv run --frozen python -X utf8 -m pytest -q
 uv run --frozen ruff check .
-uv run --frozen python scripts/verify_baseline.py
+uv run --frozen python -X utf8 scripts/run_loop_pilot.py
 ```
 
 Source documents and run archives are deliberately outside Git. Restore the

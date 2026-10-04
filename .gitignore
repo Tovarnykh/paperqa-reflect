@@ -39,3 +39,4 @@ data/verification/rewrite-only-v1/
 !/results/server-selection/*/qualification-035-outcomes.json
 !/results/server-selection/*/repeat-plan.json
 *.pid
+/results/loop-pilot/

@@ -49,6 +49,7 @@ class ReferenceConfig(BaseModel):
     tool_call_compatibility: bool = False
     tool_transport: Literal["native", "json-schema-v1"] = "native"
     embedding_batch_tokens: int | None = Field(None, gt=0)
+    agent_evidence_n: int | None = Field(None, ge=1)
     request_timeout_seconds: int = Field(600, gt=0)
     agent_timeout_seconds: int = Field(1800, gt=0)
     question_timeout_seconds: int = Field(2400, gt=0)
@@ -201,6 +202,8 @@ def reference_settings(config, root: Path, index_dir: Path, manifest: Path):
         agent_llm_config=llm(config.agent_model, agent=True),
         timeout=config.agent_timeout_seconds,
     )
+    if config.agent_evidence_n is not None:
+        values["agent"]["agent_evidence_n"] = config.agent_evidence_n
     if config.tool_call_compatibility:
         values["agent"]["agent_system_prompt"] += "\n\n" + TOOL_CALL_COMPATIBILITY
     values["agent"]["index"].update(
@@ -211,7 +214,8 @@ def reference_settings(config, root: Path, index_dir: Path, manifest: Path):
         concurrency=1,
     )
     # Only the explicit local tool-call adaptation can extend the agent prompt.
-    # No step cap, changed evidence cap or changed RCS/answer prompt.
+    # No step cap or changed RCS/answer prompt. agent_evidence_n changes only
+    # the existing GatherEvidence observation, not retrieval or answer evidence caps.
     if config.tool_transport == "json-schema-v1":
         from .tool_transport import LocalStructuredSettings
 

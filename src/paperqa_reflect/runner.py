@@ -87,6 +87,7 @@ class QuestionTrace:
         self.started = time.perf_counter()
         self.state = None
         self.actions = []
+        self.step_count = 0
 
     def event(self, kind, value):
         with (self.directory / "events.jsonl").open("a", encoding="utf-8") as stream:
@@ -114,6 +115,13 @@ class QuestionTrace:
         print(f"  {self.directory.name}: {', '.join(names)}", flush=True)
 
     async def step(self, observations, reward, done, truncated):
+        self.step_count += 1
+        snapshot = {}
+        if self.state:
+            path = self.directory / "states" / f"step-{self.step_count:03d}.json"
+            write_json(path, self.state.session.model_dump(mode="json"))
+            snapshot = {"state_path": path.relative_to(self.directory).as_posix(),
+                        "state_sha256": sha256(path)}
         self.event(
             "step",
             {
@@ -121,6 +129,7 @@ class QuestionTrace:
                 "reward": reward,
                 "done": done,
                 "truncated": truncated,
+                **snapshot,
             },
         )
         if self.state:
