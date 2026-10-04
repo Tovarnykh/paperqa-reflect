@@ -13,6 +13,13 @@ PaperQA settings ablation; no efficacy result is implied by implementation.
 The initial Git organization (citation branch, loop branch, baseline branch/tag)
 was published to GitHub on 4 October after explicit user authorization.
 
+[The four-attempt diagnostic pilot is complete](results/reports/2026-10-04-loop-evidence-pilot.md).
+N3 used one fewer gather on each selected question; N1 abstained on COSA-1.
+The pairs diverged before the changed observation, so this does not isolate a
+causal improvement. A separate verified finding: a useful new summary reached
+the controller but ranked sixth and was excluded from the answer's five records.
+No broader evaluation or answer-selection fix has been run.
+
 The selected comparator is **Qwen3.8 27B Q4_K_M + BGE-M3**, PaperQA pinned through
 `uv.lock`, Ollama 0.35.0 on the UiA V100 32 GiB. Seeds 42 and 43 each completed 8/8
 dev questions with correct options. These repeated questions are not independent

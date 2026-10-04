@@ -1,0 +1,1256 @@
+{
+  "kind": "controller-evidence-visibility-diagnostic-v1",
+  "date": "2026-10-04",
+  "pilot_id": "20261004T114111Z-aeb0a1",
+  "status": "completed",
+  "source_git": {
+    "head": "c717ddd64c832195e5f422c71057ba049e083f01",
+    "status": ""
+  },
+  "driver_sha256": "d7803c355eb50fd442a4f77e55a994c45dffe123f63ac78ba12be020e1156581",
+  "model_digests": {
+    "qwen3.8:27b": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+    "bge-m3:567m": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab"
+  },
+  "seed": 42,
+  "api_judge_calls": 0,
+  "holdout_used": false,
+  "stage_b_run": false,
+  "adaptive_retries": 0,
+  "plan_sha256": "8f73e9453c6988891a6a151bd6b61c06845ebf3b3f54a239b4d519664080d0fa",
+  "checks": {
+    "same_models_inputs_packages_code": true,
+    "same_settings_except_N_checksum_run_paths": true,
+    "all_observations_match_upstream_visibility": true,
+    "step_state_hashes_verified": true,
+    "export_file_count": 289,
+    "export_sha256": "5f1deb7ceb8908d6fbbb4f0d4691ab16fbf1a80e2947de11f7d0892f3622b75c",
+    "offline_audit_sha256": "c2ec00ba18c825b9079e8f1a05d479705e84e35af1393547889a68ea2f359e35"
+  },
+  "outcomes": [
+    {
+      "case": "RfaH",
+      "n": 1,
+      "run_id": "20261004T114112Z-584492",
+      "question_id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+      "status": "success",
+      "correct_completed": true,
+      "selected": "B",
+      "question_seconds": 589.014,
+      "controller_turns": 6,
+      "tool_counts": {
+        "paper_search": 1,
+        "gather_evidence": 2,
+        "gen_answer": 2,
+        "complete": 1
+      },
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "token_counts": {
+        "ollama_chat/qwen3.8:27b": [
+          108583,
+          3348
+        ]
+      },
+      "gathers": [
+        {
+          "batch_seconds": 165.49728105217218,
+          "mixed_tool_batch": false,
+          "new_original_chunks": 3,
+          "new_summary_texts": 3,
+          "current_contexts": 3,
+          "state_sha256": "9b51262d58066afc34510d78763cead3e82f51445765c6d6eca580aa9c910bf3"
+        },
+        {
+          "batch_seconds": 187.01581007102504,
+          "mixed_tool_batch": false,
+          "new_original_chunks": 2,
+          "new_summary_texts": 5,
+          "current_contexts": 8,
+          "state_sha256": "ef2c142a8b83a3e5718439a22edb0c4d8c4192ee6f22f8e76ee9e4b190dfb4ae"
+        }
+      ],
+      "incomplete_action_batch": false,
+      "raw_answer_sha256": "b70e447329e99053d7003a9977063e1dad2567815506a265c9613591b9c3c260",
+      "indexing": {
+        "seconds": 93.378,
+        "documents": 16,
+        "status": "success"
+      },
+      "usage": {
+        "requests": 79,
+        "observed_estimated_usd": 0,
+        "requests_without_cost": 0,
+        "cost_complete": true,
+        "stop_after_observed_usd": null,
+        "note": "Observed estimates, not an invoice or hard cap. In-flight/failed requests may be billed. Local electricity/hardware excluded."
+      },
+      "provenance_sha256": "f96087394cf61f41d9c8531999796cd117c24f51c8e834a2b85317639825e01a",
+      "settings_sha256": "e656550060d15777620e17d63f4ebee793108b78b404632d0b9051a60cacca57",
+      "events_sha256": "a8f7149b3892fb59f7c728c816e2467b88a59f39c4f9d941bc206556ccb32ee1",
+      "requests_sha256": "69cbc932a3cc0c78a9167dfdbcdc724c1116094ee4d4e8d2addb6e010aaf6624",
+      "request_status": {
+        "success": 79
+      },
+      "chat_requests": 48,
+      "max_chat_prompt_tokens": 2955,
+      "max_chat_completion_tokens": 444,
+      "chat_finish_reasons": [
+        "stop"
+      ],
+      "first_chat_request_seconds": 150.504842,
+      "timeline": [
+        {
+          "calls": [
+            {
+              "arguments": "{\"query\": \"Vibrio cholerae RfaH E. coli RfaH similarity\", \"min_year\": 2000, \"max_year\": 2026}",
+              "name": "paper_search"
+            }
+          ],
+          "decision_and_overhead_seconds": 150.99618656327948,
+          "tool_batch_seconds": 1.701743105892092,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"question\": \"How similar is the full length Vibrio cholerae RfaH to E. coli RfaH transcription protein percent identity\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "decision_and_overhead_seconds": 4.936024779919535,
+          "tool_batch_seconds": 165.49728105217218,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{}",
+              "name": "gen_answer"
+            }
+          ],
+          "decision_and_overhead_seconds": 5.612834014929831,
+          "tool_batch_seconds": 17.83738549100235,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"question\": \"full length VcRfaH sequence identity 43.6 or 35.8 percent KOW domain Vibrio cholerae RfaH compared to E. coli\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "decision_and_overhead_seconds": 15.026310942135751,
+          "tool_batch_seconds": 187.01581007102504,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{}",
+              "name": "gen_answer"
+            }
+          ],
+          "decision_and_overhead_seconds": 7.9688309780322015,
+          "tool_batch_seconds": 26.09196276869625,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"has_successful_answer\": true}",
+              "name": "complete"
+            }
+          ],
+          "decision_and_overhead_seconds": 5.3268312332220376,
+          "tool_batch_seconds": 0.0033841989934444427,
+          "done": true,
+          "truncated": false
+        }
+      ],
+      "gather_detail": [
+        {
+          "functions": [
+            {
+              "arguments": "{\"question\": \"How similar is the full length Vibrio cholerae RfaH to E. coli RfaH transcription protein percent identity\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "observation_sha256": "1feadc06c8ec3c6ff0f2de81ddb4971ff397dc117e0156fa98d708cb69532a8c",
+          "shown_summaries": 1,
+          "visibility_matches_upstream_setting": true,
+          "shown_chunks": [
+            "pk2022structuralandthermodynamic chunk 9"
+          ],
+          "state_path": "states/step-002.json",
+          "contexts": [
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 9",
+              "score": 10,
+              "original_sha256": "590b603ccbbf84a02ee33c24a375164fae5dcb1c7ec0c11304fd62110e424b92",
+              "summary_sha256": "2b0637dc7f78110d6a29d6ca0839d9ee6cc99f4150fe027995d175b061cd40e3"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 10",
+              "score": 10,
+              "original_sha256": "ac745d4984b2a6dce2f0e4aff5d5a4d07b183b9746d430b5c6568cca392aa731",
+              "summary_sha256": "4165cff0ef671d8b14b4ba14ce33e911516b405c6dca3858ba8b956d3ae40be8"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 2",
+              "score": 10,
+              "original_sha256": "6988019c486e51417cdacc6a3f9621aaa2ac0e2f10938b87dbf41d80bbeb46d5",
+              "summary_sha256": "383d3ac886251acdb904fc22098dbc241ea0e961392db8992e4d54a7b60b79d8"
+            }
+          ]
+        },
+        {
+          "functions": [
+            {
+              "arguments": "{\"question\": \"full length VcRfaH sequence identity 43.6 or 35.8 percent KOW domain Vibrio cholerae RfaH compared to E. coli\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "observation_sha256": "3b0a41b8231ef140464dc88fe90c8a1f89d45d756be9c516b977b2dd8353fe6e",
+          "shown_summaries": 1,
+          "visibility_matches_upstream_setting": true,
+          "shown_chunks": [
+            "pk2022structuralandthermodynamic chunk 2"
+          ],
+          "state_path": "states/step-004.json",
+          "contexts": [
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 9",
+              "score": 10,
+              "original_sha256": "590b603ccbbf84a02ee33c24a375164fae5dcb1c7ec0c11304fd62110e424b92",
+              "summary_sha256": "2b0637dc7f78110d6a29d6ca0839d9ee6cc99f4150fe027995d175b061cd40e3"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 10",
+              "score": 10,
+              "original_sha256": "ac745d4984b2a6dce2f0e4aff5d5a4d07b183b9746d430b5c6568cca392aa731",
+              "summary_sha256": "4165cff0ef671d8b14b4ba14ce33e911516b405c6dca3858ba8b956d3ae40be8"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 2",
+              "score": 10,
+              "original_sha256": "6988019c486e51417cdacc6a3f9621aaa2ac0e2f10938b87dbf41d80bbeb46d5",
+              "summary_sha256": "383d3ac886251acdb904fc22098dbc241ea0e961392db8992e4d54a7b60b79d8"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 2",
+              "score": 10,
+              "original_sha256": "6988019c486e51417cdacc6a3f9621aaa2ac0e2f10938b87dbf41d80bbeb46d5",
+              "summary_sha256": "32aafee1054be3306ada75ee6177d04be3cc172b5828bc78ad556d30675120a0"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 9",
+              "score": 10,
+              "original_sha256": "590b603ccbbf84a02ee33c24a375164fae5dcb1c7ec0c11304fd62110e424b92",
+              "summary_sha256": "da6d286780a5f092cfdd871c44ea0cb37068503dcf4abe7d1446955dc779a6e9"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 10",
+              "score": 10,
+              "original_sha256": "ac745d4984b2a6dce2f0e4aff5d5a4d07b183b9746d430b5c6568cca392aa731",
+              "summary_sha256": "221b41f7ff33a4bc3dd7fdbc9dbeb03575c5c75a3203fe4c1702314256927534"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 11",
+              "score": 7,
+              "original_sha256": "d8c17240a75c004973c7e9fa98ff5d3fb16518f91b14de0f8e60a6bdb6905e27",
+              "summary_sha256": "9a41a7c7bbe0b5b2517967666ca3d245f1d1b46e733e6584d73037ebb980bb8d"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 1",
+              "score": 7,
+              "original_sha256": "49310ec75d595531f6f9a820de131f1ead6c59b58ac643278226933f1e463cfa",
+              "summary_sha256": "e470476835dde28eb82862a234dd3f4b3144a2c80ccb24e8275237da46a57665"
+            }
+          ]
+        }
+      ],
+      "answer_attempts": [
+        {
+          "final_marker": "B",
+          "characters": 1105,
+          "answer_sha256": "301f2b913d795218a2333bde124b37f4c856bb03150bf268c8c8c1eac39d0da1",
+          "state_path": "states/step-003.json"
+        },
+        {
+          "final_marker": "B",
+          "characters": 1764,
+          "answer_sha256": "6f9af8f101b061921c4607ee5720c3e0cc3a154860b4feb9bee8e5ea6db1bee5",
+          "state_path": "states/step-005.json"
+        }
+      ],
+      "job": 1,
+      "exit_code": 0,
+      "wall_seconds": 694.0428609722294
+    },
+    {
+      "case": "RfaH",
+      "n": 3,
+      "run_id": "20261004T115247Z-eb9cda",
+      "question_id": "b105af85-833e-48bc-ac78-48f73c9673fd",
+      "status": "success",
+      "correct_completed": true,
+      "selected": "B",
+      "question_seconds": 294.492,
+      "controller_turns": 4,
+      "tool_counts": {
+        "paper_search": 1,
+        "gather_evidence": 1,
+        "gen_answer": 1,
+        "complete": 1
+      },
+      "actions": [
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "token_counts": {
+        "ollama_chat/qwen3.8:27b": [
+          56055,
+          2514
+        ]
+      },
+      "gathers": [
+        {
+          "batch_seconds": 209.83508243318647,
+          "mixed_tool_batch": false,
+          "new_original_chunks": 6,
+          "new_summary_texts": 6,
+          "current_contexts": 6,
+          "state_sha256": "426e408ca24a4d51c37aa3306db591b6d547bc95e98435dbff62b8c54140bf7a"
+        }
+      ],
+      "incomplete_action_batch": false,
+      "raw_answer_sha256": "1acdd6083dd1f4cf65cb880fc196c7e3b541b97ddd3e09e95e73ae52b4a94d7a",
+      "indexing": {
+        "seconds": 77.969,
+        "documents": 16,
+        "status": "success"
+      },
+      "usage": {
+        "requests": 55,
+        "observed_estimated_usd": 0,
+        "requests_without_cost": 0,
+        "cost_complete": true,
+        "stop_after_observed_usd": null,
+        "note": "Observed estimates, not an invoice or hard cap. In-flight/failed requests may be billed. Local electricity/hardware excluded."
+      },
+      "provenance_sha256": "0ec217c735d50c9cc5311fe1db099da71c55c9454b2b601fdcb023e31e54b5e0",
+      "settings_sha256": "36666334d6e879cc4264a167bf6ba1eb9057dc779a560cdca2e2f556d59cec28",
+      "events_sha256": "67a1d148c88a1d7034361793806816b588e0630b453748076a2b745695c5af86",
+      "requests_sha256": "bb8d6d457964a0dfa46d2f8cce50dc04748748938b69faf8e816715ec8fd9c57",
+      "request_status": {
+        "success": 55
+      },
+      "chat_requests": 25,
+      "max_chat_prompt_tokens": 2776,
+      "max_chat_completion_tokens": 482,
+      "chat_finish_reasons": [
+        "stop"
+      ],
+      "first_chat_request_seconds": 22.641673,
+      "timeline": [
+        {
+          "calls": [
+            {
+              "arguments": "{\"query\": \"Vibrio cholerae RfaH E. coli RfaH similarity\", \"min_year\": 2000, \"max_year\": 2026}",
+              "name": "paper_search"
+            }
+          ],
+          "decision_and_overhead_seconds": 23.00481630396098,
+          "tool_batch_seconds": 0.3018823517486453,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"question\": \"How similar is full length Vibrio cholerae RfaH to E. coli RfaH transcription protein?\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "decision_and_overhead_seconds": 6.261821676045656,
+          "tool_batch_seconds": 209.83508243318647,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{}",
+              "name": "gen_answer"
+            }
+          ],
+          "decision_and_overhead_seconds": 21.801204696763307,
+          "tool_batch_seconds": 24.542656247038394,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"has_successful_answer\": true}",
+              "name": "complete"
+            }
+          ],
+          "decision_and_overhead_seconds": 5.35325304698199,
+          "tool_batch_seconds": 0.004762744996696711,
+          "done": true,
+          "truncated": false
+        }
+      ],
+      "gather_detail": [
+        {
+          "functions": [
+            {
+              "arguments": "{\"question\": \"How similar is full length Vibrio cholerae RfaH to E. coli RfaH transcription protein?\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "observation_sha256": "f4435892a28fae21fc86ac448cd9bfc1524be97c35e498e7cbfc0316ce4b4929",
+          "shown_summaries": 3,
+          "visibility_matches_upstream_setting": true,
+          "shown_chunks": [
+            "pk2022structuralandthermodynamic chunk 10",
+            "pk2022structuralandthermodynamic chunk 9",
+            "pk2022structuralandthermodynamic chunk 2"
+          ],
+          "state_path": "states/step-002.json",
+          "contexts": [
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 3",
+              "score": 8,
+              "original_sha256": "914f8a4d2473ba58a466e02e1bced1de2d9b49b7a11aed5af83c4520fcbf1fc0",
+              "summary_sha256": "bc4dcbf843a1484a374b1774c5bb85c79e4a347d0d2807458c386ee321b0f515"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 10",
+              "score": 10,
+              "original_sha256": "ac745d4984b2a6dce2f0e4aff5d5a4d07b183b9746d430b5c6568cca392aa731",
+              "summary_sha256": "5cf581c17d57584ab86719751428a3bfb995b18423008fc1d86b067172f70320"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 9",
+              "score": 9,
+              "original_sha256": "590b603ccbbf84a02ee33c24a375164fae5dcb1c7ec0c11304fd62110e424b92",
+              "summary_sha256": "f4f728c61cf6fbf883cf37551b1172bce8ade8d256e894a3b6775b0a60ba36de"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 11",
+              "score": 3,
+              "original_sha256": "d8c17240a75c004973c7e9fa98ff5d3fb16518f91b14de0f8e60a6bdb6905e27",
+              "summary_sha256": "22a7be2755cbd79af69b7e08fe465dfa9574f91521efe1872f7be0810870bad5"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 1",
+              "score": 6,
+              "original_sha256": "49310ec75d595531f6f9a820de131f1ead6c59b58ac643278226933f1e463cfa",
+              "summary_sha256": "d4fcf76b527a3562abace5232119db517680078c9e8407d7e57302fc05f10dfb"
+            },
+            {
+              "chunk": "pk2022structuralandthermodynamic chunk 2",
+              "score": 9,
+              "original_sha256": "6988019c486e51417cdacc6a3f9621aaa2ac0e2f10938b87dbf41d80bbeb46d5",
+              "summary_sha256": "a92808f61d64a9f7ffeb4806fd73a8652a06263970dab0fb27490dd0b96fa142"
+            }
+          ]
+        }
+      ],
+      "answer_attempts": [
+        {
+          "final_marker": "B",
+          "characters": 1627,
+          "answer_sha256": "041a849f2fbfec95514f1140bad9872a514614addae4bf4114933f709c9de8ca",
+          "state_path": "states/step-003.json"
+        }
+      ],
+      "job": 2,
+      "exit_code": 0,
+      "wall_seconds": 381.0303843473084
+    },
+    {
+      "case": "COSA-1",
+      "n": 3,
+      "run_id": "20261004T115908Z-8f6714",
+      "question_id": "487539f9-2f17-4009-aa4a-c41322445f11",
+      "status": "success",
+      "correct_completed": true,
+      "selected": "B",
+      "question_seconds": 492.975,
+      "controller_turns": 5,
+      "tool_counts": {
+        "paper_search": 3,
+        "gather_evidence": 2,
+        "gen_answer": 1,
+        "complete": 1
+      },
+      "actions": [
+        "paper_search",
+        "paper_search",
+        "gather_evidence",
+        "gather_evidence",
+        "paper_search",
+        "gen_answer",
+        "complete"
+      ],
+      "token_counts": {
+        "ollama_chat/qwen3.8:27b": [
+          103598,
+          4597
+        ]
+      },
+      "gathers": [
+        {
+          "batch_seconds": 171.5947240171954,
+          "mixed_tool_batch": false,
+          "new_original_chunks": 4,
+          "new_summary_texts": 4,
+          "current_contexts": 4,
+          "state_sha256": "8ae9a30f3dda1eba0f99b4b7b2e42b2b1fdf779ca8ef219851c612480411a947"
+        },
+        {
+          "batch_seconds": 190.3879232541658,
+          "mixed_tool_batch": true,
+          "new_original_chunks": 1,
+          "new_summary_texts": 4,
+          "current_contexts": 8,
+          "state_sha256": "e63ed54ac0180cfe22412bde46b7d90adefc549240a390ac6582af3ba5453ce2"
+        }
+      ],
+      "incomplete_action_batch": false,
+      "raw_answer_sha256": "7a26182385de4b0a23193f2f69eac879441d871c48b0efaeef17bea3cce6560b",
+      "indexing": {
+        "seconds": 99.609,
+        "documents": 16,
+        "status": "success"
+      },
+      "usage": {
+        "requests": 77,
+        "observed_estimated_usd": 0,
+        "requests_without_cost": 0,
+        "cost_complete": true,
+        "stop_after_observed_usd": null,
+        "note": "Observed estimates, not an invoice or hard cap. In-flight/failed requests may be billed. Local electricity/hardware excluded."
+      },
+      "provenance_sha256": "d40834a811ac6ca88299d894cd95d9435f958a31ddfb014f4cd24b4a68a08c69",
+      "settings_sha256": "d3dbb3573d18705152884655af6824d46f2a057097a03d727faa7336abd08593",
+      "events_sha256": "d59cccfd620596aef570ab98e5c0def38a2edb8e46405f786b04a882feb7948b",
+      "requests_sha256": "70375981c050c404b4c3ed29cde1e27d3338170dddfd847d6fd0181af03788f7",
+      "request_status": {
+        "success": 77
+      },
+      "chat_requests": 46,
+      "max_chat_prompt_tokens": 3116,
+      "max_chat_completion_tokens": 1220,
+      "chat_finish_reasons": [
+        "stop"
+      ],
+      "first_chat_request_seconds": 25.436979,
+      "timeline": [
+        {
+          "calls": [
+            {
+              "arguments": "{\"query\": \"COSA-1 C. elegans MSH5 ZHP3 amino acid interaction\", \"min_year\": 2000, \"max_year\": 2026}",
+              "name": "paper_search"
+            },
+            {
+              "arguments": "{\"query\": \"COSA-1 synaptonemal complex MSH5 ZHP3 recruitment\", \"min_year\": 2000, \"max_year\": 2026}",
+              "name": "paper_search"
+            }
+          ],
+          "decision_and_overhead_seconds": 25.890433743596077,
+          "tool_batch_seconds": 0.5448786811903119,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"question\": \"Which amino acids of COSA-1 are required for recruiting MSH5 and ZHP3? Deleting which residues would affect MSH5 and ZHP3 binding to COSA-1?\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "decision_and_overhead_seconds": 7.40049500297755,
+          "tool_batch_seconds": 171.5947240171954,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"question\": \"COSA-1 N-terminal deletion amino acids 1-10 11-20 21-30 31-40 MSH5 ZHP3 binding intrinsically disordered region\"}",
+              "name": "gather_evidence"
+            },
+            {
+              "arguments": "{\"query\": \"COSA-1 N-terminal disordered region deletion MSH5 ZHP3 C. elegans\", \"min_year\": 2015, \"max_year\": 2026}",
+              "name": "paper_search"
+            }
+          ],
+          "decision_and_overhead_seconds": 44.77431080490351,
+          "tool_batch_seconds": 190.3879232541658,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{}",
+              "name": "gen_answer"
+            }
+          ],
+          "decision_and_overhead_seconds": 18.799919327721,
+          "tool_batch_seconds": 18.53451977111399,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"has_successful_answer\": true}",
+              "name": "complete"
+            }
+          ],
+          "decision_and_overhead_seconds": 14.144320263061672,
+          "tool_batch_seconds": 0.003247946035116911,
+          "done": true,
+          "truncated": false
+        }
+      ],
+      "gather_detail": [
+        {
+          "functions": [
+            {
+              "arguments": "{\"question\": \"Which amino acids of COSA-1 are required for recruiting MSH5 and ZHP3? Deleting which residues would affect MSH5 and ZHP3 binding to COSA-1?\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "observation_sha256": "b651ca767e5bdb04fbfde927bb33c8cb7e77e38ba2109e7bc828835ab76198f3",
+          "shown_summaries": 3,
+          "visibility_matches_upstream_setting": true,
+          "shown_chunks": [
+            "y2024cosa1mediatedprocrossover chunk 4",
+            "y2024cosa1mediatedprocrossover chunk 8",
+            "y2024cosa1mediatedprocrossover chunk 5"
+          ],
+          "state_path": "states/step-002.json",
+          "contexts": [
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 10,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "fc92897051f96614ddc80f302d5ea27dbd81dded6b46a651a6cca3e76a7ce4e7"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 1",
+              "score": 6,
+              "original_sha256": "5a833518050247608d59301918c49495d7290d4b8c2d9fc73193a47d8a498ad2",
+              "summary_sha256": "81a135e1f15ebbd48a82ba57cb2f8a93c6bfd74999f0cb2e709bb66b50b27055"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 8",
+              "score": 9,
+              "original_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+              "summary_sha256": "9b62070aeb9ac1944f527d78e6a49a1d3846f302a5516184afbcede2721739fb"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 5",
+              "score": 8,
+              "original_sha256": "b9d242ccda4c0b133f51744906d695709aef1a22ae7177ad9a84a2383ebc13a7",
+              "summary_sha256": "65ec8aa90ca7807367e8336ee6628ffac247552a102e1ef9cfb441ff7d8adb87"
+            }
+          ]
+        },
+        {
+          "functions": [
+            {
+              "arguments": "{\"question\": \"COSA-1 N-terminal deletion amino acids 1-10 11-20 21-30 31-40 MSH5 ZHP3 binding intrinsically disordered region\"}",
+              "name": "gather_evidence"
+            },
+            {
+              "arguments": "{\"query\": \"COSA-1 N-terminal disordered region deletion MSH5 ZHP3 C. elegans\", \"min_year\": 2015, \"max_year\": 2026}",
+              "name": "paper_search"
+            }
+          ],
+          "observation_sha256": "dd304742c8db695f872f57cea5df4eda9f5308fed110f5e5564e773ebce10c2e",
+          "shown_summaries": 3,
+          "visibility_matches_upstream_setting": true,
+          "shown_chunks": [
+            "y2024cosa1mediatedprocrossover chunk 4",
+            "y2024cosa1mediatedprocrossover chunk 1",
+            "y2024cosa1mediatedprocrossover chunk 8"
+          ],
+          "state_path": "states/step-003.json",
+          "contexts": [
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 10,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "fc92897051f96614ddc80f302d5ea27dbd81dded6b46a651a6cca3e76a7ce4e7"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 1",
+              "score": 6,
+              "original_sha256": "5a833518050247608d59301918c49495d7290d4b8c2d9fc73193a47d8a498ad2",
+              "summary_sha256": "81a135e1f15ebbd48a82ba57cb2f8a93c6bfd74999f0cb2e709bb66b50b27055"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 8",
+              "score": 9,
+              "original_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+              "summary_sha256": "9b62070aeb9ac1944f527d78e6a49a1d3846f302a5516184afbcede2721739fb"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 5",
+              "score": 8,
+              "original_sha256": "b9d242ccda4c0b133f51744906d695709aef1a22ae7177ad9a84a2383ebc13a7",
+              "summary_sha256": "65ec8aa90ca7807367e8336ee6628ffac247552a102e1ef9cfb441ff7d8adb87"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 7",
+              "score": 4,
+              "original_sha256": "f6d27ac8aaa8d952543c6d48985b80029668ce4fbd342aa23e80c02ed136ab18",
+              "summary_sha256": "1f43229fd4aaa83294c88a6e01c687f25b37bba1130929151dfaac4d87245d86"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 1",
+              "score": 8,
+              "original_sha256": "5a833518050247608d59301918c49495d7290d4b8c2d9fc73193a47d8a498ad2",
+              "summary_sha256": "7a2b129268ebfa9670ee24f04f2b03dc7593f330a73f77a641e9a24a9368628d"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 8",
+              "score": 8,
+              "original_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+              "summary_sha256": "40e4921a3a92549ba98812f3d6e8d114333c411efc0693ad5f661d438150c8bb"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 10,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "dac5782f4e5df5331aa48b891a54b7623a53dc9fbf95c1af6ccc963516d64fae"
+            }
+          ]
+        }
+      ],
+      "answer_attempts": [
+        {
+          "final_marker": "B",
+          "characters": 1078,
+          "answer_sha256": "423a97bcdc2e28993edc2baf31ac54d33ced28e5785b2470daa1aae91f594561",
+          "state_path": "states/step-004.json"
+        }
+      ],
+      "job": 3,
+      "exit_code": 0,
+      "wall_seconds": 597.8069007634185
+    },
+    {
+      "case": "COSA-1",
+      "n": 1,
+      "run_id": "20261004T120906Z-eb779c",
+      "question_id": "487539f9-2f17-4009-aa4a-c41322445f11",
+      "status": "unsure",
+      "correct_completed": false,
+      "selected": "ABSTAIN",
+      "question_seconds": 882.116,
+      "controller_turns": 7,
+      "tool_counts": {
+        "paper_search": 3,
+        "gather_evidence": 3,
+        "gen_answer": 2,
+        "complete": 1
+      },
+      "actions": [
+        "paper_search",
+        "paper_search",
+        "gather_evidence",
+        "gather_evidence",
+        "gen_answer",
+        "paper_search",
+        "gather_evidence",
+        "gen_answer",
+        "complete"
+      ],
+      "token_counts": {
+        "ollama_chat/qwen3.8:27b": [
+          173191,
+          9628
+        ]
+      },
+      "gathers": [
+        {
+          "batch_seconds": 179.33371634269133,
+          "mixed_tool_batch": false,
+          "new_original_chunks": 5,
+          "new_summary_texts": 5,
+          "current_contexts": 5,
+          "state_sha256": "3342547d36026b40b51f3f0ea215ae06120e7561c3f074fa06ed31295c53fce0"
+        },
+        {
+          "batch_seconds": 198.85259410412982,
+          "mixed_tool_batch": false,
+          "new_original_chunks": 1,
+          "new_summary_texts": 6,
+          "current_contexts": 11,
+          "state_sha256": "a00bcd6787583f3bee16453dc6d5abf4f9a1b8f7b4d1b0a6734b964db8a96454"
+        },
+        {
+          "batch_seconds": 161.49859056808054,
+          "mixed_tool_batch": true,
+          "new_original_chunks": 0,
+          "new_summary_texts": 1,
+          "current_contexts": 12,
+          "state_sha256": "799bb5aaadb0c201f88ca95644237cb05c1a46da875b24843c274ed42ce11299"
+        }
+      ],
+      "incomplete_action_batch": false,
+      "raw_answer_sha256": "4712bc065ee81546f60b690fdce18fd30519270746698595984d19589441a7b2",
+      "indexing": {
+        "seconds": 84.313,
+        "documents": 16,
+        "status": "success"
+      },
+      "usage": {
+        "requests": 101,
+        "observed_estimated_usd": 0,
+        "requests_without_cost": 0,
+        "cost_complete": true,
+        "stop_after_observed_usd": null,
+        "note": "Observed estimates, not an invoice or hard cap. In-flight/failed requests may be billed. Local electricity/hardware excluded."
+      },
+      "provenance_sha256": "7f38942590db63f622eaf2e6f7e8074afb0f3526b103371c528e0d5edd794a21",
+      "settings_sha256": "fae8b229532131fc5145cee90e781af841ef9465cc6803bf6bfce8dafab03db6",
+      "events_sha256": "d2f80b873b34ef669dc4bef48568c3b52d2dc53190092285cd03a4708b1e9ea2",
+      "requests_sha256": "5ff56a7f44efafc7dae36cf26359f8223dcc60b6e5402a95401595914b2a2a07",
+      "request_status": {
+        "success": 101
+      },
+      "chat_requests": 69,
+      "max_chat_prompt_tokens": 5764,
+      "max_chat_completion_tokens": 2688,
+      "chat_finish_reasons": [
+        "stop"
+      ],
+      "first_chat_request_seconds": 25.635887,
+      "timeline": [
+        {
+          "calls": [
+            {
+              "arguments": "{\"query\": \"COSA-1 C. elegans MSH5 ZHP3 amino acid interaction\", \"min_year\": 2000, \"max_year\": 2026}",
+              "name": "paper_search"
+            },
+            {
+              "arguments": "{\"query\": \"COSA-1 synaptonemal complex MSH5 ZHP3 recruitment\", \"min_year\": 2000, \"max_year\": 2026}",
+              "name": "paper_search"
+            }
+          ],
+          "decision_and_overhead_seconds": 26.127458394970745,
+          "tool_batch_seconds": 0.9039856907911599,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"question\": \"Which amino acids of COSA-1 are required for recruiting MSH5 and ZHP3? What domain or region of COSA-1 interacts with MSH5 or ZHP3?\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "decision_and_overhead_seconds": 6.556197087280452,
+          "tool_batch_seconds": 179.33371634269133,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"question\": \"COSA-1 N-terminal residues 1-50 IDR MSH5 ZHP3 specific critical residues deletion truncation which region most important\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "decision_and_overhead_seconds": 41.80747950728983,
+          "tool_batch_seconds": 198.85259410412982,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{}",
+              "name": "gen_answer"
+            }
+          ],
+          "decision_and_overhead_seconds": 35.749073343817145,
+          "tool_batch_seconds": 147.1993918651715,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"query\": \"COSA-1 N-terminal IDR MSH5 ZHP3 deletion 11 20 31 40 specific residues binding\", \"min_year\": 2020, \"max_year\": 2026}",
+              "name": "paper_search"
+            },
+            {
+              "arguments": "{\"question\": \"COSA-1 which specific 10 amino acid region within N-terminal IDR 1-50 is most critical for MSH5 ZHP3 binding, residues 1-10 or 11-20 or 21-30 or 31-40\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "decision_and_overhead_seconds": 37.14248115289956,
+          "tool_batch_seconds": 161.49859056808054,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{}",
+              "name": "gen_answer"
+            }
+          ],
+          "decision_and_overhead_seconds": 14.015894258860499,
+          "tool_batch_seconds": 23.50469200918451,
+          "done": false,
+          "truncated": false
+        },
+        {
+          "calls": [
+            {
+              "arguments": "{\"has_successful_answer\": false}",
+              "name": "complete"
+            }
+          ],
+          "decision_and_overhead_seconds": 8.938196694012731,
+          "tool_batch_seconds": 0.003674435894936323,
+          "done": true,
+          "truncated": false
+        }
+      ],
+      "gather_detail": [
+        {
+          "functions": [
+            {
+              "arguments": "{\"question\": \"Which amino acids of COSA-1 are required for recruiting MSH5 and ZHP3? What domain or region of COSA-1 interacts with MSH5 or ZHP3?\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "observation_sha256": "15be6c6ae1a59d50c263548cbcd9ac48e9cb68843510c1c15084b5775b796b4c",
+          "shown_summaries": 1,
+          "visibility_matches_upstream_setting": true,
+          "shown_chunks": [
+            "y2024cosa1mediatedprocrossover chunk 4"
+          ],
+          "state_path": "states/step-002.json",
+          "contexts": [
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 10,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "3b9d908ccd54c30d8d901df77a775ab5d5b24eff6b828401eb1b466d7cbd7650"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 6",
+              "score": 8,
+              "original_sha256": "9543ab0040962798c37d6cd826646d478f824f42937bfdddd894b2b8d5bd5f46",
+              "summary_sha256": "be71b4039c83c807eee2c65f137c01ac07908f458ee6ab308038615f30160dcd"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 8",
+              "score": 10,
+              "original_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+              "summary_sha256": "2895728afaab108708bb53a3b307700cc2ecfe174deb078ff51006f2ba84d929"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 5",
+              "score": 8,
+              "original_sha256": "b9d242ccda4c0b133f51744906d695709aef1a22ae7177ad9a84a2383ebc13a7",
+              "summary_sha256": "ade855d826686e16ab2558a2c83e6dfbf47f5eebe9572bc595ec8600ca3ef8bc"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 1",
+              "score": 9,
+              "original_sha256": "5a833518050247608d59301918c49495d7290d4b8c2d9fc73193a47d8a498ad2",
+              "summary_sha256": "51b67a870fcdd2b514cb1b5237920ad09d1a42126b759440e1abaa6155e88619"
+            }
+          ]
+        },
+        {
+          "functions": [
+            {
+              "arguments": "{\"question\": \"COSA-1 N-terminal residues 1-50 IDR MSH5 ZHP3 specific critical residues deletion truncation which region most important\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "observation_sha256": "098c4bcbabefa56761fd9d7686df553ac7e5584bf6b39bee48b6cd87e19b02f4",
+          "shown_summaries": 1,
+          "visibility_matches_upstream_setting": true,
+          "shown_chunks": [
+            "y2024cosa1mediatedprocrossover chunk 4"
+          ],
+          "state_path": "states/step-003.json",
+          "contexts": [
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 10,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "3b9d908ccd54c30d8d901df77a775ab5d5b24eff6b828401eb1b466d7cbd7650"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 6",
+              "score": 8,
+              "original_sha256": "9543ab0040962798c37d6cd826646d478f824f42937bfdddd894b2b8d5bd5f46",
+              "summary_sha256": "be71b4039c83c807eee2c65f137c01ac07908f458ee6ab308038615f30160dcd"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 8",
+              "score": 10,
+              "original_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+              "summary_sha256": "2895728afaab108708bb53a3b307700cc2ecfe174deb078ff51006f2ba84d929"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 5",
+              "score": 8,
+              "original_sha256": "b9d242ccda4c0b133f51744906d695709aef1a22ae7177ad9a84a2383ebc13a7",
+              "summary_sha256": "ade855d826686e16ab2558a2c83e6dfbf47f5eebe9572bc595ec8600ca3ef8bc"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 1",
+              "score": 9,
+              "original_sha256": "5a833518050247608d59301918c49495d7290d4b8c2d9fc73193a47d8a498ad2",
+              "summary_sha256": "51b67a870fcdd2b514cb1b5237920ad09d1a42126b759440e1abaa6155e88619"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 10,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "f9b49c569e7fa7dd53414a9ae04b7b933603b96121e947590f7ecafcb45ff6b7"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 6",
+              "score": 9,
+              "original_sha256": "9543ab0040962798c37d6cd826646d478f824f42937bfdddd894b2b8d5bd5f46",
+              "summary_sha256": "6ace5f8ad670a104f187b3e61740e13a0021374d7da60383686358e0beb39a9c"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 8",
+              "score": 9,
+              "original_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+              "summary_sha256": "6881043840d218c0af1a2636989b5b540910d89e40828962eaee2ef7cd8155a6"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 1",
+              "score": 9,
+              "original_sha256": "5a833518050247608d59301918c49495d7290d4b8c2d9fc73193a47d8a498ad2",
+              "summary_sha256": "da4009a6d2937693230d0060c9b40650930fd7fda6bdb97752da541ef9e1d639"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 5",
+              "score": 9,
+              "original_sha256": "b9d242ccda4c0b133f51744906d695709aef1a22ae7177ad9a84a2383ebc13a7",
+              "summary_sha256": "64419c4e1971eca05b5888976fcbaeff51c26d7a05e7ff63584083dc1003fe52"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 7",
+              "score": 8,
+              "original_sha256": "f6d27ac8aaa8d952543c6d48985b80029668ce4fbd342aa23e80c02ed136ab18",
+              "summary_sha256": "b3a975d1967844b6a02754a41997fff6a5f6d919ca97f2a39b9cb5ec37b6b65a"
+            }
+          ]
+        },
+        {
+          "functions": [
+            {
+              "arguments": "{\"query\": \"COSA-1 N-terminal IDR MSH5 ZHP3 deletion 11 20 31 40 specific residues binding\", \"min_year\": 2020, \"max_year\": 2026}",
+              "name": "paper_search"
+            },
+            {
+              "arguments": "{\"question\": \"COSA-1 which specific 10 amino acid region within N-terminal IDR 1-50 is most critical for MSH5 ZHP3 binding, residues 1-10 or 11-20 or 21-30 or 31-40\"}",
+              "name": "gather_evidence"
+            }
+          ],
+          "observation_sha256": "d38b73ef2367c29a8081f482e884e70bfb2ea97152f3aae8befec2a7866625d9",
+          "shown_summaries": 1,
+          "visibility_matches_upstream_setting": true,
+          "shown_chunks": [
+            "y2024cosa1mediatedprocrossover chunk 4"
+          ],
+          "state_path": "states/step-005.json",
+          "contexts": [
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 10,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "3b9d908ccd54c30d8d901df77a775ab5d5b24eff6b828401eb1b466d7cbd7650"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 6",
+              "score": 8,
+              "original_sha256": "9543ab0040962798c37d6cd826646d478f824f42937bfdddd894b2b8d5bd5f46",
+              "summary_sha256": "be71b4039c83c807eee2c65f137c01ac07908f458ee6ab308038615f30160dcd"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 8",
+              "score": 10,
+              "original_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+              "summary_sha256": "2895728afaab108708bb53a3b307700cc2ecfe174deb078ff51006f2ba84d929"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 5",
+              "score": 8,
+              "original_sha256": "b9d242ccda4c0b133f51744906d695709aef1a22ae7177ad9a84a2383ebc13a7",
+              "summary_sha256": "ade855d826686e16ab2558a2c83e6dfbf47f5eebe9572bc595ec8600ca3ef8bc"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 1",
+              "score": 9,
+              "original_sha256": "5a833518050247608d59301918c49495d7290d4b8c2d9fc73193a47d8a498ad2",
+              "summary_sha256": "51b67a870fcdd2b514cb1b5237920ad09d1a42126b759440e1abaa6155e88619"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 10,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "f9b49c569e7fa7dd53414a9ae04b7b933603b96121e947590f7ecafcb45ff6b7"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 6",
+              "score": 9,
+              "original_sha256": "9543ab0040962798c37d6cd826646d478f824f42937bfdddd894b2b8d5bd5f46",
+              "summary_sha256": "6ace5f8ad670a104f187b3e61740e13a0021374d7da60383686358e0beb39a9c"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 8",
+              "score": 9,
+              "original_sha256": "46f50a7fad811abfa544252711297dc9d792a7a660c75eeb530e9e79afe4c762",
+              "summary_sha256": "6881043840d218c0af1a2636989b5b540910d89e40828962eaee2ef7cd8155a6"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 1",
+              "score": 9,
+              "original_sha256": "5a833518050247608d59301918c49495d7290d4b8c2d9fc73193a47d8a498ad2",
+              "summary_sha256": "da4009a6d2937693230d0060c9b40650930fd7fda6bdb97752da541ef9e1d639"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 5",
+              "score": 9,
+              "original_sha256": "b9d242ccda4c0b133f51744906d695709aef1a22ae7177ad9a84a2383ebc13a7",
+              "summary_sha256": "64419c4e1971eca05b5888976fcbaeff51c26d7a05e7ff63584083dc1003fe52"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 7",
+              "score": 8,
+              "original_sha256": "f6d27ac8aaa8d952543c6d48985b80029668ce4fbd342aa23e80c02ed136ab18",
+              "summary_sha256": "b3a975d1967844b6a02754a41997fff6a5f6d919ca97f2a39b9cb5ec37b6b65a"
+            },
+            {
+              "chunk": "y2024cosa1mediatedprocrossover chunk 4",
+              "score": 9,
+              "original_sha256": "b07b00944bda3f98ab0983b443bb96d183e38e021e22226b33344ecb9ba92377",
+              "summary_sha256": "4e166467edcc4621d4d47d42808b14896c2c281593d211e8d2d1e6a991adbbef"
+            }
+          ]
+        }
+      ],
+      "answer_attempts": [
+        {
+          "final_marker": "ABSTAIN",
+          "characters": 10459,
+          "answer_sha256": "a2c737100769004027aa2ce6b26409574af9efaefe214e0e25aa1bb664533cc9",
+          "state_path": "states/step-004.json"
+        },
+        {
+          "final_marker": "ABSTAIN",
+          "characters": 1340,
+          "answer_sha256": "96d4e698a42755d0fa2992addbaf9de6eae27a7a5203abe53af964caea289f7a",
+          "state_path": "states/step-006.json"
+        }
+      ],
+      "job": 4,
+      "exit_code": 1,
+      "wall_seconds": 975.3306528250687
+    }
+  ],
+  "initial_gather_comparison": [
+    {
+      "case": "RfaH",
+      "first_gather_arguments_equal": false,
+      "first_gather_context_order_equal": false,
+      "first_gather_originals_and_summaries_equal": false
+    },
+    {
+      "case": "COSA-1",
+      "first_gather_arguments_equal": false,
+      "first_gather_context_order_equal": false,
+      "first_gather_originals_and_summaries_equal": false
+    }
+  ],
+  "answer_routing_finding": {
+    "kind": "offline-upstream-serializer-replay",
+    "run_id": "20261004T120906Z-eb779c",
+    "target_context_id": "pqac-ecfc1320",
+    "target_score": 9,
+    "target_chunk": "y2024cosa1mediatedprocrossover chunk 4",
+    "global_rank": 6,
+    "answer_max_sources": 5,
+    "controller_saw_target_summary": true,
+    "answer_received_target_summary": false,
+    "both_answer_contexts_identical": true,
+    "upstream_replay_matches_saved_context": true,
+    "context_sha256": "ea09112b86e8d3b0c0239f2351c545910f9185e19556114e772cf30ef3fca7ef",
+    "limitation": "Exclusion is reproduced; effect of changing selection has not been tested."
+  },
+  "runtime_audit": {
+    "artifact_sha256": "41fe9e791603e6ffecac2da391118bc03679ff32bde2b291adfd07e937da7a50",
+    "interval_lines": 21654,
+    "untruncated_releases": 892,
+    "warnings": [
+      "Initial GPU discovery watchdog timed out; cached memory values used."
+    ],
+    "offloaded_layers_seen": [
+      "25/25 embedding",
+      "66/66 language model"
+    ],
+    "context_lengths_seen": [
+      8192,
+      16384
+    ],
+    "context_truncation_found": false,
+    "out_of_memory_found": false
+  },
+  "upstream_source_sha256": {
+    "settings.py": "30eddcf7f9859a4f0007e9679a78b49d8877f117ab27fcdc69216ab723993a3f",
+    "docs.py": "45b01887f5b0e1bc4c21a4c87291683ac2a472706a3c59e4ba9f5e42c1cd7e2a",
+    "agents/tools.py": "1d7ec81d1752aa41b766784ac66b7072d2ba91b0f9bd153060bd7564d1b3f420"
+  },
+  "quality_review": {
+    "kind": "assistant trace/source diagnostic, not blinded expert or external judge",
+    "rfah_n1": "Correct option already in first answer. Second answer propagates wrong disulfide location from RCS.",
+    "rfah_n3": "Correct option; avoids that location claim, but 35.8 domain explanation is vague.",
+    "cosa_n3": "Correct option and decreased/undetectable distinction. Overstates direct testing of separate internal intervals.",
+    "cosa_n1": "Two abstentions. Third gather finds useful summary but global answer ranking excludes it."
+  },
+  "limitations": [
+    "Two deliberately selected questions, one seed; not four independent questions.",
+    "First gather queries and evidence differ before N-dependent observation in both pairs.",
+    "First-request loading/cache timings differ; raw time ratio is not isolated treatment speedup.",
+    "Correct options and fewer tools do not establish source fidelity.",
+    "Observed answer-context exclusion is reproduced; impact of a fix is untested."
+  ]
+}
