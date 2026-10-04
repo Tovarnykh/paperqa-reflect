@@ -18,6 +18,12 @@ N8 is an observed-saturation diagnostic, not an established optimum. The new
 the fixed schedule. Historical Stage A/B runs are preserved separately. No N8
 efficacy result is implied by this preparation; parent wiki records launch status.
 
+Stage C was interrupted by Coder autostop after9 recorded attempts and during
+job10. The [inspected recovery amendment](docs/loop-stage-c-recovery-v1.md)
+preserves those results and runs only the38 never-started jobs. It does not retry
+the failed first attempt or the interrupted tenth attempt. Original Stage C
+plan/progress/raw files are retained; continuation records are separate.
+
 The initial Git organization (citation branch, loop branch, baseline branch/tag)
 was published to GitHub on 4 October after explicit user authorization.
 
