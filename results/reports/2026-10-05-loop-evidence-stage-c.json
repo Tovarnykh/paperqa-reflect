@@ -7564,7 +7564,7 @@
     "Stage A/B are not pooled; no attempts are retried or replaced; interrupted job10 is not scored or imputed."
   ],
   "report_date": "2026-10-05",
-  "report_status": "local_analysis_complete_external_evaluation_pending",
+  "report_status": "local_and_external_assessment_complete",
   "local_finished_utc": "2026-10-05T02:30:26Z",
   "local_finished_europe_oslo": "2026-10-05T04:30:26+02:00",
   "archive": {
@@ -7574,14 +7574,14 @@
   },
   "stats_source_sha256": "ed2a939d6b2150d2ac716bccfc75fbfa51e57d3662be40d143db99b13f2f5ef4",
   "external_evaluation": {
-    "status": "running",
-    "results_integrated": false,
+    "status": "completed_with_user_authorized_continuation",
+    "results_integrated": true,
     "recipe": "source-grounded-answer-pairs-v2.1",
     "recipe_canonical_sha256": "b45a1fde6d323e000193d2015d45b1ce132a763b5e4fe237dd029d1d774681f9",
     "available_pairs": 30,
     "planned_mirrored_judgments": 60,
     "original_maximum_judgments": 64,
-    "note": "Evaluation execution, budget and verdict provenance will be added separately; no preference is inferred for missing N1 cells.",
+    "note": "53 original assessments preserved; one HTTP429 call explicitly retried and six previously unstarted calls completed after user credit top-up.",
     "execution_plan_id": "20261005T103734Z-00aaee",
     "started_utc": "2026-10-05T10:39:56.134671+00:00",
     "request_count": 60,
@@ -7595,12 +7595,521 @@
     "execution_recipe_sha256": "702b7c386893fcdeb98e4b2607ffec0574da19287e98356a24eb63818d8baf6d",
     "recipe_change": "budget_group only; exact requests and mirrored mapping byte-equal",
     "allocation_doc": "docs/loop-stage-c-evaluation-allocation-v1.md",
-    "final_spend_and_verdicts": "pending; do not infer from this running checkpoint"
+    "final_spend_and_verdicts": "Complete; API-usage-based accounted amounts exclude the separately retained unresolved HTTP429 hold, which is not confirmed billing.",
+    "continuation_plan_id": "20261005T103734Z-00aaee-manual-continuation-v1",
+    "finished_utc": "2026-10-05T15:18:28.371486+00:00",
+    "checked_assessments": 60,
+    "outcomes_by_contrast": {
+      "N8/N1": {
+        "order_unstable": 1,
+        "N1": 3,
+        "tie": 8,
+        "N8": 2
+      },
+      "N8/N3": {
+        "tie": 9,
+        "N8": 3,
+        "N3": 4
+      }
+    },
+    "pairs": [
+      {
+        "pair_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s42-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s42-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s42-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s43-N8-N1",
+        "outcome": "order_unstable",
+        "orders": [
+          {
+            "case_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s43-N8-N1-1",
+            "status": "checked",
+            "winner": "N8"
+          },
+          {
+            "case_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s43-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s43-N8-N3",
+        "outcome": "N8",
+        "orders": [
+          {
+            "case_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s43-N8-N3-0",
+            "status": "checked",
+            "winner": "N8"
+          },
+          {
+            "case_id": "22306bd7-7e84-415d-aebb-11c6312eb081-s43-N8-N3-1",
+            "status": "checked",
+            "winner": "N8"
+          }
+        ]
+      },
+      {
+        "pair_id": "487539f9-2f17-4009-aa4a-c41322445f11-s42-N8-N3",
+        "outcome": "N8",
+        "orders": [
+          {
+            "case_id": "487539f9-2f17-4009-aa4a-c41322445f11-s42-N8-N3-1",
+            "status": "checked",
+            "winner": "N8"
+          },
+          {
+            "case_id": "487539f9-2f17-4009-aa4a-c41322445f11-s42-N8-N3-0",
+            "status": "checked",
+            "winner": "N8"
+          }
+        ]
+      },
+      {
+        "pair_id": "487539f9-2f17-4009-aa4a-c41322445f11-s43-N8-N1",
+        "outcome": "N1",
+        "orders": [
+          {
+            "case_id": "487539f9-2f17-4009-aa4a-c41322445f11-s43-N8-N1-1",
+            "status": "checked",
+            "winner": "N1"
+          },
+          {
+            "case_id": "487539f9-2f17-4009-aa4a-c41322445f11-s43-N8-N1-0",
+            "status": "checked",
+            "winner": "N1"
+          }
+        ]
+      },
+      {
+        "pair_id": "487539f9-2f17-4009-aa4a-c41322445f11-s43-N8-N3",
+        "outcome": "N3",
+        "orders": [
+          {
+            "case_id": "487539f9-2f17-4009-aa4a-c41322445f11-s43-N8-N3-1",
+            "status": "checked",
+            "winner": "N3"
+          },
+          {
+            "case_id": "487539f9-2f17-4009-aa4a-c41322445f11-s43-N8-N3-0",
+            "status": "checked",
+            "winner": "N3"
+          }
+        ]
+      },
+      {
+        "pair_id": "658f7050-d137-477e-8693-26609080cecd-s42-N8-N1",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "658f7050-d137-477e-8693-26609080cecd-s42-N8-N1-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "658f7050-d137-477e-8693-26609080cecd-s42-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "658f7050-d137-477e-8693-26609080cecd-s42-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "658f7050-d137-477e-8693-26609080cecd-s42-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "658f7050-d137-477e-8693-26609080cecd-s42-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "658f7050-d137-477e-8693-26609080cecd-s43-N8-N1",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "658f7050-d137-477e-8693-26609080cecd-s43-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "658f7050-d137-477e-8693-26609080cecd-s43-N8-N1-1",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "658f7050-d137-477e-8693-26609080cecd-s43-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "658f7050-d137-477e-8693-26609080cecd-s43-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "658f7050-d137-477e-8693-26609080cecd-s43-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "77a41274-cd9c-48bc-a347-e0746907840d-s42-N8-N1",
+        "outcome": "N8",
+        "orders": [
+          {
+            "case_id": "77a41274-cd9c-48bc-a347-e0746907840d-s42-N8-N1-0",
+            "status": "checked",
+            "winner": "N8"
+          },
+          {
+            "case_id": "77a41274-cd9c-48bc-a347-e0746907840d-s42-N8-N1-1",
+            "status": "checked",
+            "winner": "N8"
+          }
+        ]
+      },
+      {
+        "pair_id": "77a41274-cd9c-48bc-a347-e0746907840d-s42-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "77a41274-cd9c-48bc-a347-e0746907840d-s42-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "77a41274-cd9c-48bc-a347-e0746907840d-s42-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "77a41274-cd9c-48bc-a347-e0746907840d-s43-N8-N1",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "77a41274-cd9c-48bc-a347-e0746907840d-s43-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "77a41274-cd9c-48bc-a347-e0746907840d-s43-N8-N1-1",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "77a41274-cd9c-48bc-a347-e0746907840d-s43-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "77a41274-cd9c-48bc-a347-e0746907840d-s43-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "77a41274-cd9c-48bc-a347-e0746907840d-s43-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s42-N8-N1",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s42-N8-N1-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s42-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s42-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s42-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s42-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s43-N8-N1",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s43-N8-N1-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s43-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s43-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s43-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "7a88e6f7-fb8e-4a24-b08d-9b7a6edafe57-s43-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s42-N8-N1",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s42-N8-N1-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s42-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s42-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s42-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s42-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s43-N8-N1",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s43-N8-N1-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s43-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s43-N8-N3",
+        "outcome": "N3",
+        "orders": [
+          {
+            "case_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s43-N8-N3-1",
+            "status": "checked",
+            "winner": "N3"
+          },
+          {
+            "case_id": "983f1ef5-fc7d-4f4a-8f48-e704641eae12-s43-N8-N3-0",
+            "status": "checked",
+            "winner": "N3"
+          }
+        ]
+      },
+      {
+        "pair_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s42-N8-N1",
+        "outcome": "N1",
+        "orders": [
+          {
+            "case_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s42-N8-N1-1",
+            "status": "checked",
+            "winner": "N1"
+          },
+          {
+            "case_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s42-N8-N1-0",
+            "status": "checked",
+            "winner": "N1"
+          }
+        ]
+      },
+      {
+        "pair_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s42-N8-N3",
+        "outcome": "N3",
+        "orders": [
+          {
+            "case_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s42-N8-N3-0",
+            "status": "checked",
+            "winner": "N3"
+          },
+          {
+            "case_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s42-N8-N3-1",
+            "status": "checked",
+            "winner": "N3"
+          }
+        ]
+      },
+      {
+        "pair_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s43-N8-N1",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s43-N8-N1-1",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s43-N8-N1-0",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      },
+      {
+        "pair_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s43-N8-N3",
+        "outcome": "N8",
+        "orders": [
+          {
+            "case_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s43-N8-N3-0",
+            "status": "checked",
+            "winner": "N8"
+          },
+          {
+            "case_id": "ae02d0e9-edf5-4c39-a215-3cbc8f4c565d-s43-N8-N3-1",
+            "status": "checked",
+            "winner": "N8"
+          }
+        ]
+      },
+      {
+        "pair_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s42-N8-N1",
+        "outcome": "N8",
+        "orders": [
+          {
+            "case_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s42-N8-N1-0",
+            "status": "checked",
+            "winner": "N8"
+          },
+          {
+            "case_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s42-N8-N1-1",
+            "status": "checked",
+            "winner": "N8"
+          }
+        ]
+      },
+      {
+        "pair_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s42-N8-N3",
+        "outcome": "N3",
+        "orders": [
+          {
+            "case_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s42-N8-N3-0",
+            "status": "checked",
+            "winner": "N3"
+          },
+          {
+            "case_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s42-N8-N3-1",
+            "status": "checked",
+            "winner": "N3"
+          }
+        ]
+      },
+      {
+        "pair_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s43-N8-N1",
+        "outcome": "N1",
+        "orders": [
+          {
+            "case_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s43-N8-N1-0",
+            "status": "checked",
+            "winner": "N1"
+          },
+          {
+            "case_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s43-N8-N1-1",
+            "status": "checked",
+            "winner": "N1"
+          }
+        ]
+      },
+      {
+        "pair_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s43-N8-N3",
+        "outcome": "tie",
+        "orders": [
+          {
+            "case_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s43-N8-N3-0",
+            "status": "checked",
+            "winner": "tie"
+          },
+          {
+            "case_id": "b105af85-833e-48bc-ac78-48f73c9673fd-s43-N8-N3-1",
+            "status": "checked",
+            "winner": "tie"
+          }
+        ]
+      }
+    ],
+    "original_preserved_assessments": 53,
+    "continuation_assessments": 7,
+    "continuation_accounted_usd": "0.206432",
+    "stage_c_accounted_usd": "1.704848",
+    "project_accounted_usd": "5.502052",
+    "unresolved_http429_hold_usd": "0.071925",
+    "project_conservative_budget_total_usd": "5.573977",
+    "continuation_helper_sha256": "06583f01e858068f88664281156ec67d0c4cca03f85e82f2ba62237a6afa27ef",
+    "amendment_sha256": "4372652ea3f0dbf815cf6b51e9afef803afa2bd0756491278cfb3b11f5ef2621",
+    "combined_assessment_sha256": "242a4780eb2f0aff1735db48025db628ea13554cf25df2f546743722d611682c",
+    "original_files_verified_unchanged": true
   },
   "decision": {
     "baseline_n": 1,
     "adopted_treatment": null,
-    "final_method_selection": "pending_external_source_fidelity_evaluation",
-    "interpretation": "N8 has all correct final options, but no observed gather reduction versus N3 and higher observed time/tokens. This does not establish a quality-preserving improvement or an optimal N."
+    "final_method_selection": "N8 not adopted; N1 remains frozen comparator",
+    "interpretation": "N8 has no clear source-grounded quality advantage over N1 or N3; versus N3 it does not reduce gathers and increases observed time and tokens. Small selected dev sample and mixed preferences do not establish equivalence or an optimum."
   }
 }

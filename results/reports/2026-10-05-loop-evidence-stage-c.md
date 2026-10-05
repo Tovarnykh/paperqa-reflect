@@ -4,8 +4,9 @@
 The 48-job schedule produced 46 technically successful answers, all with the correct
 final option, one preserved model-startup failure and one infrastructure-interrupted
 attempt. N8 did not reduce evidence-gathering calls relative to N3 and used more
-observed time and tokens. **Independent source-fidelity evaluation is pending in
-this report; no final treatment selection or quality-preserving improvement is claimed.**
+observed time and tokens. **Independent evaluation is complete: N8 shows mixed preferences against both
+comparators, with no established quality-preserving improvement. N1 remains the
+frozen comparator; N8 is not adopted as an improved default.**
 
 ## Fixed design and recovery
 
@@ -170,27 +171,49 @@ the completed trajectories; the preserved interruption is reported separately.
 
 ## Independent evaluation and current decision
 
-External source-fidelity results are **pending integration**. The planned frozen
-mirrored pairwise v2.1 evaluation has 30 available pairs: 14 N8/N1 and 16 N8/N3,
-each shown in both orders (60 judgments, within the original maximum 64). Missing
-N1 cells receive no invented preference. Questions/options, exact final answers
-and unioned original cited passages enter the judge; gold keys, arm labels, runtime
-metrics and this diagnosis do not. Evaluation execution/budget/verdict provenance
-is documented in the [series allocation](../../docs/loop-stage-c-evaluation-allocation-v1.md).
-Execution plan `20261005T103734Z-00aaee` started at10:39:56UTC on5October; it is
-running at this report checkpoint. The exact whole-plan maximum reservation is
-USD3.886388 within a new USD5 series group and the unchanged USD100 cumulative
-project cap. The old group and ledger remain intact. Only budget_group metadata
-changed; all60 request bodies and mirrored rows are byte-equal to the original
-frozen plan. Final spend and verdicts are pending. The judge remains a model proxy,
-not expert ground truth.
+All60 mirrored assessments are complete, covering14 N8/N1 pairs and16 N8/N3
+pairs. The frozen v2.1 model, rubric, exact request bodies and arm mapping were
+retained. Questions/options, exact final answers and full unioned original cited
+passages entered the judge; gold keys, treatment labels and runtime metrics did not.
+Missing N1 cells receive no invented preference. The judge is a model proxy, not
+scientific expert ground truth, and these eight selected dev questions are not an
+independent final evaluation.
 
-**N1 remains the frozen comparator; no N setting has been selected as an improved
-default.** Correct final options alone do not establish explanation or citation
-quality. N8 currently shows no gather reduction over N3 and increases observed
-costs, so an improvement claim requires the pending fidelity evidence. No further
-N tuning, evidence-preservation intervention, citation combination or holdout run
-is included in this comparison.
+| Contrast | N8 preferred in both orders | Comparator preferred in both orders | Tie in both orders | Order disagreement |
+|---|---:|---:|---:|---:|
+| N8 / N1,14 pairs |2|3|8|1|
+| N8 / N3,16 pairs |3|4|9|0|
+
+N8 does not show a clear quality advantage. Against N3 it also leaves gather
+counts unchanged and increases observed question time and input/output tokens.
+**Keep N1 as the frozen comparator; do not adopt N8 as an established improvement.**
+This is a mixed development result, not proof of equivalence or a globally optimal N.
+No further N tuning, evidence-selection change, citation combination or holdout run
+has been added. Stage A/B remain separate and are not pooled to choose a winner.
+
+### Credit interruption and explicit continuation
+
+The original plan `20261005T103734Z-00aaee` completed53 valid assessments before
+item054 returned HTTP429; items055–060 were never submitted. The user reported
+exhausted API credits, then explicitly requested the remaining seven after topping
+up. Error429 alone does not independently identify the billing reason.
+
+The original failed run, all53 successful results and their raw responses remain
+unchanged and hash-verified. A separate manual-continuation-v1 plan repeated only
+the unsuccessful item054 and sent the six unstarted requests, in original order.
+It finished5October15:18:28UTC with7/7 checked; combining source-verified results
+produced60/60 checks and30 complete mirrored pairs. Original API attempts total61:
+60 successful assessments plus the preserved429 failure. No successful answer was
+rejudged, no model/rubric changed, and the 30-pair sample was not filtered by outcome.
+
+Continuation maximum reservation was USD0.469142; its usage-based accounted cost
+was **USD0.206432**. Stage C successful assessments totalUSD1.704848; cumulative
+project accounted cost isUSD5.502052. The old429 reservationUSD0.071925 is retained
+conservatively in the ledger as held_http429, after backup and documented inspection.
+It is not asserted to be an actual charge or silently released. Budget consumption
+including that unresolved hold isUSD5.573977. The sameUSD5 series group andUSD100
+project cap apply. [Allocation provenance](../../docs/loop-stage-c-evaluation-allocation-v1.md)
+and the exact continuation helper are retained; raw API data/key/ledger stay local.
 
 ## Reproducibility artifacts
 

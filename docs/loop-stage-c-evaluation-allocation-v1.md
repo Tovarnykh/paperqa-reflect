@@ -36,3 +36,13 @@ and [token-counting guide](https://developers.openai.com/api/docs/guides/token-c
 Exclusive execution files, request hashes and ledger reservations prohibit
 automatic repeats. The old plan also must remain unexecuted. Helpers and their
 hashes are retained in [the reproduction supplement](repro/loop-stage-c-v1/README.md).
+
+## Completion after credit interruption
+
+The original run retained53 successful assessments and stopped on HTTP429.
+After the user explicitly authorized completion following a credit top-up,
+manual-continuation-v1 completed only items054–060 with identical requests.
+Seven-call maximumUSD0.469142; actual accountedUSD0.206432. All60 assessments
+are complete. The oldUSD0.071925 reservation stays in both budget totals as
+held_http429, not confirmed billing. No previous successful request was repeated.
+The completed report records the separate run, costs and mirrored outcomes.

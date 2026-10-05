@@ -31,3 +31,16 @@ budget ledger remain private on the original laptop, outside Git and server sync
 
 The historical price recheck is not a future price guarantee. The unchanged
 evaluator also enforces its pricing validity period and single execution host.
+
+## Explicit credit-failure continuation
+
+continue-stage-c-judge-v1.py is the exact executed helper (including one harmless
+unused local retained for hash fidelity). Commands prepare/run/assess are separate.
+It validates all53 original results against raw responses, builds only missing
+items054–060 with unchanged request hashes, backs up the original ledger, retains
+the429 reservation as a reviewed conservative hold, checks whole-seven-request
+budget headroom, and sends seven requests once. A separate assessment-only view
+combines results and validates all60; it sends no API calls. Original files are
+hash-verified immutable. This continuation was explicitly authorized after the user
+replenished API credits; it is not a generic automatic retry mechanism. Do not rerun
+its measured plan or release the unresolved hold without billing evidence.

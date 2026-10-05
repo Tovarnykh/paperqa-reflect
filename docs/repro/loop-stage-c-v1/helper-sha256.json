@@ -3,5 +3,6 @@
   "prepare-loop-stage-c-judge.py": "138b9e200dd9223df2c2884d49067c4d940e9e934b09d7d341f3793858d07d2e",
   "allocate-loop-stage-c-judge.py": "1cb626f2648698f8208b7a601768a00f70db61b842c7df8a25c0b5409aab6fe2",
   "run-loop-stage-c-judge.py": "fd793716343f4016dc3e020ddadfe049b6d9a78d3f2ed76851c54e3e15291baf",
-  "run-loop-stage-b-judge.py": "f3bf98fb740d4602b35c048a6c1daaf188df1370a5c30d65d2a095a45d56261e"
+  "run-loop-stage-b-judge.py": "f3bf98fb740d4602b35c048a6c1daaf188df1370a5c30d65d2a095a45d56261e",
+  "continue-stage-c-judge-v1.py": "06583f01e858068f88664281156ec67d0c4cca03f85e82f2ba62237a6afa27ef"
 }
