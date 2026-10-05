@@ -35,6 +35,12 @@ N1 remains the frozen comparator. See the [documented evaluation allocation](doc
 The initial Git organization (citation branch, loop branch, baseline branch/tag)
 was published to GitHub on 4 October after explicit user authorization.
 
+[The subsequent evidence-retention investigation](docs/evidence-retention-review-2026-10-05.md)
+replays 47 saved answer contexts without inference and separates RCS distortion,
+answer-context selection, generation and citation-assignment failures. It reviews
+extractive context methods and proposes a fixed-state answer-context comparison.
+This is an offline diagnosis and proposal; no new treatment has been implemented.
+
 [The four-attempt diagnostic pilot is complete](results/reports/2026-10-04-loop-evidence-pilot.md).
 N3 used one fewer gather on each selected question; N1 abstained on COSA-1.
 The pairs diverged before the changed observation, so this does not isolate a
