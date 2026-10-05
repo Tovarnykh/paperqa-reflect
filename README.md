@@ -24,6 +24,13 @@ preserves those results and runs only the38 never-started jobs. It does not retr
 the failed first attempt or the interrupted tenth attempt. Original Stage C
 plan/progress/raw files are retained; continuation records are separate.
 
+[Stage C local inference is complete](results/reports/2026-10-05-loop-evidence-stage-c.md):
+N3 and N8 each produced 16 correct answers; N1 produced 14 correct answers plus
+one startup failure and one infrastructure interruption. N8/N3 both used 18 gather
+calls, while N8 took 8.63% longer on the observed paired question time. Independent
+source-grounded quality judging is running; no N8 superiority or quality equivalence
+is established. See the [documented evaluation allocation](docs/loop-stage-c-evaluation-allocation-v1.md).
+
 The initial Git organization (citation branch, loop branch, baseline branch/tag)
 was published to GitHub on 4 October after explicit user authorization.
 
